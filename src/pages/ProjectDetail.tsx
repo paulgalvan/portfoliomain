@@ -62,7 +62,7 @@ const ProjectDetail = () => {
             {project.content?.map((item, index) => {
               switch (item.type) {
                 case 'image':
-                  return <img key={index} src={item.value} alt="" className="w-full h-auto rounded-lg" />;
+                  return <img key={index} src={item.value} alt="" className="w-full h-auto rounded-lg max-w-xl mx-auto" />;
                 case 'text':
                   return <p key={index} className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: item.value }} />;
                 case 'video':

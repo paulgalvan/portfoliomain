@@ -51,7 +51,7 @@
       "C++",
       "Arduino",
       "CAD",
-      "3d Printing",
+      "3D Printing",
       "Laser Cutting",
       "Soft Robotics"
     ],
@@ -95,7 +95,7 @@
     "Raspberry Pi",
     "Robotics",
     "Controls",
-    "3d Printing",
+    "3D Printing",
     "Laser Cutting",
     "Soldering",
     "PCB Design"
@@ -211,55 +211,122 @@
       "value": "https://youtu.be/1xDbENuh6WE"
     }
   ]
+  },
+  {
+  "id": "me10-solidworks",
+  "title": "Introduction to CAD (SolidWorks)",
+  "quick_description": "First exposure to 3D modeling and digital prototyping.",
+  "display_order": 13,
+  "is_featured": false,
+  "gif_url": "public/blank.gif",
+  "tags": [
+    "CAD",
+    "SolidWorks"
+  ],
+  "content": [
+    {
+      "type": "text",
+      "value": "This class was my introduction to CAD using SolidWorks. I practiced creating parts, assemblies, and realistic models to build a foundation in digital design."
+    },
+    {
+      "type": "text",
+      "value": "  "
+    },
+    {
+      "type": "text",
+      "value": "Example Project: Citrus Press Assembly – practiced combining multiple parts into a functional assembly with moving components."
+    },
+    {
+      "type": "image",
+      "value": "/images/me10cad/citrus.png"
+    },
+    {
+      "type": "text",
+      "value": "Example Project: Coffee Mug – practiced surface modeling, lofts, and fillets to recreate a common object."
+    },
+    {
+      "type": "image",
+      "value": "/images/me10cad/mug.png"
+    },
+    {
+      "type": "text",
+      "value": "Example Project: Mounting Bracket – learned precision dimensioning and constraints for mechanical parts."
+    },
+    {
+      "type": "image",
+      "value": "/images/me10cad/model.png"
+    },
+    {
+      "type": "text",
+      "value": "Example Project: LEGO Brick – replicated an existing part with accurate proportions to strengthen parametric modeling skills."
+    },
+    {
+      "type": "image",
+      "value": "/images/me10cad/legobrick.png"
+    },
+    {
+      "type": "text",
+      "value": "Example Project: Pumpkin – used advanced features such as revolves and patterns to create a complex organic shape."
+    },
+    {
+      "type": "image",
+      "value": "/images/me10cad/pumpkin.png"
+    }
+  ]
 },
-  {
-    "id": "lego-exploration",
-    "title": "LEGO Engineering Exploration",
-    "quick_description": "Hands-on introduction to engineering with LEGO.",
-    "display_order": 12,
-    "is_featured": false,
-    "gif_url": "/gifs/lego-exploration.gif",
-    "tags": [
-      "LEGO",
-      "Robotics",
-      ""
-    ],
-    "content": [
-      {
-        "type": "image",
-        "value": "/images/lego-exploration.png"
-      },
-      {
-        "type": "text",
-        "value": "Explored fundamental engineering principles using LEGO Spike Prime kits. Created functional prototypes including a snake robot, a miniature vehicle, and tablet-controlled devices. Gained hands-on experience in mechanical design, programming, and iterative prototyping."
-      }
-    ]
-  },
-  {
-    "id": "lego-es2",
-    "title": "LEGO White House & Easter Egg",
-    "quick_description": "Creative LEGO builds combining design and engineering.",
-    "display_order": 13,
-    "is_featured": false,
-    "gif_url": "/gifs/lego-es2.gif",
-    "tags": [
-      "LEGO",
-      "Design",
-      "Creativity"
-    ],
-    "content": [
-      {
-        "type": "image",
-        "value": "/images/lego-es2.png"
-      },
-      {
-        "type": "text",
-        "value": "Designed creative LEGO models that balanced aesthetics and structural stability. Built a detailed White House replica and a custom Easter Egg model. Practiced iterative testing and optimization with limited materials."
-      }
-    ]
-  },
-  {
-    "id": "me10-cad",
+{
+  "id": "me10-soccerball",
+  "title": "Metal Casting Project: Pewter Soccer Ball",
+  "quick_description": "Designed and cast a pewter soccer ball trophy through multiple mold-making iterations.",
+  "display_order": 14,
+  "is_featured": false,
+  "gif_url": "/public/casting.gif",
+  "tags": [
+    "Manufacturing",
+    "Casting",
+    "Materials"
+  ],
+  "content": [
+    {
+      "type": "text",
+      "value": "For our ME10 final project, my team and I set out to recreate the Ballon d’Or trophy as a pewter soccer ball. The project became an exploration of casting methods, iteration, and creative problem solving."
+    },
+    {
+      "type": "text",
+      "value": "We began by attempting to cast a half-sphere of the ball directly, but quickly learned that the plastic mold would melt under molten pewter. To overcome this, I suggested vacuum forming the ball to create a wax replica, which could then be packed in sand and replaced with metal during the pour."
+    },
+    {
+      "type": "image",
+      "value": "/images/me10man/ball.jpeg",
+      "caption": "Ball mold experiment before transitioning to Wax"
+    },
+    {
+      "type": "text",
+      "value": "The wax casting approach worked in theory but presented new issues with removing the wax cleanly and creating a hollow interior. After several rounds of testing, we switched to making a hard silicone base mold. This allowed us to pour pewter safely and achieve a consistent final shape."
+    },
+    {
+      "type": "image",
+      "value": "/images/me10man/wax.jpeg",
+      "caption": "Wax mold experiment before transitioning to silicone"
+    },
+    {
+      "type": "image",
+      "value": "/images/me10man/silicone.jpeg",
+      "caption": "Final pewter casting mounted on CNC-routed wooden base"
+    },
+    {
+      "type": "text",
+      "value": "The final product combined creativity with practical problem solving. This project taught me not only the technical aspects of casting, but also how to pivot and refine designs through hands-on experimentation."
+    },
+    {
+      "type": "image",
+      "value": "/images/me10man/pewter.jpg",
+      "caption": "Final pewter casting mounted on CNC-routed wooden base"
+    }
+  ]
+},
+{
+    "id": "me10-cead",
     "title": "CAD & Manufacturing Foundations",
     "quick_description": "Introductory projects in CAD modeling and manufacturing.",
     "display_order": 14,
