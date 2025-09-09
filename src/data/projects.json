@@ -13,8 +13,7 @@
       "CAD",
       "Ubuntu",
       "Raspberry Pi",
-      "3D Printing",
-      "Automation"
+      "3D Printing"
     ],
     "content": [
       {
@@ -154,7 +153,7 @@
     },
     {
       "type": "image",
-      "value": "public/images/walle.png"
+      "value": "/images/walle.png"
     },
     {
       "type": "video",
@@ -283,7 +282,6 @@
   "gif_url": "/public/casting.gif",
   "tags": [
     "Manufacturing",
-    "Casting",
     "Materials"
   ],
   "content": [
@@ -298,7 +296,8 @@
     {
       "type": "image",
       "value": "/images/me10man/ball.jpeg",
-      "caption": "Ball mold experiment before transitioning to Wax"
+      "caption": "Ball mold experiment before transitioning to Wax",
+      "size": "max-w-md"
     },
     {
       "type": "text",
@@ -307,12 +306,14 @@
     {
       "type": "image",
       "value": "/images/me10man/wax.jpeg",
-      "caption": "Wax mold experiment before transitioning to silicone"
+      "caption": "Wax mold experiment before transitioning to silicone",
+      "size": "max-w-md"
     },
     {
       "type": "image",
       "value": "/images/me10man/silicone.jpeg",
-      "caption": "Final pewter casting mounted on CNC-routed wooden base"
+      "caption": "Final pewter casting mounted on CNC-routed wooden base",
+      "size": "max-w-md"
     },
     {
       "type": "text",
@@ -321,7 +322,8 @@
     {
       "type": "image",
       "value": "/images/me10man/pewter.jpg",
-      "caption": "Final pewter casting mounted on CNC-routed wooden base"
+      "caption": "Final pewter casting mounted on CNC-routed wooden base",
+      "size": "max-w-md"
     }
   ]
 },
@@ -334,8 +336,7 @@
     "gif_url": "/gifs/me10-cad.gif",
     "tags": [
       "CAD",
-      "Manufacturing",
-      "SolidWorks"
+      "Manufacturing"
     ],
     "content": [
       {
@@ -356,9 +357,7 @@
     "is_featured": false,
     "gif_url": "/gifs/me35-motion.gif",
     "tags": [
-      "CAD",
-      "Mechanisms",
-      "Design"
+      "CAD"
     ],
     "content": [
       {
@@ -379,9 +378,7 @@
     "is_featured": false,
     "gif_url": "/gifs/me40-products.gif",
     "tags": [
-      "CAD",
-      "Product Design",
-      "Accessibility"
+      "CAD"
     ],
     "content": [
       {
@@ -403,8 +400,7 @@
     "gif_url": "/gifs/robovend-arm.gif",
     "tags": [
       "Robotics",
-      "CAD",
-      "Team Project"
+      "CAD"
     ],
     "content": [
       {
