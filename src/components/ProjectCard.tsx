@@ -7,6 +7,7 @@ interface Project {
   title: string;
   description: string;
   quick_description: string;
+  images?: string[];
   gif_url?: string;
   tags: string[];
   is_featured: boolean;
@@ -31,11 +32,17 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       <CardContent className="p-0 h-full relative overflow-hidden">
         {/* Background Image/GIF */}
         <div className="absolute inset-0">
-          {project.gif_url && !imageError ? (
+          {isHovered && project.gif_url ? (
             <img
               src={project.gif_url}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+            />
+          ) : project.images && project.images.length > 0 && !imageError ? (
+            <img
+              src={project.images[0]}
+              alt={project.title}
+              className="w-full h-full object-contain"
               onError={() => setImageError(true)}
             />
           ) : (

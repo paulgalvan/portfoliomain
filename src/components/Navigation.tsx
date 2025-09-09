@@ -11,21 +11,19 @@ import { Github, Linkedin, Mail, Phone, FileDown, ChevronDown } from "lucide-rea
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("portfolio");
+  const [phoneText, setPhoneText] = useState("Phone");
   const navigate = useNavigate();
 
   const handleConnectClick = (type: string) => {
     switch (type) {
       case "github":
-        window.open("https://github.com/yourusername", "_blank");
+        window.open("https://github.com/paulgalvan", "_blank");
         break;
       case "linkedin":
-        window.open("https://linkedin.com/in/yourusername", "_blank");
+        window.open("https://www.linkedin.com/in/paul-galvan/", "_blank");
         break;
       case "email":
-        window.location.href = "mailto:your.email@example.com";
-        break;
-      case "phone":
-        window.location.href = "tel:+1234567890";
+        window.location.href = "mailto:paul.galvan@tufts.edu";
         break;
     }
   };
@@ -115,11 +113,12 @@ const Navigation = () => {
                   Email
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  onClick={() => handleConnectClick("phone")}
+                  onMouseEnter={() => setPhoneText("(424)425-9675")}
+                  onMouseLeave={() => setPhoneText("Phone")}
                   className="cursor-pointer"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Phone
+                  {phoneText}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

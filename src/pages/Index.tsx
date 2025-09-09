@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TagFilter from "@/components/TagFilter";
 import ProjectCard from "@/components/ProjectCard";
+
 import { useProjects, Project } from "@/hooks/useProjects";
 import { Loader2 } from "lucide-react";
 
@@ -64,10 +64,8 @@ const Index = () => {
           </h1>
           <div className="max-w-3xl mx-auto space-y-6">
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Welcome to my portfolio! I'm a passionate developer and creator who loves building 
-              innovative solutions that make a difference. From LEGO robotics to cutting-edge web 
-              applications, I bring ideas to life through code and creativity.
-            </p>
+             Welcome to my portfolio! I’m a mechanical engineer driven to create innovative systems that merge technical precision with creative design. Here, you’ll find projects that highlight my passion for robotics, engineering, and collaborative problem-solving.
+             </p>
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
@@ -157,39 +155,25 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 text-left">
                 <p className="text-lg leading-relaxed">
-                  I'm a passionate developer with a love for creating innovative solutions. 
-                  My journey spans from robotics and AI to modern web development, always 
-                  with a focus on building tools that make a real impact.
+                  I'm a rising senior in Mechanical Engineering with a Human Factors minor. I enjoy collaborating with others and pushing the limits of what's possible.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  When I'm not coding, you'll find me experimenting with LEGO robotics, 
-                  exploring new technologies, or working on projects that combine creativity 
-                  with technical excellence.
+                  I like to play with LEGOs, explore new technologies, and work on projects that combine creativity with technical excellence
                 </p>
               </div>
-              <Card className="p-8">
-                <CardContent className="space-y-4">
-                  <h3 className="text-xl font-semibold">Quick Stats</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span>Projects Completed:</span>
-                      <span className="font-medium">{projects.length}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Technologies Used:</span>
-                      <span className="font-medium">{availableTags.length}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Featured Projects:</span>
-                      <span className="font-medium">{featuredProjects.length}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex justify-center items-center">
+                <img
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  alt="Placeholder for my picture"
+                  className="rounded-lg border-2 border-dashed border-muted-foreground w-64 h-64"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      
 
       {/* Footer */}
       <Footer />

@@ -1,50 +1,53 @@
-
 [
   {
-    "id": "f9201cb0-bbdc-475e-a7c3-ac0bacef4669",
-    "title": "LEGO Sorting System",
-    "description": "An automated LEGO brick sorting system using computer vision and robotics",
-    "quick_description": "AI-powered LEGO brick sorting automation",
-    "takeaways": "Learned computer vision, robotics integration, and machine learning optimization",
-    "duration": "3 months",
-    "tags": ["lego", "ai", "robotics", "python"],
-    "is_featured": true,
-    "display_order": 1,
-    "gif_url": "/Wow-gif.gif"
-  },
-  {
-    "id": "f9201cb0-bdco-475e-a7c3-ac0bacef4669",
-    "title": "Pascal IS Goated Sorting System",
-    "description": "An automated LEGO brick sorting system using computer vision and robotics",
-    "quick_description": "AI-powered LEGO brick sorting automation",
-    "takeaways": "Learned computer vision, robotics integration, and machine learning optimization",
-    "duration": "3 months",
-    "tags": ["lego", "ai", "robotics", "python"],
-    "is_featured": true,
-    "display_order": 1,
-    "gif_url": "https://example.com/lego-sorting.gif"
-  },
-  {
-    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "id": "4b7512e6-a554-4362-a481-e6d23b5f5a9a",
     "title": "Low-Cost Robotic Arm",
-    "description": "This is the description for the project",
+    "description": "A robotic arm built to make robotics more accessible for learning and hands-on projects.",
+    "quick_description": "AI-powered LEGO brick sorting automation",
+    "takeaways": "Learned computer vision, robotics integration, and machine learning optimization",
+    "duration": "12 months",
+    "images": ["/images/lca-pic.png"],
+    "tags": ["Robotics", "Python", "Controls","CAD", "Ubuntu", "Raspberry Pi", "3d Printing"],
+    "is_featured": true,
+    "display_order": 1,
+    "gif_url": "/lca-gif.gif"
+  },
+  {
+    "id": "b25f1a9e-f277-4fb4-8612-6648069f5751",
+    "title": "ActuAid",
+    "description": "An assistive device to rehabilitate athletes using adaptive resistance training.",
+    "quick_description": "AI-powered LEGO brick sorting automation",
+    "takeaways": "Learned computer vision, robotics integration, and machine learning optimization",
+    "duration": "3 months",
+    "images": ["/images/actuaid.png"],
+    "tags": ["Robotics", "C++", "Arduino", "CAD","3d Printing","Laser Cutting"],
+    "is_featured": true,
+    "display_order": 1,
+    "gif_url": "public/actuaid.gif"
+  },
+  {
+    "id": "a48340e9-42cb-4c44-a8f2-aacf457f374e",
+    "title": "PID Controlled Car",
+    "description": "PID-controlled car with  Raspberry Pi web interface and multi-car network communication.",
     "quick_description": "Interactive portfolio with smart filtering",
     "takeaways": "Mastered React, and modern web development practices",
     "duration": "2 weeks",
-    "tags": ["react", "typescript", "web"],
-    "is_featured": false,
+    "images": ["/images/mamalona.png"],
+    "tags": ["CAD", "Python", "Raspberry Pi", "Robotics", "Controls","3d Printing","Laser Cutting",""],
+    "is_featured": true,
     "display_order": 2,
-    "gif_url": "https://example.com/portfolio.gif"
+    "gif_url": "/mamalona.gif"
   },
   {
-    "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef1",
+    "id": "63c0c717-c56b-4a79-b3cf-3e27f48136e6",
     "title": "Data Visualization Dashboard",
     "description": "Interactive dashboard for analyzing complex datasets with real-time updates",
     "quick_description": "Real-time data analytics platform",
     "takeaways": "Advanced data visualization and real-time processing techniques",
     "duration": "6 weeks",
-    "tags": ["data", "visualization", "dashboard", "analytics"],
-    "is_featured": true,
+    "images": [],
+    "tags": ["", "visualization",  "analytics"],
+    "is_featured": false,
     "display_order": 3,
     "gif_url": "https://example.com/dashboard.gif"
   }
