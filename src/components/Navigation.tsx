@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,6 +11,7 @@ import { Github, Linkedin, Mail, Phone, FileDown, ChevronDown } from "lucide-rea
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("portfolio");
+  const navigate = useNavigate();
 
   const handleConnectClick = (type: string) => {
     switch (type) {
@@ -44,9 +46,9 @@ const Navigation = () => {
             variant="ghost"
             size="lg"
             className="text-2xl font-bold hover:bg-primary/10 rounded-full w-12 h-12 p-0"
-            onClick={() => scrollToSection("hero")}
+            onClick={() => navigate("/")}
           >
-            PG
+            <img src="/favicon_io/android-chrome-512x512.png" alt="Logo" className="w-15 h-15" />
           </Button>
 
           {/* Navigation Links */}
@@ -65,8 +67,7 @@ const Navigation = () => {
               variant={activeTab === "resume" ? "default" : "ghost"}
               onClick={() => {
                 setActiveTab("resume");
-                // Handle resume viewing/download
-                window.open("/resume.pdf", "_blank");
+                navigate("/resume");
               }}
             >
               <FileDown className="w-4 h-4 mr-2" />

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import TagFilter from "@/components/TagFilter";
 import ProjectCard from "@/components/ProjectCard";
 import { useProjects, Project } from "@/hooks/useProjects";
@@ -191,13 +192,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-muted-foreground">
-            © 2024 Your Name. Built with React and TypeScript.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
