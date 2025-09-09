@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import projectsData from "@/data/projects.json";
 
 export interface Project {
   id: string;
@@ -16,8 +16,8 @@ export interface Project {
   display_order: number;
   project_url?: string;
   github_url?: string;
-  created_at: string;
-  updated_at: string;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export const useProjects = () => {
@@ -31,16 +31,10 @@ export const useProjects = () => {
       setLoading(true);
       setError(null);
 
-      const { data, error: supabaseError } = await supabase
-        .from("projects")
-        .select("*")
-        .order("display_order", { ascending: true });
+      // Simulate fetching data from a local file
+      await new Promise(resolve => setTimeout(resolve, 500));
 
-      if (supabaseError) {
-        throw supabaseError;
-      }
-
-      setProjects(data || []);
+      setProjects(projectsData || []);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : "Failed to fetch projects";
       setError(errorMessage);
