@@ -23,7 +23,7 @@
     "tags": ["Robotics", "C++", "Arduino", "CAD","3d Printing","Laser Cutting"],
     "is_featured": true,
     "display_order": 1,
-    "gif_url": "public/actuaid.gif"
+    "gif_url": "/actuaid.gif"
   },
   {
     "id": "a48340e9-42cb-4c44-a8f2-aacf457f374e",

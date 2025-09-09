@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 interface Project {
   id: string;
@@ -15,19 +16,20 @@ interface Project {
 
 interface ProjectCardProps {
   project: Project;
-  onClick: (project: Project) => void;
+  // onClick: (project: Project) => void; // Removed onClick prop
 }
 
-const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
+const ProjectCard = ({ project }: ProjectCardProps) => { // Removed onClick from destructuring
   const [isHovered, setIsHovered] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const navigate = useNavigate(); // Get navigate function
 
   return (
     <Card 
       className="project-card h-80 group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => onClick(project)}
+      onClick={() => navigate(`/projects/${project.id}`)} // Navigate to project detail page
     >
       <CardContent className="p-0 h-full relative overflow-hidden">
         {/* Background Image/GIF */}

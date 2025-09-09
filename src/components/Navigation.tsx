@@ -76,7 +76,7 @@ const Navigation = () => {
               variant={activeTab === "about" ? "default" : "ghost"}
               onClick={() => {
                 setActiveTab("about");
-                scrollToSection("about");
+                navigate("/personal-about");
               }}
             >
               About
