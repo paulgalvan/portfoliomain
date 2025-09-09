@@ -26,14 +26,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => { // Removed onClick from
 
   return (
     <Card 
-      className="project-card h-80 group"
+      className="project-card group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => navigate(`/projects/${project.id}`)} // Navigate to project detail page
     >
-      <CardContent className="p-0 h-full relative overflow-hidden">
+      <CardContent className="p-0 relative overflow-hidden flex flex-col">
         {/* Background Image/GIF */}
-        <div className="absolute inset-0">
+        <div className="relative h-48">
           {isHovered && project.gif_url ? (
             <img
               src={project.gif_url}
@@ -44,7 +44,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => { // Removed onClick from
             <img
               src={project.images[0]}
               alt={project.title}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-scale-down"
               onError={() => setImageError(true)}
             />
           ) : (
@@ -56,41 +56,32 @@ const ProjectCard = ({ project }: ProjectCardProps) => { // Removed onClick from
           )}
         </div>
 
-        {/* Overlay */}
-        <div className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${
-          isHovered ? "opacity-90" : "opacity-0"
-        }`} />
-
         {/* Content */}
-        <div className={`absolute inset-0 p-6 flex flex-col justify-end text-white transition-all duration-300 ${
-          isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        }`}>
-          <div className="space-y-3">
+        <div className="p-6 flex-grow flex flex-col justify-between">
+          <div className="space-y-2">
             <h3 className="text-xl font-bold">{project.title}</h3>
-            <p className="text-sm leading-relaxed opacity-90">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               {project.quick_description}
             </p>
-            
-            {/* Tags preview - only show first 3 */}
-            <div className="flex flex-wrap gap-1">
-              {project.tags.slice(0, 3).map((tag) => (
-                <Badge 
-                  key={tag} 
-                  variant="secondary" 
-                  className="text-xs bg-white/20 text-white border-white/20 hover:bg-white/30"
-                >
-                  {tag}
-                </Badge>
-              ))}
-              {project.tags.length > 3 && (
-                <Badge 
-                  variant="secondary" 
-                  className="text-xs bg-white/20 text-white border-white/20"
-                >
-                  +{project.tags.length - 3}
-                </Badge>
-              )}
-            </div>
+          </div>
+          
+          {/* Tags preview - only show first 3 */}
+          <div className="flex flex-wrap gap-1 mt-4">
+            {project.tags.slice(0, 3).map((tag) => (
+              <Badge 
+                key={tag} 
+                variant="secondary"
+              >
+                {tag}
+              </Badge>
+            ))}
+            {project.tags.length > 3 && (
+              <Badge 
+                variant="secondary"
+              >
+                +{project.tags.length - 3}
+              </Badge>
+            )}
           </div>
         </div>
 
@@ -102,15 +93,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => { // Removed onClick from
             </Badge>
           </div>
         )}
-
-        {/* Hover indicator */}
-        <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 transition-all duration-300 ${
-          isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-        }`}>
-          <div className="text-white text-sm font-medium bg-primary/80 px-3 py-1 rounded-full">
-            Click to view details →
-          </div>
-        </div>
       </CardContent>
     </Card>
   );

@@ -2,53 +2,352 @@
   {
     "id": "4b7512e6-a554-4362-a481-e6d23b5f5a9a",
     "title": "Low-Cost Robotic Arm",
-    "description": "A robotic arm built to make robotics more accessible for learning and hands-on projects.",
-    "quick_description": "AI-powered LEGO brick sorting automation",
-    "takeaways": "Learned computer vision, robotics integration, and machine learning optimization",
-    "duration": "12 months",
-    "images": ["/images/lca-pic.png"],
-    "tags": ["Robotics", "Python", "Controls","CAD", "Ubuntu", "Raspberry Pi", "3d Printing"],
-    "is_featured": true,
+    "quick_description": "Affordable, open-source robotic arm for hands-on learning and experimentation",
     "display_order": 1,
-    "gif_url": "/lca-gif.gif"
+    "is_featured": true,
+    "gif_url": "/lca-gif.gif",
+    "tags": [
+      "Robotics",
+      "Python",
+      "Controls",
+      "CAD",
+      "Ubuntu",
+      "Raspberry Pi",
+      "3D Printing",
+      "Automation"
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/images/lca-pic.png"
+      },
+      {
+        "type": "text",
+        "value": "Developed an accessible, low-cost robotic arm using Python and servo motors. The arm allows students and hobbyists to explore robotics, automation, and programming concepts through hands-on learning. Modular design enables easy assembly and experimentation, while practical applications include automation, control systems, and robotics education. Instructions and code are available <a href=\"https://flax-haze-954.notion.site/Robotic-Arm-310fab6ae4964f76a97f469aeb2018bf?source=copy_link\">HERE</a>."
+      },
+      {
+        "type": "video",
+        "value": "https://youtu.be/PtO2wxTNH9Q"
+      },
+      {
+        "type": "image",
+        "value": "/images/motor.png"
+      },
+      {
+        "type": "text",
+        "value": "The arm is controlled via a Raspberry Pi running Ubuntu, with a Python-based interface for programming and operation, or the alternate being done through the Terminal. The design emphasizes affordability and accessibility, making it suitable for educational settings and hobbyist projects. We used an SG90 servo motor for the gripper, and MG996R servo motors for the arm joints, all powered by a 5V power supply."
+      }
+    ]
   },
   {
     "id": "b25f1a9e-f277-4fb4-8612-6648069f5751",
-    "title": "ActuAid",
-    "description": "An assistive device to rehabilitate athletes using adaptive resistance training.",
-    "quick_description": "AI-powered LEGO brick sorting automation",
-    "takeaways": "Learned computer vision, robotics integration, and machine learning optimization",
-    "duration": "3 months",
-    "images": ["/images/actuaid.png"],
-    "tags": ["Robotics", "C++", "Arduino", "CAD","3d Printing","Laser Cutting"],
-    "is_featured": true,
+    "title": "Actuaid",
+    "quick_description": "Assistive device for rehabilitation ",
     "display_order": 1,
-    "gif_url": "/actuaid.gif"
-  },
-  {
-    "id": "a48340e9-42cb-4c44-a8f2-aacf457f374e",
-    "title": "PID Controlled Car",
-    "description": "PID-controlled car with  Raspberry Pi web interface and multi-car network communication.",
-    "quick_description": "Interactive portfolio with smart filtering",
-    "takeaways": "Mastered React, and modern web development practices",
-    "duration": "2 weeks",
-    "images": ["/images/mamalona.png"],
-    "tags": ["CAD", "Python", "Raspberry Pi", "Robotics", "Controls","3d Printing","Laser Cutting",""],
     "is_featured": true,
-    "display_order": 2,
-    "gif_url": "/mamalona.gif"
+    "gif_url": "/actuaid.gif",
+    "tags": [
+      "Robotics",
+      "C++",
+      "Arduino",
+      "CAD",
+      "3d Printing",
+      "Laser Cutting",
+      "Soft Robotics"
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/images/actuaid.png"
+      },
+      {
+        "type": "text",
+        "value": "Actuaid is an assistive device designed to help patients with limited mobility perform rehabilitation exercises. The device uses a combination of sensors and actuators to provide feedback and assistance during exercises, making it easier for patients to complete their rehabilitation routines. The device is designed to be user-friendly and easy to use, with a simple interface that allows patients to customize their exercise routines. The device is also designed to be portable, allowing patients to take it with them wherever they go."
+      },
+      {
+        "type": "image",
+        "value": "/images/phone-demo.png"
+      },
+      {
+        "type": "text",
+        "value": "The device worked with a glove that had flex sensors on the thumb. On the box itself, you could set the pressure and speed of the pumps. The pumps would inflate the pneumatic actuator to help with rehabilitation."
+      },
+      {
+        "type": "image",
+        "value": "/images/path.png"
+      },
+      {
+        "type": "video",
+        "value": "https://youtu.be/9BupUNeVFZY"
+      }
+    ]
   },
   {
-    "id": "63c0c717-c56b-4a79-b3cf-3e27f48136e6",
-    "title": "Data Visualization Dashboard",
-    "description": "Interactive dashboard for analyzing complex datasets with real-time updates",
-    "quick_description": "Real-time data analytics platform",
-    "takeaways": "Advanced data visualization and real-time processing techniques",
-    "duration": "6 weeks",
-    "images": [],
-    "tags": ["", "visualization",  "analytics"],
+  "id": "a48340e9-42cb-4c44-a8f2-aacf457f374e",
+  "title": "PID Controlled Car",
+  "quick_description": "PID-controlled car with web interface and multi-car network communication.",
+  "display_order": 2,
+  "is_featured": true,
+  "gif_url": "/mamalona.gif",
+  "tags": [
+    "CAD",
+    "Python",
+    "Raspberry Pi",
+    "Robotics",
+    "Controls",
+    "3d Printing",
+    "Laser Cutting",
+    "Soldering",
+    "PCB Design"
+  ],
+  "content": [
+    {
+      "type": "image",
+      "value": "/images/mamalona.png"
+    },
+    {
+      "type": "text",
+      "value": "The multi-car network communication allows for a web interface allows users to monitor and control the car remotely, while the network communication enables multiple cars to coordinate their movements and avoid falling off the ramp. The car is built using a combination of 3D-printed and laser-cut components, with a focus on looking good and ease of assembly."
+    },
+    {
+      "type": "text",
+      "value": "A key part of this project was building the H-bridge motor driver circuit. I explored this process independently, before it was covered in class, and figured out how to wire and test the transistors to safely switch motor directions. Once I validated the design on a breadboard, I transferred the circuit into a PCB layout and integrated it into the car. This early work helped my team move faster when it came time to apply it to the full system."
+    },
+    {
+      "type": "video",
+      "value": "https://youtu.be/eQxgCaSZY6A"
+    },
+    {
+      "type": "image",
+      "value": "/images/schematic.png"
+    },
+    {
+      "type": "image",
+      "value": "/images/schematic2.png"
+    },
+    {
+      "type": "image",
+      "value": "/images/placeholder1.png"
+    },
+    {
+      "type": "image",
+      "value": "/images/placeholder2.png"
+    }
+  ]
+  },
+  {
+  "id": "lego-collab-1",
+  "title": "Collaborative Robotics Projects (Tufts Simple Robotics)",
+  "quick_description": "Introduction to robotics through LEGO — exploring gears, sensors, and creative mechanisms.",
+  "display_order": 1,
+  "is_featured": false,
+  "gif_url": "/legowalker.gif",
+  "tags": [
+    "Robotics",
+    "LEGO",
+    "Python"
+  ],
+  "content": [
+    {
+      "type": "text",
+      "value": "Walking Mechanism – Inspired by duck-like motion, creating a LEGO walker that 'falls forward' to walk."
+    },
+    {
+      "type": "image",
+      "value": "public/images/walle.png"
+    },
+    {
+      "type": "video",
+      "value": "/legowalker.gif"
+    },
+
+    {
+      "type": "text",
+      "value": "LEGO Spirograph – Integrated my tablet on a LEGO mechanism to draw intricate designs (only one in the class to attempt this)."
+    },
+    {
+      "type": "image",
+      "value": "/images/spirography.jpeg"
+    },
+    {
+      "type": "video",
+      "value": "https://youtu.be/amXjZDTHRv8"
+    },
+{
+      "type": "text",
+      "value": "LEGO 2D Printer – Integrated my tablet on an XY-axis LEGO mechanism to draw squares (only one in the class to attempt this)."
+    },
+    {
+      "type": "image",
+      "value": "/images/2dprinter.jpeg"
+    },
+    {
+      "type": "video",
+      "value": "https://youtu.be/Wo-A803eMnc"
+    },
+    {
+      "type": "text",
+      "value": "PS4-Controlled LEGO Car – Connected a LEGO car to a PS4 controller and tablet. Later expanded this into a LEGO snake showcased at a Haunted House."
+    },
+    {
+      "type": "image",
+      "value": "/images/lego-car.jpg"
+    },
+    {
+      "type": "video",
+      "value": "https://example.com/lego-snake.mp4"
+    },
+
+    {
+      "type": "text",
+      "value": "Final Project: Repurposed WALL-E Set – Added motors and PS4 controller support for full interactive control."
+    },
+    {
+      "type": "image",
+      "value": "/images/lego-walle.jpg"
+    },
+    {
+      "type": "video",
+      "value": "https://youtu.be/1xDbENuh6WE"
+    }
+  ]
+},
+  {
+    "id": "lego-exploration",
+    "title": "LEGO Engineering Exploration",
+    "quick_description": "Hands-on introduction to engineering with LEGO.",
+    "display_order": 12,
     "is_featured": false,
-    "display_order": 3,
-    "gif_url": "https://example.com/dashboard.gif"
+    "gif_url": "/gifs/lego-exploration.gif",
+    "tags": [
+      "LEGO",
+      "Robotics",
+      ""
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/images/lego-exploration.png"
+      },
+      {
+        "type": "text",
+        "value": "Explored fundamental engineering principles using LEGO Spike Prime kits. Created functional prototypes including a snake robot, a miniature vehicle, and tablet-controlled devices. Gained hands-on experience in mechanical design, programming, and iterative prototyping."
+      }
+    ]
+  },
+  {
+    "id": "lego-es2",
+    "title": "LEGO White House & Easter Egg",
+    "quick_description": "Creative LEGO builds combining design and engineering.",
+    "display_order": 13,
+    "is_featured": false,
+    "gif_url": "/gifs/lego-es2.gif",
+    "tags": [
+      "LEGO",
+      "Design",
+      "Creativity"
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/images/lego-es2.png"
+      },
+      {
+        "type": "text",
+        "value": "Designed creative LEGO models that balanced aesthetics and structural stability. Built a detailed White House replica and a custom Easter Egg model. Practiced iterative testing and optimization with limited materials."
+      }
+    ]
+  },
+  {
+    "id": "me10-cad",
+    "title": "CAD & Manufacturing Foundations",
+    "quick_description": "Introductory projects in CAD modeling and manufacturing.",
+    "display_order": 14,
+    "is_featured": false,
+    "gif_url": "/gifs/me10-cad.gif",
+    "tags": [
+      "CAD",
+      "Manufacturing",
+      "SolidWorks"
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/images/me10-cad.png"
+      },
+      {
+        "type": "text",
+        "value": "Developed foundational skills in CAD modeling and manufacturing workflows. Modeled real-world objects such as a soccer ball, company logo, and an orange peel with attention to tolerances. Documented design-to-production processes through detailed imagery and notes."
+      }
+    ]
+  },
+  {
+    "id": "me35-motion",
+    "title": "Mechanisms & Motion Design",
+    "quick_description": "Exploring motion and mechanisms through CAD.",
+    "display_order": 15,
+    "is_featured": false,
+    "gif_url": "/gifs/me35-motion.gif",
+    "tags": [
+      "CAD",
+      "Mechanisms",
+      "Design"
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/images/me35-motion.png"
+      },
+      {
+        "type": "text",
+        "value": "Designed and modeled dynamic mechanical assemblies with gears and linkages. Created interactive tracks inspired by Mario Kart, including Stair Road, Rainbow Road, and Mushroom Kingdom. Analyzed and simulated motion to understand mechanical behavior and system interaction."
+      }
+    ]
+  },
+  {
+    "id": "me40-products",
+    "title": "Product CAD & Accessibility Projects",
+    "quick_description": "Designing consumer products with accessibility in mind.",
+    "display_order": 16,
+    "is_featured": false,
+    "gif_url": "/gifs/me40-products.gif",
+    "tags": [
+      "CAD",
+      "Product Design",
+      "Accessibility"
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/images/me40-products.png"
+      },
+      {
+        "type": "text",
+        "value": "Modeled and prototyped components for consumer products such as a hair dryer and electric drill. Collaborated on an assistive wheelchair project, emphasizing accessibility and user-centered design. Documented processes for design iteration, testing, and manufacturing readiness."
+      }
+    ]
+  },
+  {
+    "id": "robovend-arm",
+    "title": "Robovend Senior Design Project",
+    "quick_description": "Senior design project focused on robotic automation.",
+    "display_order": 17,
+    "is_featured": false,
+    "gif_url": "/gifs/robovend-arm.gif",
+    "tags": [
+      "Robotics",
+      "CAD",
+      "Team Project"
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/images/robovend-arm.png"
+      },
+      {
+        "type": "text",
+        "value": "Developed a robotic arm for automated vending as part of a team-based senior design project. Led mechanical design iterations and conducted performance testing for precision and reliability. Compiled full documentation and presented the project, highlighting collaboration and engineering problem-solving."
+      }
+    ]
   }
 ]

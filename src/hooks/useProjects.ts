@@ -18,6 +18,7 @@ export interface Project {
   github_url?: string;
   created_at?: string;
   updated_at?: string;
+  content?: any[];
 }
 
 export const useProjects = () => {
@@ -34,7 +35,15 @@ export const useProjects = () => {
       // Simulate fetching data from a local file
       await new Promise(resolve => setTimeout(resolve, 500));
 
-      setProjects(projectsData || []);
+      const processedProjects = projectsData.map(project => {
+        const firstImage = project.content?.find(item => item.type === 'image');
+        return {
+          ...project,
+          images: firstImage ? [firstImage.value] : [],
+        };
+      });
+
+      setProjects(processedProjects || []);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : "Failed to fetch projects";
       setError(errorMessage);
@@ -56,7 +65,9 @@ export const useProjects = () => {
   const getAllTags = () => {
     const tagSet = new Set<string>();
     projects.forEach(project => {
-      project.tags.forEach(tag => tagSet.add(tag));
+      if (project.tags) {
+        project.tags.forEach(tag => tagSet.add(tag));
+      }
     });
     return Array.from(tagSet).sort();
   };

@@ -8,6 +8,13 @@ const ProjectDetail = () => {
   const { projectId } = useParams<{ projectId: string }>();
   const { projects, loading, error } = useProjects();
 
+  const getYouTubeVideoId = (url: string) => {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+
+    return (match && match[2].length === 11) ? match[2] : null;
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -50,29 +57,35 @@ const ProjectDetail = () => {
       <div className="flex-grow pt-20">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-          <p className="text-muted-foreground text-lg mb-6">{project.quick_description}</p>
-
-          {project.images && project.images.length > 0 && (
-            <img src={project.images[0]} alt={project.title} className="w-full h-auto rounded-lg shadow-lg mb-8" />
-          )}
-
-          <div className="prose dark:prose-invert max-w-none">
-            <p>{project.description}</p>
-            {project.takeaways && (
-              <p><strong>Takeaways:</strong> {project.takeaways}</p>
-            )}
-            {project.duration && (
-              <p><strong>Duration:</strong> {project.duration}</p>
-            )}
-            {project.tags && project.tags.length > 0 && (
-              <p><strong>Tags:</strong> {project.tags.join(", ")}</p>
-            )}
-            {project.project_url && (
-              <p><a href={project.project_url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">View Project</a></p>
-            )}
-            {project.github_url && (
-              <p><a href={project.github_url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub Repository</a></p>
-            )}
+          <p className="text-muted-foreground mb-8">{project.quick_description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {project.content?.map((item, index) => {
+              switch (item.type) {
+                case 'image':
+                  return <img key={index} src={item.value} alt="" className="w-full h-auto rounded-lg" />;
+                case 'text':
+                  return <p key={index} className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: item.value }} />;
+                case 'video':
+                  const videoId = getYouTubeVideoId(item.value);
+                  if (videoId) {
+                    return (
+                      <iframe
+                        key={index}
+                        width="560"
+                        height="315"
+                        src={`https://www.youtube.com/embed/${videoId}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    );
+                  }
+                  return <video key={index} src={item.value} controls className="w-full h-auto rounded-lg" />;
+                default:
+                  return null;
+              }
+            })}
           </div>
         </div>
       </div>
