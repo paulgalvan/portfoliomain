@@ -16,17 +16,8 @@ const TagFilter = ({ availableTags, selectedTags, onTagToggle, onClearAll }: Tag
     switch (tag.toLowerCase()) {
       case "lego":
         return `${baseClass} lego-red`;
-      case "ai":
-      case "robotics":
-        return `${baseClass} lego-blue`;
-      case "web":
-      case "react":
-        return `${baseClass} lego-green`;
-      case "python":
-      case "data":
-        return `${baseClass} lego-yellow`;
       default:
-        return baseClass;
+        return `${baseClass} no-bumps bg-secondary text-secondary-foreground`;
     }
   };
 
@@ -37,7 +28,6 @@ const TagFilter = ({ availableTags, selectedTags, onTagToggle, onClearAll }: Tag
           <h2 className="text-3xl font-bold mb-4">Filter Projects by Skills</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Click on the tags below to filter projects by technology and skills. 
-            You can select multiple tags to find projects that match your interests.
           </p>
         </div>
 

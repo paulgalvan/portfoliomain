@@ -6,22 +6,42 @@ const PersonalAbout = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <div className="flex-grow pt-20">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold text-center mb-8">My Personal Interests</h1>
-          <div className="max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
-            <p>
-              This page is dedicated to all the non-professional aspects of my life.
-              Here, you'll find insights into my hobbies, passions, and personal journey.
-            </p>
-            <p>
-              Whether it's exploring new places, diving into a good book, or engaging in community activities,
-              I believe these experiences are crucial for a well-rounded life.
-            </p>
-            <p>
-              Feel free to explore and get to know the person behind the portfolio!
-            </p>
+        <section id="about" className="py-16 bg-muted/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-8">About Me</h2>
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-8 text-left">
+                  <p className="text-lg leading-relaxed">
+                    Hello!! I’m Paul Galvan, a rising senior at Tufts University studying Mechanical Engineering with a
+                    minor in Human Factors Engineering. I’m passionate about tackling hands-on projects that blend 
+                    creativity with technical skill, from building and experimenting to exploring new technologies and 
+                    innovative solutions. I thrive in collaborative environments and love pushing the limits of what’s 
+                    possible, whether in the lab, on a project, or on the field.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Outside of academics, I enjoy playing soccer, cooking for friends, and spending time with the people 
+                    I care about. I founded the Mexican Culture Club (MCC) at Tufts to celebrate and share Mexican heritage,
+                     and I’m also an active member of the Society of Hispanic Professional Engineers (SHPE) and BlackOut, Tufts’
+                    step team. These experiences have strengthened my leadership, teamwork, and communication skills while allowing 
+                    me to make meaningful connections across campus.
+                   </p>
+                   <p className="text-lg leading-relaxed">
+                    When I’m not working on engineering projects or campus activities, I love exploring new ideas, learning new 
+                    skills, and creating experiences that combine technical excellence with creativity.
+                   </p>
+                </div>
+                <div className="flex justify-center items-center">
+                  <img
+                    src="/Headshot_Paul_Galvan.jpeg"
+                    alt="Placeholder for my picture"
+                    className="rounded-lg border-2 border border-muted-foreground w-70 h-70"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
       <Footer />
     </div>

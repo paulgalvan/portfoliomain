@@ -61,7 +61,7 @@
       },
       {
         "type": "text",
-        "value": "Actuaid is an assistive device designed to help patients with limited mobility perform rehabilitation exercises. The device uses a combination of sensors and actuators to provide feedback and assistance during exercises, making it easier for patients to complete their rehabilitation routines. The device is designed to be user-friendly and easy to use, with a simple interface that allows patients to customize their exercise routines. The device is also designed to be portable, allowing patients to take it with them wherever they go."
+        "value": "Purpose: the purpose of the project is ...Actuaid is an assistive device designed to help patients with limited mobility perform rehabilitation exercises. The device uses a combination of sensors and actuators to provide feedback and assistance during exercises, making it easier for patients to complete their rehabilitation routines. The device is designed to be user-friendly and easy to use, with a simple interface that allows patients to customize their exercise routines. The device is also designed to be portable, allowing patients to take it with them wherever they go."
       },
       {
         "type": "image",
@@ -217,7 +217,7 @@
   "quick_description": "First exposure to 3D modeling and digital prototyping.",
   "display_order": 13,
   "is_featured": false,
-  "gif_url": "public/blank.gif",
+  "gif_url": "/blank.gif",
   "tags": [
     "CAD",
     "SolidWorks"

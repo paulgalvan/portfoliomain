@@ -45,9 +45,6 @@ All colors MUST be HSL.
     --shadow-card: 0 8px 30px hsl(222.2 84% 4.9% / 0.08);
     
     --lego-red: 0 84% 60%;
-    --lego-blue: 220 90% 56%;
-    --lego-green: 142 72% 29%;
-    --lego-yellow: 43 74% 66%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -135,12 +132,14 @@ All colors MUST be HSL.
   .lego-brick::before {
     content: '';
     position: absolute;
-    top: -2px;
+    top: -3px;
     left: 50%;
     transform: translateX(-50%);
-    width: 12px;
-    height: 6px;
-    border-radius: 50%;
+    width: 8px;
+    height: 4px;
+    border-radius: 2px;
+    background: transparent;
+    box-shadow: -18px 0 0 0, -6px 0 0 0, 6px 0 0 0, 18px 0 0 0;
     opacity: 0.8;
   }
   
@@ -150,34 +149,8 @@ All colors MUST be HSL.
   }
   
   .lego-brick.lego-red::before {
-    background: hsl(var(--lego-red) / 0.8);
-  }
-  
-  .lego-brick.lego-blue {
-    background: hsl(var(--lego-blue));
-    color: white;
-  }
-  
-  .lego-brick.lego-blue::before {
-    background: hsl(var(--lego-blue) / 0.8);
-  }
-  
-  .lego-brick.lego-green {
-    background: hsl(var(--lego-green));
-    color: white;
-  }
-  
-  .lego-brick.lego-green::before {
-    background: hsl(var(--lego-green) / 0.8);
-  }
-  
-  .lego-brick.lego-yellow {
-    background: hsl(var(--lego-yellow));
-    color: hsl(222.2 84% 4.9%);
-  }
-  
-  .lego-brick.lego-yellow::before {
-    background: hsl(var(--lego-yellow) / 0.8);
+    background: transparent;
+    color: hsl(var(--lego-red) / 0.8);
   }
   
   .lego-brick:hover {
@@ -214,5 +187,9 @@ All colors MUST be HSL.
   
   .project-card:hover::before {
     opacity: 1;
+  }
+
+  .lego-brick.no-bumps::before {
+    display: none;
   }
 }
