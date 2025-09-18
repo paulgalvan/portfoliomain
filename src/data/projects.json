@@ -918,20 +918,8 @@
         "value": "PS4-Controlled LEGO Car – Connected a LEGO car to a PS4 controller and tablet. Later expanded this into a LEGO snake showcased at a Haunted House."
       },
       {
-        "type": "image",
-        "value": "/images/lego-car.jpg"
-      },
-      {
-        "type": "video",
-        "value": "https://example.com/lego-snake.mp4"
-      },
-      {
         "type": "text",
         "value": "Final Project: Repurposed WALL-E Set – Added motors and PS4 controller support for full interactive control."
-      },
-      {
-        "type": "image",
-        "value": "/images/lego-walle.jpg"
       },
       {
         "type": "video",

@@ -30,6 +30,7 @@ const ProjectDetail = () => {
   
 
   useEffect(() => {
+    setLayouts(null); // Reset layout state
     if (projects.length > 0) {
       const foundProject = projects.find((p) => p.id === projectId);
       if (foundProject) {
@@ -149,6 +150,52 @@ const ProjectDetail = () => {
             <p className="text-muted-foreground">
               The project you are looking for does not exist.
             </p>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (!layouts) {
+    // Fallback to old layout if no layout is defined
+    console.error("<<<<< RENDERING FALLBACK LAYOUT >>>>>");
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
+        <div className="flex-grow pt-20">
+          <div className="container mx-auto px-4 py-8">
+            <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+            <p className="text-muted-foreground mb-8">{project.quick_description}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {project.content?.map((item: any, index: number) => {
+                switch (item.type) {
+                  case 'image':
+                    return <img key={index} src={item.value} alt="" className={`h-auto rounded-lg mx-auto ${item.size || 'max-w-xl'}`} />;
+                  case 'text':
+                    return <p key={index} className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: item.value }} />;
+                  case 'video':
+                    const videoId = getYouTubeVideoId(item.value);
+                    if (videoId) {
+                      return (
+                        <iframe
+                          key={index}
+                          width="560"
+                          height="315"
+                          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}`}
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      );
+                    }
+                    return <video key={index} src={item.value} controls className="w-full h-auto rounded-lg" />;
+                  default:
+                    return null;
+                }
+              })}
+            </div>
           </div>
         </div>
         <Footer />
