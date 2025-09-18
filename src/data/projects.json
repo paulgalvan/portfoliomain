@@ -5,7 +5,11 @@
     "quick_description": "Affordable, open-source robotic arm for hands-on learning and experimentation",
     "display_order": 1,
     "is_featured": true,
-    "gif_url": "/lca-gif.gif",
+    "gif_url": "/LCRA-ezgif.com-optimize.gif",
+    "hero_media": "/LCRA-ezgif.com-optimize.gif",
+    "images": [
+      "/images/lca-pic.png"
+    ],
     "tags": [
       "Robotics",
       "Python",
@@ -15,28 +19,180 @@
       "Raspberry Pi",
       "3D Printing"
     ],
-    "content": [
-      {
-        "type": "image",
-        "value": "/images/lca-pic.png"
-      },
-      {
-        "type": "text",
-        "value": "Developed an accessible, low-cost robotic arm using Python and servo motors. The arm allows students and hobbyists to explore robotics, automation, and programming concepts through hands-on learning. Modular design enables easy assembly and experimentation, while practical applications include automation, control systems, and robotics education. Instructions and code are available <a href=\"https://flax-haze-954.notion.site/Robotic-Arm-310fab6ae4964f76a97f469aeb2018bf?source=copy_link\">HERE</a>."
-      },
-      {
-        "type": "video",
-        "value": "https://youtu.be/PtO2wxTNH9Q"
-      },
-      {
-        "type": "image",
-        "value": "/images/motor.png"
-      },
-      {
-        "type": "text",
-        "value": "The arm is controlled via a Raspberry Pi running Ubuntu, with a Python-based interface for programming and operation, or the alternate being done through the Terminal. The design emphasizes affordability and accessibility, making it suitable for educational settings and hobbyist projects. We used an SG90 servo motor for the gripper, and MG996R servo motors for the arm joints, all powered by a 5V power supply."
-      }
-    ]
+    "overview": {
+      "title": "Overview",
+      "text": "The Low-Cost Robotic Arm was inspired by an earlier LEGO arm I built. In talking with Dr. Briana Bouchard, we reflected on how expensive the LEGO system was and how unintuitive its programming could be. That conversation sparked the idea of creating a more affordable and accessible alternative, and we teamed up to make it feasible."
+    },
+    "development": {
+      "title": "Development / Process",
+      "items": [
+        {
+          "type": "image",
+          "value": "/images/desc.png"
+        },
+        {
+          "type": "text",
+          "value": "Designing the Gripper was one of the most challenging parts of the project. Because it sits at the very end of the arm, the weight was a critical constraint. A smaller SG90 servo was chosen, which provided enough torque to handle small objects.\n\nSeveral concepts were tested before reaching the final version. Each option revealed new trade-offs and informed the next iteration. The process highlighted the constraints shape design choices. Small refinements ultimately made the difference between a fragile prototype and a dependable solution."
+        },
+        {
+          "type": "image",
+          "value": "/ikdisp.gif"
+        },
+        {
+          "type": "text",
+          "value": "A big part of the project was writing the control code for the arm. I implemented inverse kinematics using trigenometry to simplify IK. This allowed the arm be move to a specific Cartesian position. A simple WASD interface for direct control was also added. This was my first time combining mechanical design with real-time programming, which gave me a deeper understanding of how hardware and software work together."
+        }
+      ]
+    },
+    "final_result": {
+      "title": "Final Result",
+      "items": [
+        {
+          "type": "image",
+          "value": "/ikvid.gif"
+        },
+        {
+          "type": "text",
+          "value": "Overall, I was able to:"
+        },
+        {
+          "type": "list",
+          "value": [          
+            "Build a fully functional 4-DOF robotic arm using low-cost, 3D-printed parts and off-the-shelf electronics.",
+            "Design a lightweight custom gripper that reliably handles small objects.",
+            "Implement key robotics concepts such as kinematics, control systems, and programming for under $30."
+         ]
+        }
+      ]
+    },
+    "reflection": {
+      "title": "Reflection",
+      "text": "This project taught me how constraints like weight, torque, and printability shape design choices. I learned the value of rapid iteration, designing for manufacturability, and staying persistent when early versions failed. It was also my first time leading a design project from concept to reality, learning new skills on the fly and turning an idea into a working system. Most importantly, it showed me how affordable tools can make robotics education more accessible and inspiring."
+    },
+    "content": [],
+    "layout": {
+      "desktop": [
+        {
+          "i": "hero_media",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 8
+        },
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 8,
+          "w": 12,
+          "h": 4
+        },
+        {
+          "i": "development",
+          "x": 0,
+          "y": 12,
+          "w": 12,
+          "h": 8
+        },
+        {
+          "i": "final_result",
+          "x": 0,
+          "y": 20,
+          "w": 12,
+          "h": 8
+        },
+        {
+          "i": "reflection",
+          "x": 0,
+          "y": 28,
+          "w": 12,
+          "h": 4
+        }
+      ],
+      "mobile": [
+        {
+          "i": "hero_media",
+          "x": 0,
+          "y": 0,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 3,
+          "w": 4,
+          "h": 2
+        },
+        {
+          "i": "development",
+          "x": 0,
+          "y": 5,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "i": "final_result",
+          "x": 0,
+          "y": 8,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "i": "reflection",
+          "x": 0,
+          "y": 11,
+          "w": 4,
+          "h": 2
+        }
+      ],
+      "lg": [
+        {
+          "w": 10,
+          "h": 5,
+          "x": 1,
+          "y": 0,
+          "i": "hero_media",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 5,
+          "i": "overview",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 9,
+          "x": 0,
+          "y": 7,
+          "i": "development",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 8,
+          "x": 0,
+          "y": 16,
+          "i": "final_result",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 24,
+          "i": "reflection",
+          "moved": false,
+          "static": false
+        }
+      ]
+    }
   },
   {
     "id": "b25f1a9e-f277-4fb4-8612-6648069f5751",
@@ -45,6 +201,9 @@
     "display_order": 1,
     "is_featured": true,
     "gif_url": "/actuaid.gif",
+    "images": [
+      "/images/actuaid.png"
+    ],
     "tags": [
       "Robotics",
       "C++",
@@ -82,252 +241,188 @@
     ]
   },
   {
-  "id": "a48340e9-42cb-4c44-a8f2-aacf457f374e",
-  "title": "PID Controlled Car",
-  "quick_description": "PID-controlled car with web interface and multi-car network communication.",
-  "display_order": 2,
-  "is_featured": true,
-  "gif_url": "/mamalona.gif",
-  "tags": [
-    "CAD",
-    "Python",
-    "Raspberry Pi",
-    "Robotics",
-    "Controls",
-    "3D Printing",
-    "Laser Cutting",
-    "Soldering",
-    "PCB Design"
-  ],
-  "content": [
-    {
-      "type": "image",
-      "value": "/images/mamalona.png"
-    },
-    {
-      "type": "text",
-      "value": "The multi-car network communication allows for a web interface allows users to monitor and control the car remotely, while the network communication enables multiple cars to coordinate their movements and avoid falling off the ramp. The car is built using a combination of 3D-printed and laser-cut components, with a focus on looking good and ease of assembly."
-    },
-    {
-      "type": "text",
-      "value": "A key part of this project was building the H-bridge motor driver circuit. I explored this process independently, before it was covered in class, and figured out how to wire and test the transistors to safely switch motor directions. Once I validated the design on a breadboard, I transferred the circuit into a PCB layout and integrated it into the car. This early work helped my team move faster when it came time to apply it to the full system."
-    },
-    {
-      "type": "video",
-      "value": "https://youtu.be/eQxgCaSZY6A"
-    },
-    {
-      "type": "image",
-      "value": "/images/schematic.png"
-    },
-    {
-      "type": "image",
-      "value": "/images/schematic2.png"
-    },
-    {
-      "type": "image",
-      "value": "/images/placeholder1.png"
-    },
-    {
-      "type": "image",
-      "value": "/images/placeholder2.png"
-    }
-  ]
+    "id": "a48340e9-42cb-4c44-a8f2-aacf457f374e",
+    "title": "PID Controlled Car",
+    "quick_description": "PID-controlled car with web interface and multi-car network communication.",
+    "display_order": 2,
+    "is_featured": true,
+    "gif_url": "/mamalona.gif",
+    "tags": [
+      "CAD",
+      "Python",
+      "Raspberry Pi",
+      "Robotics",
+      "Controls",
+      "3D Printing",
+      "Laser Cutting",
+      "Soldering",
+      "PCB Design"
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/images/mamalona.png"
+      },
+      {
+        "type": "text",
+        "value": "The multi-car network communication allows for a web interface allows users to monitor and control the car remotely, while the network communication enables multiple cars to coordinate their movements and avoid falling off the ramp. The car is built using a combination of 3D-printed and laser-cut components, with a focus on looking good and ease of assembly."
+      },
+      {
+        "type": "text",
+        "value": "A key part of this project was building the H-bridge motor driver circuit. I explored this process independently, before it was covered in class, and figured out how to wire and test the transistors to safely switch motor directions. Once I validated the design on a breadboard, I transferred the circuit into a PCB layout and integrated it into the car. This early work helped my team move faster when it came time to apply it to the full system."
+      },
+      {
+        "type": "video",
+        "value": "https://youtu.be/eQxgCaSZY6A"
+      },
+      {
+        "type": "image",
+        "value": "/images/schematic.png"
+      },
+      {
+        "type": "image",
+        "value": "/images/schematic2.png"
+      },
+      {
+        "type": "image",
+        "value": "/images/placeholder1.png"
+      },
+      {
+        "type": "image",
+        "value": "/images/placeholder2.png"
+      }
+    ]
   },
   {
-  "id": "lego-collab-1",
-  "title": "Collaborative Robotics Projects (Tufts Simple Robotics)",
-  "quick_description": "Introduction to robotics through LEGO — exploring gears, sensors, and creative mechanisms.",
-  "display_order": 1,
-  "is_featured": false,
-  "gif_url": "/legowalker.gif",
-  "tags": [
-    "Robotics",
-    "LEGO",
-    "Python"
-  ],
-  "content": [
-    {
-      "type": "text",
-      "value": "Walking Mechanism – Inspired by duck-like motion, creating a LEGO walker that 'falls forward' to walk."
-    },
-    {
-      "type": "image",
-      "value": "/images/walle.png"
-    },
-    {
-      "type": "video",
-      "value": "/legowalker.gif"
-    },
-
-    {
-      "type": "text",
-      "value": "LEGO Spirograph – Integrated my tablet on a LEGO mechanism to draw intricate designs (only one in the class to attempt this)."
-    },
-    {
-      "type": "image",
-      "value": "/images/spirography.jpeg"
-    },
-    {
-      "type": "video",
-      "value": "https://youtu.be/amXjZDTHRv8"
-    },
-{
-      "type": "text",
-      "value": "LEGO 2D Printer – Integrated my tablet on an XY-axis LEGO mechanism to draw squares (only one in the class to attempt this)."
-    },
-    {
-      "type": "image",
-      "value": "/images/2dprinter.jpeg"
-    },
-    {
-      "type": "video",
-      "value": "https://youtu.be/Wo-A803eMnc"
-    },
-    {
-      "type": "text",
-      "value": "PS4-Controlled LEGO Car – Connected a LEGO car to a PS4 controller and tablet. Later expanded this into a LEGO snake showcased at a Haunted House."
-    },
-    {
-      "type": "image",
-      "value": "/images/lego-car.jpg"
-    },
-    {
-      "type": "video",
-      "value": "https://example.com/lego-snake.mp4"
-    },
-
-    {
-      "type": "text",
-      "value": "Final Project: Repurposed WALL-E Set – Added motors and PS4 controller support for full interactive control."
-    },
-    {
-      "type": "image",
-      "value": "/images/lego-walle.jpg"
-    },
-    {
-      "type": "video",
-      "value": "https://youtu.be/1xDbENuh6WE"
-    }
-  ]
+    "id": "lego-collab-1",
+    "title": "Collaborative Robotics Projects (Tufts Simple Robotics)",
+    "quick_description": "Introduction to robotics through LEGO — exploring gears, sensors, and creative mechanisms.",
+    "display_order": 1,
+    "is_featured": false,
+    "gif_url": "/legowalker.gif",
+    "tags": [
+      "Robotics",
+      "LEGO",
+      "Python"
+    ],
+    "content": [
+      {
+        "type": "text",
+        "value": "Walking Mechanism – Inspired by duck-like motion, creating a LEGO walker that 'falls forward' to walk."
+      },
+      {
+        "type": "image",
+        "value": "/images/walle.png"
+      },
+      {
+        "type": "video",
+        "value": "/legowalker.gif"
+      },
+      {
+        "type": "text",
+        "value": "LEGO Spirograph – Integrated my tablet on a LEGO mechanism to draw intricate designs (only one in the class to attempt this)."
+      },
+      {
+        "type": "image",
+        "value": "/images/spirography.jpeg"
+      },
+      {
+        "type": "video",
+        "value": "https://youtu.be/amXjZDTHRv8"
+      },
+      {
+        "type": "text",
+        "value": "LEGO 2D Printer – Integrated my tablet on an XY-axis LEGO mechanism to draw squares (only one in the class to attempt this)."
+      },
+      {
+        "type": "image",
+        "value": "/images/2dprinter.jpeg"
+      },
+      {
+        "type": "video",
+        "value": "https://youtu.be/Wo-A803eMnc"
+      },
+      {
+        "type": "text",
+        "value": "PS4-Controlled LEGO Car – Connected a LEGO car to a PS4 controller and tablet. Later expanded this into a LEGO snake showcased at a Haunted House."
+      },
+      {
+        "type": "image",
+        "value": "/images/lego-car.jpg"
+      },
+      {
+        "type": "video",
+        "value": "https://example.com/lego-snake.mp4"
+      },
+      {
+        "type": "text",
+        "value": "Final Project: Repurposed WALL-E Set – Added motors and PS4 controller support for full interactive control."
+      },
+      {
+        "type": "image",
+        "value": "/images/lego-walle.jpg"
+      },
+      {
+        "type": "video",
+        "value": "https://youtu.be/1xDbENuh6WE"
+      }
+    ]
   },
   {
-  "id": "me10-solidworks",
-  "title": "Introduction to CAD (SolidWorks)",
-  "quick_description": "First exposure to 3D modeling and digital prototyping.",
-  "display_order": 13,
-  "is_featured": false,
-  "gif_url": "/blank.gif",
-  "tags": [
-    "CAD",
-    "SolidWorks"
-  ],
-  "content": [
-    {
-      "type": "text",
-      "value": "This class was my introduction to CAD using SolidWorks. I practiced creating parts, assemblies, and realistic models to build a foundation in digital design."
-    },
-    {
-      "type": "text",
-      "value": "  "
-    },
-    {
-      "type": "text",
-      "value": "Example Project: Citrus Press Assembly – practiced combining multiple parts into a functional assembly with moving components."
-    },
-    {
-      "type": "image",
-      "value": "/images/me10cad/citrus.png"
-    },
-    {
-      "type": "text",
-      "value": "Example Project: Coffee Mug – practiced surface modeling, lofts, and fillets to recreate a common object."
-    },
-    {
-      "type": "image",
-      "value": "/images/me10cad/mug.png"
-    },
-    {
-      "type": "text",
-      "value": "Example Project: Mounting Bracket – learned precision dimensioning and constraints for mechanical parts."
-    },
-    {
-      "type": "image",
-      "value": "/images/me10cad/model.png"
-    },
-    {
-      "type": "text",
-      "value": "Example Project: LEGO Brick – replicated an existing part with accurate proportions to strengthen parametric modeling skills."
-    },
-    {
-      "type": "image",
-      "value": "/images/me10cad/legobrick.png"
-    },
-    {
-      "type": "text",
-      "value": "Example Project: Pumpkin – used advanced features such as revolves and patterns to create a complex organic shape."
-    },
-    {
-      "type": "image",
-      "value": "/images/me10cad/pumpkin.png"
-    }
-  ]
-},
-{
-  "id": "me10-soccerball",
-  "title": "Metal Casting Project: Pewter Soccer Ball",
-  "quick_description": "Designed and cast a pewter soccer ball trophy through multiple mold-making iterations.",
-  "display_order": 14,
-  "is_featured": false,
-  "gif_url": "/public/casting.gif",
-  "tags": [
-    "Manufacturing",
-    "Materials"
-  ],
-  "content": [
-    {
-      "type": "text",
-      "value": "For our ME10 final project, my team and I set out to recreate the Ballon d’Or trophy as a pewter soccer ball. The project became an exploration of casting methods, iteration, and creative problem solving."
-    },
-    {
-      "type": "text",
-      "value": "We began by attempting to cast a half-sphere of the ball directly, but quickly learned that the plastic mold would melt under molten pewter. To overcome this, I suggested vacuum forming the ball to create a wax replica, which could then be packed in sand and replaced with metal during the pour."
-    },
-    {
-      "type": "image",
-      "value": "/images/me10man/ball.jpeg",
-      "caption": "Ball mold experiment before transitioning to Wax",
-      "size": "max-w-md"
-    },
-    {
-      "type": "text",
-      "value": "The wax casting approach worked in theory but presented new issues with removing the wax cleanly and creating a hollow interior. After several rounds of testing, we switched to making a hard silicone base mold. This allowed us to pour pewter safely and achieve a consistent final shape."
-    },
-    {
-      "type": "image",
-      "value": "/images/me10man/wax.jpeg",
-      "caption": "Wax mold experiment before transitioning to silicone",
-      "size": "max-w-md"
-    },
-    {
-      "type": "image",
-      "value": "/images/me10man/silicone.jpeg",
-      "caption": "Final pewter casting mounted on CNC-routed wooden base",
-      "size": "max-w-md"
-    },
-    {
-      "type": "text",
-      "value": "The final product combined creativity with practical problem solving. This project taught me not only the technical aspects of casting, but also how to pivot and refine designs through hands-on experimentation."
-    },
-    {
-      "type": "image",
-      "value": "/images/me10man/pewter.jpg",
-      "caption": "Final pewter casting mounted on CNC-routed wooden base",
-      "size": "max-w-md"
-    }
-  ]
-},
-{
+    "id": "me10-soccerball",
+    "title": "Metal Casting Project: Pewter Soccer Ball",
+    "quick_description": "Designed and cast a pewter soccer ball trophy through multiple mold-making iterations.",
+    "display_order": 14,
+    "is_featured": false,
+    "gif_url": "/public/casting.gif",
+    "tags": [
+      "Manufacturing",
+      "Materials"
+    ],
+    "content": [
+      {
+        "type": "text",
+        "value": "For our ME10 final project, my team and I set out to recreate the Ballon d’Or trophy as a pewter soccer ball. The project became an exploration of casting methods, iteration, and creative problem solving."
+      },
+      {
+        "type": "text",
+        "value": "We began by attempting to cast a half-sphere of the ball directly, but quickly learned that the plastic mold would melt under molten pewter. To overcome this, I suggested vacuum forming the ball to create a wax replica, which could then be packed in sand and replaced with metal during the pour."
+      },
+      {
+        "type": "image",
+        "value": "/images/me10man/ball.jpeg",
+        "caption": "Ball mold experiment before transitioning to Wax",
+        "size": "max-w-md"
+      },
+      {
+        "type": "text",
+        "value": "The wax casting approach worked in theory but presented new issues with removing the wax cleanly and creating a hollow interior. After several rounds of testing, we switched to making a hard silicone base mold. This allowed us to pour pewter safely and achieve a consistent final shape."
+      },
+      {
+        "type": "image",
+        "value": "/images/me10man/wax.jpeg",
+        "caption": "Wax mold experiment before transitioning to silicone",
+        "size": "max-w-md"
+      },
+      {
+        "type": "image",
+        "value": "/images/me10man/silicone.jpeg",
+        "caption": "Final pewter casting mounted on CNC-routed wooden base",
+        "size": "max-w-md"
+      },
+      {
+        "type": "text",
+        "value": "The final product combined creativity with practical problem solving. This project taught me not only the technical aspects of casting, but also how to pivot and refine designs through hands-on experimentation."
+      },
+      {
+        "type": "image",
+        "value": "/images/me10man/pewter.jpg",
+        "caption": "Final pewter casting mounted on CNC-routed wooden base",
+        "size": "max-w-md"
+      }
+    ]
+  },
+  {
     "id": "me10-cead",
     "title": "CAD & Manufacturing Foundations",
     "quick_description": "Introductory projects in CAD modeling and manufacturing.",
@@ -412,5 +507,221 @@
         "value": "Developed a robotic arm for automated vending as part of a team-based senior design project. Led mechanical design iterations and conducted performance testing for precision and reliability. Compiled full documentation and presented the project, highlighting collaboration and engineering problem-solving."
       }
     ]
+  },
+  {
+    "id": "cad-portfolio",
+    "title": "CAD Portfolio",
+    "quick_description": "A collection of projects showcasing Computer-Aided Design skills and techniques.",
+    "display_order": 99,
+    "is_featured": false,
+    "gif_url": "/blank.gif",
+    "tags": [
+      "CAD",
+      "Design",
+      "3D Modeling"
+    ],
+    "content": [
+      {
+        "id": "overview",
+        "type": "overview",
+        "title": "Overview",
+        "text": "This portfolio collection highlights my proficiency in Computer-Aided Design (CAD) through various projects. It demonstrates my ability to translate conceptual ideas into detailed 3D models, perform complex assemblies, and generate technical drawings. The projects showcase my learning and application of industry-standard CAD software and design principles."
+      },
+      {
+        "id": "cad-intro-text",
+        "type": "text",
+        "value": "This class was my introduction to CAD using SolidWorks. I practiced creating parts, assemblies, and realistic models to build a foundation in digital design."
+      },
+      {
+        "id": "cad-lego-brick",
+        "type": "project_item",
+        "title": "LEGO Brick",
+        "description": "Replicated an existing part with accurate proportions to strengthen parametric modeling skills.",
+        "image": "/images/me10cad/legobrick.png"
+      },
+      {
+        "id": "cad-mounting-bracket",
+        "type": "project_item",
+        "title": "Mounting Bracket",
+        "description": "Learned precision dimensioning and constraints for mechanical parts.",
+        "image": "/images/me10cad/model.png"
+      },
+      {
+        "id": "cad-citrus-press",
+        "type": "project_item",
+        "title": "Citrus Press Assembly",
+        "description": "Practiced combining multiple parts into a functional assembly with moving components.",
+        "image": "/images/me10cad/citrus.png"
+      },
+      {
+        "id": "cad-coffee-mug",
+        "type": "project_item",
+        "title": "Coffee Mug",
+        "description": "Practiced surface modeling, lofts, and fillets to recreate a common object.",
+        "image": "/images/me10cad/mug.png"
+      },
+      {
+        "id": "cad-pumpkin",
+        "type": "project_item",
+        "title": "Pumpkin",
+        "description": "Used advanced features such as revolves and patterns to create a complex organic shape.",
+        "image": "/images/me10cad/pumpkin.png"
+      }
+    ],
+    "layout": {
+      "lg": [
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2
+        },
+        {
+          "i": "cad-intro-text",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 2
+        },
+        {
+          "i": "cad-lego-brick",
+          "x": 0,
+          "y": 4,
+          "w": 4,
+          "h": 4
+        },
+        {
+          "i": "cad-mounting-bracket",
+          "x": 4,
+          "y": 4,
+          "w": 4,
+          "h": 4
+        },
+        {
+          "i": "cad-citrus-press",
+          "x": 8,
+          "y": 4,
+          "w": 4,
+          "h": 4
+        },
+        {
+          "i": "cad-coffee-mug",
+          "x": 0,
+          "y": 8,
+          "w": 4,
+          "h": 4
+        },
+        {
+          "i": "cad-pumpkin",
+          "x": 4,
+          "y": 8,
+          "w": 4,
+          "h": 4
+        }
+      ],
+      "md": [
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 0,
+          "w": 10,
+          "h": 2
+        },
+        {
+          "i": "cad-intro-text",
+          "x": 0,
+          "y": 2,
+          "w": 10,
+          "h": 2
+        },
+        {
+          "i": "cad-lego-brick",
+          "x": 0,
+          "y": 4,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "i": "cad-mounting-bracket",
+          "x": 5,
+          "y": 4,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "i": "cad-citrus-press",
+          "x": 0,
+          "y": 8,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "i": "cad-coffee-mug",
+          "x": 5,
+          "y": 8,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "i": "cad-pumpkin",
+          "x": 0,
+          "y": 12,
+          "w": 5,
+          "h": 4
+        }
+      ],
+      "sm": [
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 0,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "i": "cad-intro-text",
+          "x": 0,
+          "y": 2,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "i": "cad-lego-brick",
+          "x": 0,
+          "y": 4,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "cad-mounting-bracket",
+          "x": 0,
+          "y": 8,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "cad-citrus-press",
+          "x": 0,
+          "y": 12,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "cad-coffee-mug",
+          "x": 0,
+          "y": 16,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "cad-pumpkin",
+          "x": 0,
+          "y": 20,
+          "w": 6,
+          "h": 4
+        }
+      ]
+    }
   }
 ]

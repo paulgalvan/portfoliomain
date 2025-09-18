@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 import PersonalAbout from "./pages/PersonalAbout"; // Import PersonalAbout
+import CadPortfolio from "./pages/CadPortfolio";
 import ProjectDetail from "./pages/ProjectDetail"; // Import ProjectDetail
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/resume" element={<Resume />} />
           <Route path="/personal-about" element={<PersonalAbout />} /> {/* New Route */}
           <Route path="/projects/:projectId" element={<ProjectDetail />} /> {/* New Project Detail Route */}
+          <Route path="/projects/cad-portfolio" element={<CadPortfolio />} /> {/* New CAD Portfolio Route */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,5 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const PersonalAbout = () => {
   return (
@@ -30,6 +33,14 @@ const PersonalAbout = () => {
                     When I’m not working on engineering projects or campus activities, I love exploring new ideas, learning new 
                     skills, and creating experiences that combine technical excellence with creativity.
                    </p>
+                  <div className="pt-8">
+                    <Link to="/">
+                      <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                        <ArrowLeft className="w-4 h-4 mr-2" />
+                        Back to Home
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
                 <div className="flex justify-center items-center">
                   <img

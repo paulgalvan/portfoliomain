@@ -192,4 +192,17 @@ All colors MUST be HSL.
   .lego-brick.no-bumps::before {
     display: none;
   }
+
+  .react-grid-item.react-grid-placeholder {
+    @apply bg-primary/20 rounded-lg;
+    transition: all 300ms ease;
+  }
+
+  .layout.border {
+    @apply border-border;
+  }
+
+  .react-resizable-handle {
+    @apply bg-primary;
+  }
 }

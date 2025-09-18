@@ -36,10 +36,13 @@ export const useProjects = () => {
       await new Promise(resolve => setTimeout(resolve, 500));
 
       const processedProjects = projectsData.map(project => {
-        const firstImage = project.content?.find(item => item.type === 'image');
+        // Prioritize existing 'images' array, otherwise look in 'content'
+        const existingImages = project.images && project.images.length > 0 ? project.images : [];
+        const firstImageFromContent = existingImages.length === 0 ? project.content?.find(item => item.type === 'image') : undefined;
+
         return {
           ...project,
-          images: firstImage ? [firstImage.value] : [],
+          images: existingImages.length > 0 ? existingImages : (firstImageFromContent ? [firstImageFromContent.value] : []),
         };
       });
 

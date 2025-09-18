@@ -81,15 +81,28 @@ const Index = () => {
             </h1>
             <div className="max-w-3xl space-y-6">
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-               Welcome to my portfolio! I’m a mechanical engineer driven to create innovative systems that merge technical precision with creative design. Here, you’ll find projects that highlight my passion for robotics, engineering, and collaborative problem-solving. Click <Link to="/personal-about" className="text-primary hover:underline">HERE</Link> or my face to learn more about me.
+               Welcome to my portfolio! I’m a Mechanical Engineering student who loves turning ideas into
+                real projects. My work highlights my interest in robotics, design, and collaboration. Click 
+                my photo if you’d like to know more about me!
                </p>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
-                onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                Explore My Work
-              </Button>
+              <div className="flex space-x-4">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
+                  onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Explore My Work
+                </Button>
+                <Link to="/personal-about">
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary/10"
+                  >
+                    About Me
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -119,26 +132,24 @@ const Index = () => {
         </section>
       )}
 
-      {/* Tag Filter Section */}
-      <TagFilter
-        availableTags={availableTags}
-        selectedTags={selectedTags}
-        onTagToggle={handleTagToggle}
-        onClearAll={handleClearAllTags}
-      />
+      
 
       {/* All Projects Section */}
       <section id="projects" className="py-16">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">All Projects</h2>
+            <h2 className="text-4xl font-bold mb-4">All Projectss</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {selectedTags.length > 0 
-                ? `Showing ${filteredProjects.length} projects filtered by: ${selectedTags.join(", ")}`
-                : `Explore all ${projects.length} projects in my portfolio`
-              }
+              Click on the tags below to filter projects by technology and skills.
             </p>
           </div>
+
+          <TagFilter
+            availableTags={availableTags}
+            selectedTags={selectedTags}
+            onTagToggle={handleTagToggle}
+            onClearAll={handleClearAllTags}
+          />
 
           {filteredProjects.length === 0 ? (
             <div className="text-center py-16">
