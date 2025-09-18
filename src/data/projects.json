@@ -1,6 +1,6 @@
 [
   {
-    "id": "4b7512e6-a554-4362-a481-e6d23b5f5a9a",
+    "id": "Low-Cost-Robotic-Arm",
     "title": "Low-Cost Robotic Arm",
     "quick_description": "Affordable, open-source robotic arm for hands-on learning and experimentation",
     "display_order": 1,
@@ -21,7 +21,7 @@
     ],
     "overview": {
       "title": "Overview",
-      "text": "The Low-Cost Robotic Arm was inspired by an earlier LEGO arm I built. In talking with Dr. Briana Bouchard, we reflected on how expensive the LEGO system was and how unintuitive its programming could be. That conversation sparked the idea of creating a more affordable and accessible alternative, and we teamed up to make it feasible."
+      "text": "The Low-Cost Robotic Arm was inspired by an earlier LEGO arm I built. In talking with Dr. Briana Bouchard, we reflected on how expensive the LEGO system was and how unintuitive its programming could be. That conversation sparked the idea of creating a more affordable and accessible alternative, and we teamed up to make it feasible. This project was conducted as research through the Louis Stokes Alliances for Minority Participation (LSAMP) program under Dr. Bouchard’s guidance."
     },
     "development": {
       "title": "Development / Process",
@@ -195,12 +195,280 @@
     }
   },
   {
-    "id": "b25f1a9e-f277-4fb4-8612-6648069f5751",
+    "id": "CAD-Portfolio",
+    "title": "CAD Portfolio",
+    "quick_description": "A collection of projects showcasing Computer-Aided Design skills and techniques.",
+    "display_order": 99,
+    "is_featured": false,
+    "gif_url": "/cadslide.gif",
+    "hero_media": "/cadslide.gif",
+    "images": [
+      "/images/me10cad/model.png"
+    ],
+    "tags": [
+      "CAD",
+      "Design",
+      "3D Modeling"
+    ],
+    "content": [
+      {
+        "id": "overview",
+        "type": "overview",
+        "title": "Overview",
+        "text": "This portfolio collection highlights my introduction to Computer-Aided Design (CAD) through projects completed in ME 10: Materials and Manufacturing. It demonstrates my ability to translate conceptual ideas into detailed 3D models, perform complex assemblies, and use of technical drawings. The projects reflect my learning and application of industry-standard CAD software and design principles. Some projects were developed by following instructional videos to practice foundational skills such as mates and extrusions, while others were created by interpreting and modeling directly from provided drawings."
+      },
+      {
+        "id": "cad-lego-brick",
+        "type": "project_item",
+        "title": "LEGO Brick",
+        "description": "Replicated an existing part with accurate proportions to strengthen parametric modeling skills.",
+        "image": "/images/me10cad/legobrick.png"
+      },
+      {
+        "id": "cad-mounting-bracket",
+        "type": "project_item",
+        "title": "Mounting Bracket",
+        "description": "Learned precision dimensioning and constraints for mechanical parts.",
+        "image": "/images/me10cad/model.png"
+      },
+      {
+        "id": "cad-citrus-press",
+        "type": "project_item",
+        "title": "Citrus Press Assembly",
+        "description": "Practiced combining multiple parts into a functional assembly with moving components.",
+        "image": "/images/me10cad/citrus.png"
+      },
+      {
+        "id": "cad-coffee-mug",
+        "type": "project_item",
+        "title": "Coffee Mug",
+        "description": "Practiced surface modeling, lofts, and fillets to recreate a common object.",
+        "image": "/images/me10cad/mug.png"
+      },
+      {
+        "id": "cad-pumpkin",
+        "type": "project_item",
+        "title": "Pumpkin",
+        "description": "Used advanced features such as revolves and patterns to create a complex organic shape.",
+        "image": "/images/me10cad/pumpkin.png"
+      },
+      {
+        "id": "cad-vase",
+        "type": "project_item",
+        "title": "Vase",
+        "description": "A vase I designed and printed for personal use, showcasing creativity and practical application of CAD skills.",
+        "image": "/images/me10cad/vase.png"
+      }
+    ],
+    "layout": 
+{
+  "lg": [
+    {
+      "w": 12,
+      "h": 2,
+      "x": 0,
+      "y": 0,
+      "i": "overview",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 4,
+      "x": 0,
+      "y": 2,
+      "i": "cad-lego-brick",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 4,
+      "x": 6,
+      "y": 9,
+      "i": "cad-mounting-bracket",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 7,
+      "x": 6,
+      "y": 2,
+      "i": "cad-citrus-press",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 6,
+      "x": 0,
+      "y": 6,
+      "i": "cad-coffee-mug",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 6,
+      "x": 0,
+      "y": 12,
+      "i": "cad-pumpkin",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 6,
+      "x": 6,
+      "y": 13,
+      "i": "cad-vase",
+      "moved": false,
+      "static": false
+    }
+  ],
+  "md": [
+    {
+      "i": "hero_media",
+      "x": 0,
+      "y": 0,
+      "w": 10,
+      "h": 5
+    },
+    {
+      "i": "overview",
+      "x": 0,
+      "y": 5,
+      "w": 10,
+      "h": 2
+    },
+    {
+      "i": "cad-intro-text",
+      "x": 0,
+      "y": 7,
+      "w": 10,
+      "h": 2
+    },
+    {
+      "i": "cad-lego-brick",
+      "x": 0,
+      "y": 9,
+      "w": 5,
+      "h": 4
+    },
+    {
+      "i": "cad-mounting-bracket",
+      "x": 5,
+      "y": 9,
+      "w": 5,
+      "h": 4
+    },
+    {
+      "i": "cad-citrus-press",
+      "x": 0,
+      "y": 13,
+      "w": 5,
+      "h": 4
+    },
+    {
+      "i": "cad-coffee-mug",
+      "x": 5,
+      "y": 13,
+      "w": 5,
+      "h": 4
+    },
+    {
+      "i": "cad-pumpkin",
+      "x": 0,
+      "y": 17,
+      "w": 5,
+      "h": 4
+    },
+    {
+      "i": "cad-vase",
+      "x": 5,
+      "y": 17,
+      "w": 5,
+      "h": 4
+    }
+  ],
+  "sm": [
+    {
+      "i": "hero_media",
+      "x": 0,
+      "y": 0,
+      "w": 6,
+      "h": 4
+    },
+    {
+      "i": "overview",
+      "x": 0,
+      "y": 4,
+      "w": 6,
+      "h": 2
+    },
+    {
+      "i": "cad-intro-text",
+      "x": 0,
+      "y": 6,
+      "w": 6,
+      "h": 2
+    },
+    {
+      "i": "cad-lego-brick",
+      "x": 0,
+      "y": 8,
+      "w": 6,
+      "h": 4
+    },
+    {
+      "i": "cad-mounting-bracket",
+      "x": 0,
+      "y": 12,
+      "w": 6,
+      "h": 4
+    },
+    {
+      "i": "cad-citrus-press",
+      "x": 0,
+      "y": 16,
+      "w": 6,
+      "h": 4
+    },
+    {
+      "i": "cad-coffee-mug",
+      "x": 0,
+      "y": 20,
+      "w": 6,
+      "h": 4
+    },
+    {
+      "i": "cad-pumpkin",
+      "x": 0,
+      "y": 24,
+      "w": 6,
+      "h": 4
+    },
+    {
+      "i": "cad-vase",
+      "x": 0,
+      "y": 28,
+      "w": 6,
+      "h": 4
+    }
+  ]
+}
+
+
+  },
+  {
+    "id": "Actuaid",
     "title": "Actuaid",
     "quick_description": "Assistive device for rehabilitation ",
     "display_order": 1,
     "is_featured": true,
     "gif_url": "/actuaid.gif",
+    "hero_media": "/prbhero.png",
     "images": [
       "/images/actuaid.png"
     ],
@@ -213,32 +481,191 @@
       "Laser Cutting",
       "Soft Robotics"
     ],
-    "content": [
-      {
-        "type": "image",
-        "value": "/images/actuaid.png"
-      },
-      {
-        "type": "text",
-        "value": "Purpose: the purpose of the project is ...Actuaid is an assistive device designed to help patients with limited mobility perform rehabilitation exercises. The device uses a combination of sensors and actuators to provide feedback and assistance during exercises, making it easier for patients to complete their rehabilitation routines. The device is designed to be user-friendly and easy to use, with a simple interface that allows patients to customize their exercise routines. The device is also designed to be portable, allowing patients to take it with them wherever they go."
-      },
-      {
-        "type": "image",
-        "value": "/images/phone-demo.png"
-      },
-      {
-        "type": "text",
-        "value": "The device worked with a glove that had flex sensors on the thumb. On the box itself, you could set the pressure and speed of the pumps. The pumps would inflate the pneumatic actuator to help with rehabilitation."
-      },
-      {
-        "type": "image",
-        "value": "/images/path.png"
-      },
-      {
-        "type": "video",
-        "value": "https://youtu.be/9BupUNeVFZY"
-      }
-    ]
+    "overview": {
+      "title": "Overview",
+      "text": "ActuAid was designed to address sports-related injuries that affect the hand. ActuAid used 3D-printed fluidic actuators integrated into a wearable glove to support mobility and dexterity recovery. By combining soft robotics with simple electronic control, the project demonstrates how accessible, customizable devices can make rehabilitation more effective and affordable. It developed as the final project for ME193: Printable Robotics."
+    },
+    "development": {
+      "title": "Development / Process",
+      "items": [
+        {
+          "type": "image",
+          "value": "/images/prbw1.png"
+        },
+        {
+          "type": "text",
+          "value": "We began by researching wearable soft robotics and prototyping a bending actuator. Academic papers and prior work in soft robotic exoskeletons helped shape our design direction, confirming feasibility and showing how fluidic actuators could be adapted for hand rehabilitation in athletes."
+        },
+        {
+          "type": "image",
+          "value": "/prbw3.gif"
+        },
+        {
+          "type": "text",
+          "value": "Many print iterations were completed to refine the actuator’s design, focusing on airtightness, chamber spacing, and deflection. These iterations ensured the actuator could reliably inflate and produce consistent motion."
+        },
+        {
+          "type": "image",
+          "value": "/images/prbw2.gif"
+        },
+        {
+          "type": "text",
+          "value": "With a functional actuator established, we integrated the electronic components -pumps, valves, and an LCD interface- to control air pressure and responsiveness. The actuator was then combined with a glove prototype, and both the printed design and electronics were refined to ensure reliable motion for rehabilitation use."
+        }
+      ]
+    },
+    "final_result": {
+      "title": "Final Result",
+      "items": [
+        {
+          "type": "image",
+          "value": "/actuaid.gif"
+        },
+        {
+          "type": "text",
+          "value": "Overall, I was able to:"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Design and fabricate a 3D-printed fluidic actuator through multiple iterations, achieving an airtight system capable of reliable inflation and deflection.",
+            "Integrate the actuator into a wearable glove to enable controlled finger movement.",
+            "Develop and test an electronic control system with pumps, valves, and an LCD interface."
+         ]
+        }
+      ]
+    },
+    "reflection": {
+      "title": "Reflection",
+      "text": "This project highlighted the versatility of 3D printing and the potential of soft robotics in rehabilitation. We learned the importance of patience and iteration, as multiple design cycles were required to achieve an airtight, functional actuator. These iterations showed how fluidic actuators can be refined to produce meaningful movement, and how combining hardware and software expands the possibilities for assistive technologies. Ultimately, ActuAid demonstrates that innovative, accessible solutions can be created to support medical rehabilitation."
+    },
+    "content": [],
+    "layout": 
+{
+  "desktop": [
+    {
+      "i": "hero_media",
+      "x": 0,
+      "y": 0,
+      "w": 12,
+      "h": 8
+    },
+    {
+      "i": "overview",
+      "x": 0,
+      "y": 8,
+      "w": 12,
+      "h": 4
+    },
+    {
+      "i": "development",
+      "x": 0,
+      "y": 12,
+      "w": 12,
+      "h": 8
+    },
+    {
+      "i": "final_result",
+      "x": 0,
+      "y": 20,
+      "w": 12,
+      "h": 8
+    },
+    {
+      "i": "reflection",
+      "x": 0,
+      "y": 28,
+      "w": 12,
+      "h": 4
+    }
+  ],
+  "mobile": [
+    {
+      "i": "hero_media",
+      "x": 0,
+      "y": 0,
+      "w": 4,
+      "h": 3
+    },
+    {
+      "i": "overview",
+      "x": 0,
+      "y": 3,
+      "w": 4,
+      "h": 2
+    },
+    {
+      "i": "development",
+      "x": 0,
+      "y": 5,
+      "w": 4,
+      "h": 3
+    },
+    {
+      "i": "final_result",
+      "x": 0,
+      "y": 8,
+      "w": 4,
+      "h": 3
+    },
+    {
+      "i": "reflection",
+      "x": 0,
+      "y": 11,
+      "w": 4,
+      "h": 2
+    }
+  ],
+  "lg": [
+    {
+      "w": 10,
+      "h": 5,
+      "x": 1,
+      "y": 0,
+      "i": "hero_media",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 12,
+      "h": 2,
+      "x": 0,
+      "y": 5,
+      "i": "overview",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 12,
+      "h": 11,
+      "x": 0,
+      "y": 7,
+      "i": "development",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 12,
+      "h": 9,
+      "x": 0,
+      "y": 18,
+      "i": "final_result",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 12,
+      "h": 2,
+      "x": 0,
+      "y": 27,
+      "i": "reflection",
+      "moved": false,
+      "static": false
+    }
+  ]
+}
+
+
   },
   {
     "id": "a48340e9-42cb-4c44-a8f2-aacf457f374e",
@@ -247,6 +674,10 @@
     "display_order": 2,
     "is_featured": true,
     "gif_url": "/mamalona.gif",
+    "hero_media": "/mamalona.gif",
+    "images": [
+      "/images/mamalona.png"
+    ],
     "tags": [
       "CAD",
       "Python",
@@ -258,40 +689,180 @@
       "Soldering",
       "PCB Design"
     ],
-    "content": [
-      {
-        "type": "image",
-        "value": "/images/mamalona.png"
-      },
-      {
-        "type": "text",
-        "value": "The multi-car network communication allows for a web interface allows users to monitor and control the car remotely, while the network communication enables multiple cars to coordinate their movements and avoid falling off the ramp. The car is built using a combination of 3D-printed and laser-cut components, with a focus on looking good and ease of assembly."
-      },
-      {
-        "type": "text",
-        "value": "A key part of this project was building the H-bridge motor driver circuit. I explored this process independently, before it was covered in class, and figured out how to wire and test the transistors to safely switch motor directions. Once I validated the design on a breadboard, I transferred the circuit into a PCB layout and integrated it into the car. This early work helped my team move faster when it came time to apply it to the full system."
-      },
-      {
-        "type": "video",
-        "value": "https://youtu.be/eQxgCaSZY6A"
-      },
-      {
-        "type": "image",
-        "value": "/images/schematic.png"
-      },
-      {
-        "type": "image",
-        "value": "/images/schematic2.png"
-      },
-      {
-        "type": "image",
-        "value": "/images/placeholder1.png"
-      },
-      {
-        "type": "image",
-        "value": "/images/placeholder2.png"
-      }
-    ]
+    "overview": {
+      "title": "Overview",
+      "text": "The Low-Cost Robotic Arm was inspired by an earlier LEGO arm I built. In talking with Dr. Briana Bouchard, we reflected on how expensive the LEGO system was and how unintuitive its programming could be. That conversation sparked the idea of creating a more affordable and accessible alternative, and we teamed up to make it feasible. This project was conducted as research through the Louis Stokes Alliances for Minority Participation (LSAMP) program under Dr. Bouchard’s guidance."
+    },
+    "development": {
+      "title": "Development / Process",
+      "items": [
+        {
+          "type": "image",
+          "value": "/images/desc.png"
+        },
+        {
+          "type": "text",
+          "value": "Designing the Gripper was one of the most challenging parts of the project. Because it sits at the very end of the arm, the weight was a critical constraint. A smaller SG90 servo was chosen, which provided enough torque to handle small objects.\n\nSeveral concepts were tested before reaching the final version. Each option revealed new trade-offs and informed the next iteration. The process highlighted the constraints shape design choices. Small refinements ultimately made the difference between a fragile prototype and a dependable solution."
+        },
+        {
+          "type": "image",
+          "value": "/ikdisp.gif"
+        },
+        {
+          "type": "text",
+          "value": "A big part of the project was writing the control code for the arm. I implemented inverse kinematics using trigenometry to simplify IK. This allowed the arm be move to a specific Cartesian position. A simple WASD interface for direct control was also added. This was my first time combining mechanical design with real-time programming, which gave me a deeper understanding of how hardware and software work together."
+        }
+      ]
+    },
+    "final_result": {
+      "title": "Final Result",
+      "items": [
+        {
+          "type": "image",
+          "value": "/ikvid.gif"
+        },
+        {
+          "type": "text",
+          "value": "Overall, I was able to:"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Build a fully functional 4-DOF robotic arm using low-cost, 3D-printed parts and off-the-shelf electronics.",
+            "Design a lightweight custom gripper that reliably handles small objects.",
+            "Implement key robotics concepts such as kinematics, control systems, and programming for under $30."
+         ]
+        }
+      ]
+    },
+    "reflection": {
+      "title": "Reflection",
+      "text": "This project taught me how constraints like weight, torque, and printability shape design choices. I learned the value of rapid iteration, designing for manufacturability, and staying persistent when early versions failed. It was also my first time leading a design project from concept to reality, learning new skills on the fly and turning an idea into a working system. Most importantly, it showed me how affordable tools can make robotics education more accessible and inspiring."
+    },
+    "content": [],
+    "layout": {
+      "desktop": [
+        {
+          "i": "hero_media",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 8
+        },
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 8,
+          "w": 12,
+          "h": 4
+        },
+        {
+          "i": "development",
+          "x": 0,
+          "y": 12,
+          "w": 12,
+          "h": 8
+        },
+        {
+          "i": "final_result",
+          "x": 0,
+          "y": 20,
+          "w": 12,
+          "h": 8
+        },
+        {
+          "i": "reflection",
+          "x": 0,
+          "y": 28,
+          "w": 12,
+          "h": 4
+        }
+      ],
+      "mobile": [
+        {
+          "i": "hero_media",
+          "x": 0,
+          "y": 0,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 3,
+          "w": 4,
+          "h": 2
+        },
+        {
+          "i": "development",
+          "x": 0,
+          "y": 5,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "i": "final_result",
+          "x": 0,
+          "y": 8,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "i": "reflection",
+          "x": 0,
+          "y": 11,
+          "w": 4,
+          "h": 2
+        }
+      ],
+      "lg": [
+        {
+          "w": 10,
+          "h": 5,
+          "x": 1,
+          "y": 0,
+          "i": "hero_media",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 5,
+          "i": "overview",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 9,
+          "x": 0,
+          "y": 7,
+          "i": "development",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 8,
+          "x": 0,
+          "y": 16,
+          "i": "final_result",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 24,
+          "i": "reflection",
+          "moved": false,
+          "static": false
+        }
+      ]
+    }
   },
   {
     "id": "lego-collab-1",
@@ -374,7 +945,7 @@
     "quick_description": "Designed and cast a pewter soccer ball trophy through multiple mold-making iterations.",
     "display_order": 14,
     "is_featured": false,
-    "gif_url": "/public/casting.gif",
+    "gif_url": "/casting.gif",
     "tags": [
       "Manufacturing",
       "Materials"
@@ -421,307 +992,6 @@
         "size": "max-w-md"
       }
     ]
-  },
-  {
-    "id": "me10-cead",
-    "title": "CAD & Manufacturing Foundations",
-    "quick_description": "Introductory projects in CAD modeling and manufacturing.",
-    "display_order": 14,
-    "is_featured": false,
-    "gif_url": "/gifs/me10-cad.gif",
-    "tags": [
-      "CAD",
-      "Manufacturing"
-    ],
-    "content": [
-      {
-        "type": "image",
-        "value": "/images/me10-cad.png"
-      },
-      {
-        "type": "text",
-        "value": "Developed foundational skills in CAD modeling and manufacturing workflows. Modeled real-world objects such as a soccer ball, company logo, and an orange peel with attention to tolerances. Documented design-to-production processes through detailed imagery and notes."
-      }
-    ]
-  },
-  {
-    "id": "me35-motion",
-    "title": "Mechanisms & Motion Design",
-    "quick_description": "Exploring motion and mechanisms through CAD.",
-    "display_order": 15,
-    "is_featured": false,
-    "gif_url": "/gifs/me35-motion.gif",
-    "tags": [
-      "CAD"
-    ],
-    "content": [
-      {
-        "type": "image",
-        "value": "/images/me35-motion.png"
-      },
-      {
-        "type": "text",
-        "value": "Designed and modeled dynamic mechanical assemblies with gears and linkages. Created interactive tracks inspired by Mario Kart, including Stair Road, Rainbow Road, and Mushroom Kingdom. Analyzed and simulated motion to understand mechanical behavior and system interaction."
-      }
-    ]
-  },
-  {
-    "id": "me40-products",
-    "title": "Product CAD & Accessibility Projects",
-    "quick_description": "Designing consumer products with accessibility in mind.",
-    "display_order": 16,
-    "is_featured": false,
-    "gif_url": "/gifs/me40-products.gif",
-    "tags": [
-      "CAD"
-    ],
-    "content": [
-      {
-        "type": "image",
-        "value": "/images/me40-products.png"
-      },
-      {
-        "type": "text",
-        "value": "Modeled and prototyped components for consumer products such as a hair dryer and electric drill. Collaborated on an assistive wheelchair project, emphasizing accessibility and user-centered design. Documented processes for design iteration, testing, and manufacturing readiness."
-      }
-    ]
-  },
-  {
-    "id": "robovend-arm",
-    "title": "Robovend Senior Design Project",
-    "quick_description": "Senior design project focused on robotic automation.",
-    "display_order": 17,
-    "is_featured": false,
-    "gif_url": "/gifs/robovend-arm.gif",
-    "tags": [
-      "Robotics",
-      "CAD"
-    ],
-    "content": [
-      {
-        "type": "image",
-        "value": "/images/robovend-arm.png"
-      },
-      {
-        "type": "text",
-        "value": "Developed a robotic arm for automated vending as part of a team-based senior design project. Led mechanical design iterations and conducted performance testing for precision and reliability. Compiled full documentation and presented the project, highlighting collaboration and engineering problem-solving."
-      }
-    ]
-  },
-  {
-    "id": "cad-portfolio",
-    "title": "CAD Portfolio",
-    "quick_description": "A collection of projects showcasing Computer-Aided Design skills and techniques.",
-    "display_order": 99,
-    "is_featured": false,
-    "gif_url": "/blank.gif",
-    "tags": [
-      "CAD",
-      "Design",
-      "3D Modeling"
-    ],
-    "content": [
-      {
-        "id": "overview",
-        "type": "overview",
-        "title": "Overview",
-        "text": "This portfolio collection highlights my proficiency in Computer-Aided Design (CAD) through various projects. It demonstrates my ability to translate conceptual ideas into detailed 3D models, perform complex assemblies, and generate technical drawings. The projects showcase my learning and application of industry-standard CAD software and design principles."
-      },
-      {
-        "id": "cad-intro-text",
-        "type": "text",
-        "value": "This class was my introduction to CAD using SolidWorks. I practiced creating parts, assemblies, and realistic models to build a foundation in digital design."
-      },
-      {
-        "id": "cad-lego-brick",
-        "type": "project_item",
-        "title": "LEGO Brick",
-        "description": "Replicated an existing part with accurate proportions to strengthen parametric modeling skills.",
-        "image": "/images/me10cad/legobrick.png"
-      },
-      {
-        "id": "cad-mounting-bracket",
-        "type": "project_item",
-        "title": "Mounting Bracket",
-        "description": "Learned precision dimensioning and constraints for mechanical parts.",
-        "image": "/images/me10cad/model.png"
-      },
-      {
-        "id": "cad-citrus-press",
-        "type": "project_item",
-        "title": "Citrus Press Assembly",
-        "description": "Practiced combining multiple parts into a functional assembly with moving components.",
-        "image": "/images/me10cad/citrus.png"
-      },
-      {
-        "id": "cad-coffee-mug",
-        "type": "project_item",
-        "title": "Coffee Mug",
-        "description": "Practiced surface modeling, lofts, and fillets to recreate a common object.",
-        "image": "/images/me10cad/mug.png"
-      },
-      {
-        "id": "cad-pumpkin",
-        "type": "project_item",
-        "title": "Pumpkin",
-        "description": "Used advanced features such as revolves and patterns to create a complex organic shape.",
-        "image": "/images/me10cad/pumpkin.png"
-      }
-    ],
-    "layout": {
-      "lg": [
-        {
-          "i": "overview",
-          "x": 0,
-          "y": 0,
-          "w": 12,
-          "h": 2
-        },
-        {
-          "i": "cad-intro-text",
-          "x": 0,
-          "y": 2,
-          "w": 12,
-          "h": 2
-        },
-        {
-          "i": "cad-lego-brick",
-          "x": 0,
-          "y": 4,
-          "w": 4,
-          "h": 4
-        },
-        {
-          "i": "cad-mounting-bracket",
-          "x": 4,
-          "y": 4,
-          "w": 4,
-          "h": 4
-        },
-        {
-          "i": "cad-citrus-press",
-          "x": 8,
-          "y": 4,
-          "w": 4,
-          "h": 4
-        },
-        {
-          "i": "cad-coffee-mug",
-          "x": 0,
-          "y": 8,
-          "w": 4,
-          "h": 4
-        },
-        {
-          "i": "cad-pumpkin",
-          "x": 4,
-          "y": 8,
-          "w": 4,
-          "h": 4
-        }
-      ],
-      "md": [
-        {
-          "i": "overview",
-          "x": 0,
-          "y": 0,
-          "w": 10,
-          "h": 2
-        },
-        {
-          "i": "cad-intro-text",
-          "x": 0,
-          "y": 2,
-          "w": 10,
-          "h": 2
-        },
-        {
-          "i": "cad-lego-brick",
-          "x": 0,
-          "y": 4,
-          "w": 5,
-          "h": 4
-        },
-        {
-          "i": "cad-mounting-bracket",
-          "x": 5,
-          "y": 4,
-          "w": 5,
-          "h": 4
-        },
-        {
-          "i": "cad-citrus-press",
-          "x": 0,
-          "y": 8,
-          "w": 5,
-          "h": 4
-        },
-        {
-          "i": "cad-coffee-mug",
-          "x": 5,
-          "y": 8,
-          "w": 5,
-          "h": 4
-        },
-        {
-          "i": "cad-pumpkin",
-          "x": 0,
-          "y": 12,
-          "w": 5,
-          "h": 4
-        }
-      ],
-      "sm": [
-        {
-          "i": "overview",
-          "x": 0,
-          "y": 0,
-          "w": 6,
-          "h": 2
-        },
-        {
-          "i": "cad-intro-text",
-          "x": 0,
-          "y": 2,
-          "w": 6,
-          "h": 2
-        },
-        {
-          "i": "cad-lego-brick",
-          "x": 0,
-          "y": 4,
-          "w": 6,
-          "h": 4
-        },
-        {
-          "i": "cad-mounting-bracket",
-          "x": 0,
-          "y": 8,
-          "w": 6,
-          "h": 4
-        },
-        {
-          "i": "cad-citrus-press",
-          "x": 0,
-          "y": 12,
-          "w": 6,
-          "h": 4
-        },
-        {
-          "i": "cad-coffee-mug",
-          "x": 0,
-          "y": 16,
-          "w": 6,
-          "h": 4
-        },
-        {
-          "i": "cad-pumpkin",
-          "x": 0,
-          "y": 20,
-          "w": 6,
-          "h": 4
-        }
-      ]
-    }
   }
+  
 ]
