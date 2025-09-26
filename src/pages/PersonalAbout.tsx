@@ -25,8 +25,7 @@ const PersonalAbout = () => {
                   <p className="text-lg leading-relaxed">
                     Outside of academics, I enjoy playing soccer, cooking for friends, and spending time with the people 
                     I care about. I founded the Mexican Culture Club (MCC) at Tufts to celebrate and share Mexican heritage,
-                     and I’m also an active member of the Society of Hispanic Professional Engineers (SHPE) and BlackOut, Tufts’
-                    step team. These experiences have strengthened my leadership, teamwork, and communication skills while allowing 
+                     and I’m also an active member of the Society of Hispanic Professional Engineers (SHPE). These experiences have strengthened my leadership, teamwork, and communication skills while allowing 
                     me to make meaningful connections across campus.
                    </p>
                    <p className="text-lg leading-relaxed">

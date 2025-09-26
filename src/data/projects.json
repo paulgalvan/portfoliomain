@@ -57,7 +57,7 @@
         },
         {
           "type": "list",
-          "value": [          
+          "value": [
             "Build a fully functional 4-DOF robotic arm using low-cost, 3D-printed parts and off-the-shelf electronics.",
             "Design a lightweight custom gripper that reliably handles small objects.",
             "Implement key robotics concepts such as kinematics, control systems, and programming for under $30."
@@ -193,6 +193,213 @@
         }
       ]
     }
+  },
+  {
+    "id": "Lego-Simple-Robotics",
+    "title": "LEGO Simple Robotics",
+    "quick_description": "Introduction to robotics through LEGO — exploring gears, sensors, and creative mechanisms.",
+    "display_order": 99,
+    "is_featured": false,
+    "gif_url": "/spirolego.gif",
+    "hero_media": "/images/walle.png",
+    "images": [
+      "/images/walle.png"
+    ],
+    "tags": [
+      "Robotics",
+      "LEGO",
+      "Python"
+    ],
+    "content": [
+  {
+    "id": "lego-overview",
+    "type": "overview",
+    "title": "Overview",
+    "text": "This collection showcases a series of projects built with the LEGO Spike Prime Sets, exploring mechanical design, programming, and robotics. These projects were part of an introductory robotics(EN1:Simple Robotics) course and demonstrate the creative possibilities of the LEGO platform."
+  },
+  {
+    "id": "lego-walker",
+    "type": "project_item",
+    "title": "LEGO Walker",
+    "description": "We demonstrated the possibilites that could be achieved with LEGO by experimenting with motion. A simple forward-falling mechanism mimiced a walking pattern.",
+    "image": "/images/legowalker.jpeg",
+    "gif": "/walklego.gif"
+  },
+  {
+    "id": "lego-bird",
+    "type": "project_item",
+    "title": "LEGO Bird",
+    "description": "I applied biomimicry principles to design a bird with flapping wings. This project showed me how nature can inspire mechanical motion in LEGO builds.",
+    "image": "/images/legobird.jpeg",
+    "gif": "/birdlego.gif"
+  },
+  {
+    "id": "lego-top",
+    "type": "project_item",
+    "title": "LEGO Spinning Top",
+    "description": "Building a spinning top taught me how to use gears effectively to transfer and store energy. I learned how gear ratios can amplify speed in simple mechanisms.",
+    "image": "/images/legotop.jpg",
+    "gif": "/toplego.gif"
+  },
+  {
+    "id": "lego-spirograph",
+    "type": "project_item",
+    "title": "LEGO Spirograph",
+    "description": "This project used geometry and circular motion to create intricate designs with a tablet. I was the only one in the class to integrate a tablet into the mechanism, expanding the creative output.",
+    "image": "/images/spirography.jpeg",
+    "gif": "/spirolego.gif"
+  },
+  {
+    "id": "lego-2d-printer",
+    "type": "project_item",
+    "title": "LEGO 2D Printer",
+    "description": "For the square-drawing challenge, I developed an XY-axis LEGO printer. I was the only one to turn the task into a functional 2D drawing machine, deepening my understanding of coordinate motion.",
+    "image": "/images/2dprinter.jpeg",
+    "gif": "/squarelego.gif"
+  },
+  {
+    "id": "lego-drill",
+    "type": "project_item",
+    "title": "LEGO Drill",
+    "description": "I designed this handheld drill around the constraint of mimicking how astronauts might change a nut in space. It gave me insight into problem-solving under extreme conditions where ergonomics and efficiency are critical.",
+    "image": "/images/legodrill.jpg",
+    "gif": "/drillLego.gif"
+  },
+  {
+    "id": "lego-ps4-car",
+    "type": "project_item",
+    "title": "PS4-Controlled LEGO Car",
+    "description": "By integrating a PS4 controller, I learned the intricacies of building a responsive LEGO driving system. This project showed me how LEGO could be extended into interactive, remote-controlled systems.",
+    "image": "/carlego.gif",
+    "gif": "/carlego.gif"
+  },
+  {
+    "id": "lego-snake",
+    "type": "project_item",
+    "title": "LEGO Snake",
+    "description": "I adapted the PS4 control system to create a slithering LEGO snake. This project was themed for a Halloween house, showing how robotics could merge with creative storytelling.",
+    "image": "/images/legosnake.jpg",
+    "gif": "/snakelego.gif"
+  },
+  {
+    "id": "lego-walle",
+    "type": "project_item",
+    "title": "Repurposed WALL-E Set",
+    "description": "For the final project, I added motors and PS4 controller support to a LEGO WALL-E and designed a maze it could navigate. Although the elementary school demo was cancelled, the project taught me how to combine robotics with user interaction in playful, educational ways.",
+    "image": "/images/walle.png",
+    "gif": "/walle.gif"
+  }
+    ],
+    "layout": {
+  "lg": [
+    {
+      "w": 12,
+      "h": 2,
+      "x": 0,
+      "y": 0,
+      "i": "lego-overview",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 6,
+      "x": 0,
+      "y": 2,
+      "i": "lego-walker",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 6,
+      "x": 6,
+      "y": 2,
+      "i": "lego-bird",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 6,
+      "x": 0,
+      "y": 8,
+      "i": "lego-top",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 6,
+      "x": 6,
+      "y": 8,
+      "i": "lego-spirograph",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 6,
+      "x": 0,
+      "y": 14,
+      "i": "lego-2d-printer",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 6,
+      "x": 6,
+      "y": 14,
+      "i": "lego-drill",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 5,
+      "x": 6,
+      "y": 20,
+      "i": "lego-ps4-car",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 6,
+      "h": 5,
+      "x": 0,
+      "y": 20,
+      "i": "lego-snake",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 9,
+      "h": 10,
+      "x": 1,
+      "y": 25,
+      "i": "lego-walle",
+      "moved": false,
+      "static": false
+    }
+  ]
+    }
+  },
+  
+  {
+    "id": "project-elles",
+    "title": "Project Elles",
+    "quick_description": "A project showcasing the use of Notion for project management and documentation.",
+    "display_order": 100,
+    "is_featured": false,
+    "hero_media": "@/assets/images/elles.jpg",
+    "gif_url": "/elles.gif",
+    "notion_url": "https://flax-haze-954.notion.site/Project-Elles-acebc264597c43f59996034591a59f33?pvs=74",
+    "tags": [
+      "LEGO",
+      "Robotics",
+      "Python"
+    ]
   },
   {
     "id": "CAD-Portfolio",
@@ -863,69 +1070,6 @@
         }
       ]
     }
-  },
-  {
-    "id": "lego-collab-1",
-    "title": "Collaborative Robotics Projects (Tufts Simple Robotics)",
-    "quick_description": "Introduction to robotics through LEGO — exploring gears, sensors, and creative mechanisms.",
-    "display_order": 1,
-    "is_featured": false,
-    "gif_url": "/legowalker.gif",
-    "tags": [
-      "Robotics",
-      "LEGO",
-      "Python"
-    ],
-    "content": [
-      {
-        "type": "text",
-        "value": "Walking Mechanism – Inspired by duck-like motion, creating a LEGO walker that 'falls forward' to walk."
-      },
-      {
-        "type": "image",
-        "value": "/images/walle.png"
-      },
-      {
-        "type": "video",
-        "value": "/legowalker.gif"
-      },
-      {
-        "type": "text",
-        "value": "LEGO Spirograph – Integrated my tablet on a LEGO mechanism to draw intricate designs (only one in the class to attempt this)."
-      },
-      {
-        "type": "image",
-        "value": "/images/spirography.jpeg"
-      },
-      {
-        "type": "video",
-        "value": "https://youtu.be/amXjZDTHRv8"
-      },
-      {
-        "type": "text",
-        "value": "LEGO 2D Printer – Integrated my tablet on an XY-axis LEGO mechanism to draw squares (only one in the class to attempt this)."
-      },
-      {
-        "type": "image",
-        "value": "/images/2dprinter.jpeg"
-      },
-      {
-        "type": "video",
-        "value": "https://youtu.be/Wo-A803eMnc"
-      },
-      {
-        "type": "text",
-        "value": "PS4-Controlled LEGO Car – Connected a LEGO car to a PS4 controller and tablet. Later expanded this into a LEGO snake showcased at a Haunted House."
-      },
-      {
-        "type": "text",
-        "value": "Final Project: Repurposed WALL-E Set – Added motors and PS4 controller support for full interactive control."
-      },
-      {
-        "type": "video",
-        "value": "https://youtu.be/1xDbENuh6WE"
-      }
-    ]
   },
   {
     "id": "me10-soccerball",

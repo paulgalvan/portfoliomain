@@ -29,7 +29,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => { // Removed onClick from
       className="project-card group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => navigate(`/projects/${project.id}`)} // Navigate to project detail page
+      onClick={() => {
+        if (project.notion_url) {
+          window.open(project.notion_url, "_blank");
+        } else {
+          navigate(`/projects/${project.id}`);
+        }
+      }}
     >
       <CardContent className="p-0 relative overflow-hidden flex flex-col">
         {/* Background Image/GIF */}

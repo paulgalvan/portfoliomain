@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
@@ -19,7 +18,6 @@ import {
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const CadPortfolio: React.FC = () => {
-  const { projectId } = useParams<{ projectId: string }>();
   const { projects, loading, error } = useProjects();
   const [cadProject, setCadProject] = useState<Project | null>(null);
   const [isEditable, setIsEditable] = useState(false);
@@ -29,7 +27,7 @@ const CadPortfolio: React.FC = () => {
 
   useEffect(() => {
     if (projects.length > 0) {
-      const foundProject = projects.find((p) => p.id === "cad-portfolio");
+      const foundProject = projects.find((p) => p.id === "CAD-Portfolio");
       if (foundProject) {
         setCadProject(foundProject);
         if (foundProject.layout) {

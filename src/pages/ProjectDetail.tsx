@@ -36,7 +36,14 @@ const ProjectDetail = () => {
       if (foundProject) {
         setProject(foundProject);
         if (foundProject.layout) {
-          setLayouts(foundProject.layout);
+          const validBreakpoints = ["lg", "md", "sm", "xs", "xxs"];
+          const filteredLayouts = Object.keys(foundProject.layout)
+            .filter(key => validBreakpoints.includes(key))
+            .reduce((obj, key) => {
+              obj[key] = foundProject.layout[key];
+              return obj;
+            }, {});
+          setLayouts(filteredLayouts);
         }
       }
     }
@@ -159,7 +166,6 @@ const ProjectDetail = () => {
 
   if (!layouts) {
     // Fallback to old layout if no layout is defined
-    console.error("<<<<< RENDERING FALLBACK LAYOUT >>>>>");
     return (
       <div className="min-h-screen flex flex-col">
         <Navigation />
@@ -282,7 +288,7 @@ const ProjectDetail = () => {
               )}
               <img src={project.hero_media} alt={project.title} className="w-full h-full object-cover rounded-lg" />
             </div>
-            <div key="overview" className="bg-card rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-xl">
+            {project.overview && <div key="overview" className="bg-card rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-xl">
               {isEditable && (
                 <div className="drag-handle absolute top-2 right-2 p-2 bg-gray-800 rounded-full cursor-move z-20">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6l-4-4-4 4M18 18l-4 4-4-4M6 18l-4-4 4-4M6 6l-4 4 4 4"/></svg>
@@ -292,8 +298,8 @@ const ProjectDetail = () => {
                 <h2 className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full text-2xl font-bold mb-2">{project.overview.title}</h2>
                 <p className={`${fontSize} ${fontFamily}`}>{project.overview.text}</p>
               </div>
-            </div>
-            <div key="development" className="bg-card rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-xl">
+            </div>}
+            {project.development && <div key="development" className="bg-card rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-xl">
               {isEditable && (
                 <div className="drag-handle absolute top-2 right-2 p-2 bg-gray-800 rounded-full cursor-move z-20">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6l-4-4-4 4M18 18l-4 4-4-4M6 18l-4-4 4-4M6 6l-4 4 4 4"/></svg>
@@ -310,8 +316,8 @@ const ProjectDetail = () => {
                   ))}
                 </div>
               </div>
-            </div>
-            <div key="final_result" className="bg-card rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-xl">
+            </div>}
+            {project.final_result && <div key="final_result" className="bg-card rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-xl">
               {isEditable && (
                 <div className="drag-handle absolute top-2 right-2 p-2 bg-gray-800 rounded-full cursor-move z-20">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6l-4-4-4 4M18 18l-4 4-4-4M6 18l-4-4 4-4M6 6l-4 4 4 4"/></svg>
@@ -333,8 +339,8 @@ const ProjectDetail = () => {
                   </div>
                 ))}
               </div>
-            </div>
-            <div key="reflection" className="bg-card rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-xl">
+            </div>}
+            {project.reflection && <div key="reflection" className="bg-card rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-xl">
               {isEditable && (
                 <div className="drag-handle absolute top-2 right-2 p-2 bg-gray-800 rounded-full cursor-move z-20">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6l-4-4-4 4M18 18l-4 4-4-4M6 18l-4-4 4-4M6 6l-4 4 4 4"/></svg>
@@ -344,7 +350,7 @@ const ProjectDetail = () => {
                 <h2 className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full text-2xl font-bold mb-2">{project.reflection.title}</h2>
                 <p className={`${fontSize} ${fontFamily}`}>{project.reflection.text}</p>
               </div>
-            </div>
+            </div>}
           </ResponsiveGridLayout>
         </div>
       </div>
