@@ -19,13 +19,6 @@ export interface Project {
   created_at?: string;
   updated_at?: string;
   content?: any[];
-  layout?: any;
-  hero_media?: string;
-  overview?: any;
-  development?: any;
-  final_result?: any;
-  reflection?: any;
-  notion_url?: string;
 }
 
 export const useProjects = () => {
