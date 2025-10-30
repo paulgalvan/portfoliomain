@@ -12,12 +12,10 @@
     ],
     "tags": [
       "Robotics",
-      "Python",
-      "Controls",
+      "Coding",
       "CAD",
       "Ubuntu",
-      "Raspberry Pi",
-      "3D Printing"
+      "Microcontroller"
     ],
     "overview": {
       "title": "Overview",
@@ -208,7 +206,7 @@
     "tags": [
       "Robotics",
       "LEGO",
-      "Python"
+      "Coding"
     ],
     "content": [
   {
@@ -389,16 +387,19 @@
   {
     "id": "project-elles",
     "title": "Project Elles",
-    "quick_description": "A project showcasing the use of Notion for project management and documentation.",
-    "display_order": 100,
+    "quick_description": "A LEGO Humanoid Robot controlled through a custom LEGO controller. This link takes you to a Notion page documenting the project.",
+    "display_order": 1,
     "is_featured": false,
-    "hero_media": "@/assets/images/elles.jpg",
+    "hero_media": "/images/elles.jpg",
+    "images": [
+      "/images/elles.jpg"
+    ],
     "gif_url": "/elles.gif",
     "notion_url": "https://flax-haze-954.notion.site/Project-Elles-acebc264597c43f59996034591a59f33?pvs=74",
     "tags": [
       "LEGO",
       "Robotics",
-      "Python"
+      "Coding"
     ]
   },
   {
@@ -414,8 +415,7 @@
     ],
     "tags": [
       "CAD",
-      "Design",
-      "3D Modeling"
+      "Design"
     ],
     "content": [
       {
@@ -681,12 +681,9 @@
     ],
     "tags": [
       "Robotics",
-      "C++",
-      "Arduino",
-      "CAD",
-      "3D Printing",
-      "Laser Cutting",
-      "Soft Robotics"
+      "Coding",
+      "Microcontroller",
+      "CAD"
     ],
     "overview": {
       "title": "Overview",
@@ -875,7 +872,7 @@
 
   },
   {
-    "id": "a48340e9-42cb-4c44-a8f2-aacf457f374e",
+    "id": "Controlled_Car",
     "title": "PID Controlled Car",
     "quick_description": "PID-controlled car with web interface and multi-car network communication.",
     "display_order": 2,
@@ -887,18 +884,14 @@
     ],
     "tags": [
       "CAD",
-      "Python",
-      "Raspberry Pi",
+      "Coding",
+      "Microcontroller",
       "Robotics",
-      "Controls",
-      "3D Printing",
-      "Laser Cutting",
-      "Soldering",
       "PCB Design"
     ],
     "overview": {
       "title": "Overview",
-      "text": "The Low-Cost Robotic Arm was inspired by an earlier LEGO arm I built. In talking with Dr. Briana Bouchard, we reflected on how expensive the LEGO system was and how unintuitive its programming could be. That conversation sparked the idea of creating a more affordable and accessible alternative, and we teamed up to make it feasible. This project was conducted as research through the Louis Stokes Alliances for Minority Participation (LSAMP) program under Dr. Bouchard’s guidance."
+      "text": "The Low-Cost Robotic Arm was inspired by an earlier LEGO arm I built. In talking with Dr. Briana Bouchard, we reflected on how expensive the LEGO system was and how unintuitive its programming could be. That conversation sparked the idea of creating a more affordable and accessible alternative, and we teamed up to make it feasible. This project was conducted as research through the Louis Stokes Alliances for Minority Participation (LSAMP) program under Dr. Bouchard’s guidance. CLICK HERE to be redirected to the documentation I created to summarize the project."
     },
     "development": {
       "title": "Development / Process",
@@ -1078,52 +1071,216 @@
     "display_order": 14,
     "is_featured": false,
     "gif_url": "/casting.gif",
+    "hero_media": "/casting.gif",
+    "images": ["/images/me10man/pewter.jpg"],
     "tags": [
-      "Manufacturing",
-      "Materials"
+      "Manufacturing"
     ],
-    "content": [
-      {
-        "type": "text",
-        "value": "For our ME10 final project, my team and I set out to recreate the Ballon d’Or trophy as a pewter soccer ball. The project became an exploration of casting methods, iteration, and creative problem solving."
-      },
-      {
-        "type": "text",
-        "value": "We began by attempting to cast a half-sphere of the ball directly, but quickly learned that the plastic mold would melt under molten pewter. To overcome this, I suggested vacuum forming the ball to create a wax replica, which could then be packed in sand and replaced with metal during the pour."
-      },
-      {
-        "type": "image",
-        "value": "/images/me10man/ball.jpeg",
-        "caption": "Ball mold experiment before transitioning to Wax",
-        "size": "max-w-md"
-      },
-      {
-        "type": "text",
-        "value": "The wax casting approach worked in theory but presented new issues with removing the wax cleanly and creating a hollow interior. After several rounds of testing, we switched to making a hard silicone base mold. This allowed us to pour pewter safely and achieve a consistent final shape."
-      },
-      {
-        "type": "image",
-        "value": "/images/me10man/wax.jpeg",
-        "caption": "Wax mold experiment before transitioning to silicone",
-        "size": "max-w-md"
-      },
-      {
-        "type": "image",
-        "value": "/images/me10man/silicone.jpeg",
-        "caption": "Final pewter casting mounted on CNC-routed wooden base",
-        "size": "max-w-md"
-      },
-      {
-        "type": "text",
-        "value": "The final product combined creativity with practical problem solving. This project taught me not only the technical aspects of casting, but also how to pivot and refine designs through hands-on experimentation."
-      },
-      {
-        "type": "image",
-        "value": "/images/me10man/pewter.jpg",
-        "caption": "Final pewter casting mounted on CNC-routed wooden base",
-        "size": "max-w-md"
-      }
+    "overview": {
+      "title": "Overview",
+      "text": "For our ME10 final project, my team and I set out to recreate the Ballon d’Or trophy as a pewter soccer ball. The project became an exploration of casting methods, iteration, and creative problem solving."
+    },
+    "development": {
+      "title": "Development / Process",
+      "items": [
+        {
+          "type": "text",
+          "value": "We began by attempting to cast a half-sphere of the ball directly, but quickly learned that the plastic mold would melt under molten pewter. To overcome this, I suggested vacuum forming the ball to create a wax replica, which could then be packed in sand and replaced with metal during the pour."
+        },
+        {
+          "type": "image",
+          "value": "/images/me10man/wax.jpeg",
+          "caption": "Wax mold experiment before transitioning to silicone"
+        },
+        {
+          "type": "text",
+          "value": "The wax casting approach worked in theory but presented new issues with removing the wax cleanly and creating a hollow interior. After several rounds of testing, we switched to making a hard silicone base mold. This allowed us to pour pewter safely and achieve a consistent final shape."
+        },
+        {
+          "type": "image",
+          "value": "/images/me10man/silicone.jpeg",
+          "caption": "Silicone mold for the final pewter casting"
+        }
+      ]
+    },
+    "final_result": {
+      "title": "Final Result",
+      "items": [
+        {
+          "type": "text",
+          "value": "The final product combined creativity with practical problem solving. This project taught me not only the technical aspects of casting, but also how to pivot and refine designs through hands-on experimentation."
+        },
+        {
+          "type": "image",
+          "value": "/images/me10man/pewter.jpg",
+          "caption": "Final pewter casting mounted on CNC-routed wooden base"
+        }
+      ]
+    },
+    "reflection": {
+      "title": "Reflection",
+      "text": "This project taught me how unpredictable and iterative the casting process can be. Each failed attempt, from a melted mold to a collapsed wax form, pushed our team to rethink our approach and better understand how different materials behave. I learned how to adapt quickly when faced with real manufacturing constraints and to explore new fabrication methods like vacuum forming, lost wax casting, and plaster molding. Working through each challenge reinforced the importance of flexibility, teamwork, and creative problem solving in engineering. By the end, what began as a simple idea to replicate a trophy became a lesson in resilience, collaboration, and the craft of turning a concept into a tangible, polished piece."
+    },
+    "content": [],
+    "layout": {
+  "lg": [
+    {
+      "w": 10,
+      "h": 5,
+      "x": 1,
+      "y": 2,
+      "i": "hero_media",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 12,
+      "h": 2,
+      "x": 0,
+      "y": 0,
+      "i": "overview",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 12,
+      "h": 14,
+      "x": 0,
+      "y": 7,
+      "i": "development",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 7,
+      "h": 10,
+      "x": 0,
+      "y": 21,
+      "i": "final_result",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 5,
+      "h": 5,
+      "x": 7,
+      "y": 21,
+      "i": "reflection",
+      "moved": false,
+      "static": false
+    }
+  ],
+  "md": [
+    {
+      "w": 10,
+      "h": 5,
+      "x": 0,
+      "y": 0,
+      "i": "hero_media"
+    },
+    {
+      "w": 10,
+      "h": 2,
+      "x": 0,
+      "y": 5,
+      "i": "overview"
+    },
+    {
+      "w": 10,
+      "h": 9,
+      "x": 0,
+      "y": 7,
+      "i": "development"
+    },
+    {
+      "w": 6,
+      "h": 8,
+      "x": 0,
+      "y": 16,
+      "i": "final_result"
+    },
+    {
+      "w": 10,
+      "h": 2,
+      "x": 0,
+      "y": 24,
+      "i": "reflection"
+    }
+  ],
+  "sm": [
+    {
+      "w": 6,
+      "h": 4,
+      "x": 0,
+      "y": 0,
+      "i": "hero_media"
+    },
+    {
+      "w": 6,
+      "h": 2,
+      "x": 0,
+      "y": 4,
+      "i": "overview"
+    },
+    {
+      "w": 6,
+      "h": 9,
+      "x": 0,
+      "y": 6,
+      "i": "development"
+    },
+    {
+      "w": 4,
+      "h": 8,
+      "x": 0,
+      "y": 15,
+      "i": "final_result"
+    },
+    {
+      "w": 6,
+      "h": 2,
+      "x": 0,
+      "y": 23,
+      "i": "reflection"
+    }
+  ]
+}
+  },
+  {
+    "id": "the-hand",
+    "title": "The Hand",
+    "quick_description": "A LEGO Hand that mirrors yours!. This link takes you to a Notion page documenting the project.",
+    "display_order": 101,
+    "is_featured": false,
+    "hero_media": "/images/handlego.png",
+    "images": [
+      "/images/handlego.png"
+    ],
+    "gif_url": "/handlego.gif",
+    "notion_url": "https://flax-haze-954.notion.site/The-Hand-4bc8bda364364681be665b87bdda50e6?source=copy_link",
+    "tags": [
+      "LEGO",
+      "Robotics",
+      "Coding"
+    ]
+  },
+
+  {
+    "id": "me-35",
+    "title": "ME35 Portfolio",
+    "quick_description": "A collection of my robotics projects from my ME35 class.",
+    "display_order": 102,
+    "is_featured": false,
+    "hero_media": "/images/ME35.png",
+    "images": [
+      "/images/ME35.png"
+    ],
+    "gif_url": "/me35.gif",
+    "notion_url": "https://flax-haze-954.notion.site/ME35-Portfolio-f40b04e4f3944280beca02ca9bbc8079?source=copy_link",
+    "tags": [
+      "Robotics",
+      "Coding",
+      "Microcontroller"
     ]
   }
-  
 ]

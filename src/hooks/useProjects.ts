@@ -77,13 +77,19 @@ export const useProjects = () => {
 
   // Filter projects by tags
   const getFilteredProjects = (selectedTags: string[]) => {
-    if (selectedTags.length === 0) {
-      return projects;
+    let filtered = projects;
+
+    if (selectedTags.length > 0) {
+      filtered = projects.filter(project =>
+        selectedTags.every(tag => project.tags.includes(tag))
+      );
     }
-    
-    return projects.filter(project =>
-      selectedTags.every(tag => project.tags.includes(tag))
-    );
+
+    return filtered.sort((a, b) => {
+      if (a.is_featured && !b.is_featured) return -1;
+      if (!a.is_featured && b.is_featured) return 1;
+      return a.display_order - b.display_order;
+    });
   };
 
   // Get featured projects

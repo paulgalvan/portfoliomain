@@ -55,7 +55,7 @@ const Navigation = () => {
               variant={activeTab === "portfolio" ? "default" : "ghost"}
               onClick={() => {
                 setActiveTab("portfolio");
-                scrollToSection("projects");
+                navigate("/", { state: { scrollTo: "projects" } });
               }}
             >
               Portfolio
@@ -79,7 +79,7 @@ const Navigation = () => {
                 navigate("/personal-about");
               }}
             >
-              About
+              About Me
             </Button>
 
             {/* Connect Dropdown */}

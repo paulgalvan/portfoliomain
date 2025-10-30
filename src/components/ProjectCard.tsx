@@ -21,7 +21,10 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => { // Removed onClick from destructuring
   const [isHovered, setIsHovered] = useState(false);
-  const [imageError, setImageError] = useState(false);
+  
+  
+  
+
   const navigate = useNavigate(); // Get navigate function
 
   return (
@@ -46,12 +49,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => { // Removed onClick from
               alt={project.title}
               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
             />
-          ) : project.images && project.images.length > 0 && !imageError ? (
+          ) : project.images && project.images.length > 0 ? (
             <img
               src={project.images[0]}
               alt={project.title}
-              className="w-full h-full object-scale-down"
-              onError={() => setImageError(true)}
+              className="w-full h-full object-contain"
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">

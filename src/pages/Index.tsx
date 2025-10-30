@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -10,7 +10,7 @@ import { useProjects, Project } from "@/hooks/useProjects";
 import { Loader2 } from "lucide-react";
 
 const Index = () => {
-  const { projects, loading, error, getAllTags, getFilteredProjects, getFeaturedProjects } = useProjects();
+  const { projects, loading, error, getAllTags, getFilteredProjects } = useProjects();
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   
 
@@ -28,8 +28,19 @@ const Index = () => {
 
   
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "projects") {
+      const element = document.getElementById("projects");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   const filteredProjects = getFilteredProjects(selectedTags);
-  const featuredProjects = getFeaturedProjects();
+  
   const availableTags = getAllTags();
 
   if (loading) {
@@ -86,13 +97,7 @@ const Index = () => {
                 my photo if you’d like to know more about me!
                </p>
               <div className="flex space-x-4">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
-                  onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Explore My Work
-                </Button>
+                
                 <Link to="/personal-about">
                   <Button 
                     size="lg" 
@@ -108,29 +113,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
-      {featuredProjects.length > 0 && (
-        <section id="featured" className="py-16 bg-muted/30">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">My Favorite Projects</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Here are some of my most impactful and innovative projects that showcase 
-                my skills and passion for technology.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {featuredProjects.map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  project={project}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      
 
       
 
@@ -138,7 +121,7 @@ const Index = () => {
       <section id="projects" className="py-16">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">All Projectss</h2>
+            <h2 className="text-4xl font-bold mb-4">All Projects</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Click on the tags below to filter projects by technology and skills.
             </p>
