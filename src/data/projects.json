@@ -195,13 +195,13 @@
   {
     "id": "Lego-Simple-Robotics",
     "title": "LEGO Simple Robotics",
-    "quick_description": "Introduction to robotics through LEGO — exploring gears, sensors, and creative mechanisms.",
+    "quick_description": "Introduction to robotics through LEGO - exploring gears, sensors, and creative mechanisms.",
     "display_order": 99,
     "is_featured": false,
     "gif_url": "/spirolego.gif",
-    "hero_media": "/images/walle.png",
+    "hero_media": "/images/walle.jpg",
     "images": [
-      "/images/walle.png"
+      "/images/walle.jpg"
     ],
     "tags": [
       "Robotics",
@@ -284,7 +284,7 @@
     "type": "project_item",
     "title": "Repurposed WALL-E Set",
     "description": "For the final project, I added motors and PS4 controller support to a LEGO WALL-E and designed a maze it could navigate. Although the elementary school demo was cancelled, the project taught me how to combine robotics with user interaction in playful, educational ways.",
-    "image": "/images/walle.png",
+    "image": "/images/walle.jpg",
     "gif": "/walle.gif"
   }
     ],
@@ -694,7 +694,7 @@
       "items": [
         {
           "type": "image",
-          "value": "/images/prbw1.png"
+          "value": "/images/prbw1.jpg"
         },
         {
           "type": "text",

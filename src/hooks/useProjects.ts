@@ -5,12 +5,13 @@ import projectsData from "@/data/projects.json";
 export interface Project {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   quick_description: string;
   takeaways?: string;
   duration?: string;
   images?: string[];
   gif_url?: string;
+  hero_media?: string;
   tags: string[];
   is_featured: boolean;
   display_order: number;
@@ -19,6 +20,15 @@ export interface Project {
   created_at?: string;
   updated_at?: string;
   content?: any[];
+  layout?: any;
+  notion_url?: string;
+  notion_iframe_url?: string;
+  processedContent?: any[];
+  processedContentPath?: string;
+  overview?: { title?: string; text?: string };
+  development?: { title?: string; items?: any[] };
+  final_result?: { title?: string; items?: any[] };
+  reflection?: { text?: string; items?: any[] };
 }
 
 export const useProjects = () => {
@@ -32,9 +42,7 @@ export const useProjects = () => {
       setLoading(true);
       setError(null);
 
-      // Simulate fetching data from a local file
-      await new Promise(resolve => setTimeout(resolve, 500));
-
+      // Load directly from the bundled JSON - no artificial delay needed
       const processedProjects = projectsData.map(project => {
         // Prioritize existing 'images' array, otherwise look in 'content'
         const existingImages = project.images && project.images.length > 0 ? project.images : [];

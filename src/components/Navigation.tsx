@@ -1,5 +1,7 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+'use client';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -7,118 +9,69 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Github, Linkedin, Mail, Phone, FileDown, ChevronDown } from "lucide-react";
 
 const Navigation = () => {
-  const [activeTab, setActiveTab] = useState("portfolio");
-  const [phoneText, setPhoneText] = useState("Phone");
-  const navigate = useNavigate();
-
-  const handleConnectClick = (type: string) => {
-    switch (type) {
-      case "github":
-        window.open("https://github.com/paulgalvan", "_blank");
-        break;
-      case "linkedin":
-        window.open("https://www.linkedin.com/in/paul-galvan/", "_blank");
-        break;
-      case "email":
-        window.location.href = "mailto:paul.galvan@tufts.edu";
-        break;
-    }
-  };
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo/Initials */}
-          <Button
-            variant="ghost"
-            size="lg"
-            className="text-2xl font-bold hover:bg-primary/10 rounded-full w-12 h-12 p-0"
-            onClick={() => navigate("/")}
-          >
-            <img src="/favicon_io/android-chrome-512x512.png" alt="Logo" className="w-15 h-15" />
-          </Button>
+          <Link href="/">
+            <img src="/favicon_io/android-chrome-512x512.png" alt="Paul Galvan" className="w-10 h-10" />
+          </Link>
 
-          {/* Navigation Links */}
-          <div className="flex items-center space-x-8">
-            <Button
-              variant={activeTab === "portfolio" ? "default" : "ghost"}
-              onClick={() => {
-                setActiveTab("portfolio");
-                navigate("/", { state: { scrollTo: "projects" } });
-              }}
+          <div className="flex items-center space-x-6">
+            <Link
+              href="/#projects"
+              className={`text-sm font-medium transition-colors ${pathname === "/" ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}
             >
-              Portfolio
-            </Button>
+              Featured
+            </Link>
 
-            <Button
-              variant={activeTab === "resume" ? "default" : "ghost"}
-              onClick={() => {
-                setActiveTab("resume");
-                navigate("/resume");
-              }}
+            <Link
+              href="/projects"
+              className={`text-sm font-medium transition-colors ${pathname === "/projects" ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}
             >
-              <FileDown className="w-4 h-4 mr-2" />
+              All Work
+            </Link>
+
+            <Link
+              href="/resume"
+              className={`text-sm font-medium transition-colors ${pathname === "/resume" ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}
+            >
               Resume
-            </Button>
+            </Link>
 
-            <Button
-              variant={activeTab === "about" ? "default" : "ghost"}
-              onClick={() => {
-                setActiveTab("about");
-                navigate("/personal-about");
-              }}
+            <Link
+              href="/personal-about"
+              className={`text-sm font-medium transition-colors ${pathname === "/personal-about" ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}
             >
-              About Me
-            </Button>
+              About
+            </Link>
 
-            {/* Connect Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="gap-2">
+                <Button variant="outline" size="sm" className="gap-1.5">
                   Connect
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-3.5 h-3.5" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 bg-popover/95 backdrop-blur-sm">
-                <DropdownMenuItem
-                  onClick={() => handleConnectClick("github")}
-                  className="cursor-pointer"
-                >
-                  <Github className="w-4 h-4 mr-2" />
-                  GitHub
+              <DropdownMenuContent align="end" className="w-44">
+                <DropdownMenuItem asChild>
+                  <a href="https://github.com/paulgalvan" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer">
+                    <Github className="w-4 h-4" /> GitHub
+                  </a>
                 </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => handleConnectClick("linkedin")}
-                  className="cursor-pointer"
-                >
-                  <Linkedin className="w-4 h-4 mr-2" />
-                  LinkedIn
+                <DropdownMenuItem asChild>
+                  <a href="https://www.linkedin.com/in/paul-galvan/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer">
+                    <Linkedin className="w-4 h-4" /> LinkedIn
+                  </a>
                 </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => handleConnectClick("email")}
-                  className="cursor-pointer"
-                >
-                  <Mail className="w-4 h-4 mr-2" />
-                  Email
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onMouseEnter={() => setPhoneText("(424)425-9675")}
-                  onMouseLeave={() => setPhoneText("Phone")}
-                  className="cursor-pointer"
-                >
-                  <Phone className="w-4 h-4 mr-2" />
-                  {phoneText}
+                <DropdownMenuItem asChild>
+                  <a href="mailto:paul.galvan@tufts.edu" className="flex items-center gap-2 cursor-pointer">
+                    <Mail className="w-4 h-4" /> Email
+                  </a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

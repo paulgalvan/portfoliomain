@@ -1,0 +1,9 @@
+# Part 5 - Reflection
+
+Project Elles has been unique in the sense that it required a large variety of both engineering as well as programming skills. Using BLE connections to accomplish our goal was challenging but also extremely rewarding as we could physically see our progress through Elles. Neither of us had ever worked with BLE before, so there was a big learning curve when we initially started programming, but in the end our hard work paid off.
+
+Although we are both extremely satisfied with the end result, there are a few constraints that could be improved upon. For example, in order to make Elles “dance,” the right button on the joystick’s SPIKE Prime hub must be pressed twice, otherwise, the legs wouldn’t stop moving. There are also physical constraints, one of which is that the shoulders cannot rotate a full 360°, stemming from Elles’ wiring and construction.
+
+Project Elles is technically finished, but the possibilities for the future are endless. The constraints mentioned above could be adjusted, and the robot parts that we did not utilize (the button, neck motors, and distance sensors) in this project could be used for a number of things. Furthermore, to continue with our overarching theme of biomimicry, another idea we have is to use a camera to track body movement and have Elles copy those actions.
+
+To conclude, Project Elles was a valuable experience that allowed both of us to further develop and refine our engineering as well as programming skills. The newfound knowledge that we are taking away from this project will be put to good use in the future, and we are extremely grateful to have been given this amazing opportunity to do what we love.
