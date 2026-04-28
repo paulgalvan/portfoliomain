@@ -1,10 +1,13 @@
 {
   "app": {
     "[project]/src/app/page": [
-      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2"
     ],
     "[project]/src/app/projects/page": [
-      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2"
+    ],
+    "[project]/src/app/resume/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2"
     ]
   },
   "appUsingSizeAdjust": true,

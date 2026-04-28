@@ -81,20 +81,7 @@ function HomePage() {
                   <span className="pg-hero__avail-dot" aria-hidden="true" />
                   Available · Full-time from Summer 2026
                 </div>
-                <div className="pg-hero__actions">
-                  <button
-                    id="hero-cta-see-work"
-                    className="pg-hero__btn pg-hero__btn--primary"
-                    onClick={() =>
-                      projectsRef.current?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  >
-                    See my work ↓
-                  </button>
-                  <Link href="/personal-about" className="pg-hero__btn pg-hero__btn--outline">
-                    About me
-                  </Link>
-                </div>
+
               </div>
             </div>
 
@@ -111,7 +98,7 @@ function HomePage() {
             <div className="pg-projects__header">
               <h2 className="pg-projects__heading">Featured Work</h2>
               <Link href="/projects" className="text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors group flex items-center gap-1.5">
-                Full Archive
+                All Work
                 <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>
@@ -134,7 +121,7 @@ function HomePage() {
                     href="/projects" 
                     className="inline-flex items-center gap-2 px-8 py-4 rounded-md bg-muted/50 hover:bg-muted transition-colors text-sm font-semibold"
                   >
-                    View All Projects
+                    All Work
                     <ChevronRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -309,9 +296,9 @@ function HomePage() {
           min-width: 0;
         }
         .tl-card__monogram {
-          width: 40px;
-          height: 40px;
-          border-radius: 4px;
+          width: 52px;
+          height: 52px;
+          border-radius: 6px;
           border: 1px solid hsl(var(--border) / 0.5);
           background: hsl(var(--muted) / 0.1);
           display: flex;
@@ -326,7 +313,7 @@ function HomePage() {
           object-fit: contain;
           filter: grayscale(1);
           opacity: 0.8;
-          padding: 4px;
+          padding: 2px;
           transition: filter 0.2s, opacity 0.2s;
         }
         .tl-card:hover .tl-card__logo-img {

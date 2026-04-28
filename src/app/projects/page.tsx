@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useProjects, Project } from "@/hooks/useProjects";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -157,23 +157,21 @@ import { ArrowLeft, Loader2 } from "lucide-react";
     } as Project
   ];
 
-  export default function ProjectsArchive() {
-const [shuffledExtras, setShuffledExtras] = useState<Project[]>(extrasProjects);
+// Stable slug helper
+function toSlug(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+export default function ProjectsArchive() {
+  const [shuffledExtras, setShuffledExtras] = useState<Project[]>(extrasProjects);
+  const [activeSection, setActiveSection] = useState<string>("");
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     setShuffledExtras([...extrasProjects].sort(() => Math.random() - 0.5));
   }, []);
 
-  
   const { projects, loading } = useProjects();
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-5 h-5 animate-spin text-muted-foreground" />
-      </div>
-    );
-  }
 
   // Define categories and their corresponding tags
   const CATEGORIES = [
@@ -194,53 +192,128 @@ const [shuffledExtras, setShuffledExtras] = useState<Project[]>(extrasProjects);
     }
   ];
 
+  // All nav tabs (categories + fixed sections)
+  const NAV_TABS = [
+    ...CATEGORIES.map(c => ({ label: c.name, id: toSlug(c.name) })),
+    { label: "PCBs", id: "pcbs" },
+    { label: "Extras", id: "extras" },
+  ];
+
+  // IntersectionObserver to track active section
+  useEffect(() => {
+    if (observerRef.current) observerRef.current.disconnect();
+
+    const ids = NAV_TABS.map(t => t.id);
+    const sections = ids.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+            break;
+          }
+        }
+      },
+      { rootMargin: "-20% 0px -70% 0px", threshold: 0 }
+    );
+
+    sections.forEach(el => observerRef.current!.observe(el));
+    return () => observerRef.current?.disconnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Loader2 className="w-5 h-5 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
   // Group projects into categories
-  const categorized = CATEGORIES.map(category => {
-    return {
-      ...category,
-      items: projects.filter(project => 
-        project.tags?.some(tag => category.tags.includes(tag))
-      ).sort((a, b) => a.display_order - b.display_order)
-    };
-  });
+  const categorized = CATEGORIES.map(category => ({
+    ...category,
+    id: toSlug(category.name),
+    items: projects.filter(project =>
+      project.tags?.some(tag => category.tags.includes(tag))
+    ).sort((a, b) => a.display_order - b.display_order)
+  }));
 
   // Projects that didn't fit into a specific category
-  const uncategorized = projects.filter(p => 
+  const uncategorized = projects.filter(p =>
     !categorized.some(cat => cat.items.some(item => item.id === p.id))
   );
+
+  function scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      const offset = 120;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  }
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="container mx-auto px-6 pt-32 pb-24 max-w-6xl">
-        <div className="mb-16">
+        {/* Page Header */}
+        <div className="mb-10">
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to home
           </Link>
-          <h1 className="text-4xl font-bold tracking-tight mb-4 text-foreground">Project Archive</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-4 text-foreground">All Work</h1>
           <p className="text-muted-foreground max-w-2xl leading-relaxed">
             A directory of my engineering work, research, and technical explorations, organized by core technical discipline.
           </p>
         </div>
 
+        {/* ── Category Navigation Bar ── */}
+        <div className="sticky top-16 z-30 mb-14 -mx-2">
+          <div
+            className="flex flex-wrap gap-2 px-3 py-3 rounded-xl border border-border/50 shadow-sm"
+            style={{
+              background: "hsl(var(--background) / 0.85)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+            }}
+          >
+            {NAV_TABS.map(tab => {
+              const isActive = activeSection === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => scrollToSection(tab.id)}
+                  className={[
+                    "px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap border",
+                    isActive
+                      ? "bg-primary text-primary-foreground border-primary shadow-md scale-105"
+                      : "bg-transparent text-muted-foreground border-border/50 hover:text-foreground hover:border-border hover:bg-secondary/60",
+                  ].join(" ")}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ── Sections ── */}
         <div className="space-y-24">
           {categorized.map(category => (
-            <section key={category.name} className="space-y-8">
+            <section key={category.id} id={category.id} className="space-y-8 scroll-mt-32">
               <div className="border-b border-border/60 pb-6">
                 <h2 className="text-2xl font-bold text-foreground mb-2">{category.name}</h2>
                 <p className="text-muted-foreground leading-relaxed">{category.description}</p>
               </div>
-              
+
               {category.items.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.items.map((project, i) => (
-                    <ProjectCard 
-                      key={project.id} 
-                      project={project} 
-                      index={i} 
-                    />
+                    <ProjectCard key={project.id} project={project} index={i} />
                   ))}
                 </div>
               ) : (
@@ -251,56 +324,42 @@ const [shuffledExtras, setShuffledExtras] = useState<Project[]>(extrasProjects);
             </section>
           ))}
 
-          {/* New PCB Section */}
-          <section id="pcbs" className="space-y-8">
+          {/* PCB Section */}
+          <section id="pcbs" className="space-y-8 scroll-mt-32">
             <div className="border-b border-border/60 pb-6">
               <h2 className="text-2xl font-bold text-foreground mb-2">Printed Circuit Boards</h2>
               <p className="text-muted-foreground leading-relaxed">Custom board designs, schematics, and hardware prototyping. (Hover to view schematics)</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {pcbProjects.map((project, i) => (
-                <ProjectCard 
-                  key={project.id} 
-                  project={project} 
-                  index={i} 
-                  isStatic={true}
-                />
+                <ProjectCard key={project.id} project={project} index={i} isStatic={true} />
               ))}
             </div>
           </section>
 
           {uncategorized.length > 0 && (
-            <section className="space-y-8">
+            <section className="space-y-8 scroll-mt-32">
               <div className="border-b border-border/60 pb-6">
                 <h2 className="text-2xl font-bold text-foreground mb-2">Other Explorations</h2>
                 <p className="text-muted-foreground">Miscellaneous technical work and hobby projects.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {uncategorized.map((project, i) => (
-                  <ProjectCard 
-                    key={project.id} 
-                    project={project} 
-                    index={i} 
-                  />
+                  <ProjectCard key={project.id} project={project} index={i} />
                 ))}
               </div>
             </section>
           )}
 
           {/* Extras Section */}
-          <section id="extras" className="space-y-8">
+          <section id="extras" className="space-y-8 scroll-mt-32">
             <div className="border-b border-border/60 pb-6">
               <h2 className="text-2xl font-bold text-foreground mb-2">Extras</h2>
               <p className="text-muted-foreground leading-relaxed">Additional explorations and temporary projects.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {shuffledExtras.map((project, i) => (
-                <ProjectCard 
-                  key={project.id} 
-                  project={project} 
-                  index={i} 
-                  isStatic={true}
-                />
+                <ProjectCard key={project.id} project={project} index={i} isStatic={true} />
               ))}
             </div>
           </section>
