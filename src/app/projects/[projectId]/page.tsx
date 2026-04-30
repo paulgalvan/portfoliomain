@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useProjects } from "@/hooks/useProjects";
 import DynamicContentRenderer from "@/components/DynamicContentRenderer";
-import { Loader2, ArrowLeft, ArrowUpRight, ChevronDown, ArrowRight } from "lucide-react";
+import { Loader2, ArrowLeft, ArrowUpRight, ChevronDown, ArrowRight, ChevronLeft } from "lucide-react";
 
 function MediaBlock({ src, alt }: { src: string; alt: string }) {
   if (!src) return null;
@@ -25,6 +25,97 @@ function MediaBlock({ src, alt }: { src: string; alt: string }) {
   if (/\.(mp4|webm|ogg|mov)$/i.test(src))
     return <video src={src} controls playsInline className="cs-media" />;
   return <img src={src} alt={alt} className="cs-media" loading="eager" />;
+}
+
+const GRID_SIZE = 4;
+function ImageCarousel({ images, caption }: { images: string[]; caption?: string }) {
+  const [page, setPage] = useState(0);
+  if (!images || images.length === 0) return null;
+  const totalPages = Math.ceil(images.length / GRID_SIZE);
+  const prevPage = () => setPage((p) => (p - 1 + totalPages) % totalPages);
+  const nextPage = () => setPage((p) => (p + 1) % totalPages);
+  const slice = images.slice(page * GRID_SIZE, page * GRID_SIZE + GRID_SIZE);
+  return (
+    <div className="cs-carousel">
+      <div className="cs-carousel__grid">
+        {slice.map((src, i) => (
+          <div key={i} className="cs-carousel__cell">
+            {/\.(mp4|webm|ogg|mov)$/i.test(src)
+              ? <video src={src} controls playsInline className="cs-carousel__media" />
+              : <img src={src} alt={caption ? `${caption} ${page * GRID_SIZE + i + 1}` : `Slide ${page * GRID_SIZE + i + 1}`} className="cs-carousel__media" loading="lazy" />}
+          </div>
+        ))}
+      </div>
+      {totalPages > 1 && (
+        <div className="cs-carousel__controls">
+          <button className="cs-carousel__btn" onClick={prevPage} aria-label="Previous page">
+            <ChevronLeft size={18} />
+          </button>
+          <div className="cs-carousel__dots">
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                className={`cs-carousel__dot ${i === page ? "cs-carousel__dot--active" : ""}`}
+                onClick={() => setPage(i)}
+                aria-label={`Page ${i + 1}`}
+              />
+            ))}
+          </div>
+          <button className="cs-carousel__btn" onClick={nextPage} aria-label="Next page">
+            <ArrowRight size={18} />
+          </button>
+        </div>
+      )}
+      {caption && <p className="cs-carousel__caption">{caption}</p>}
+    </div>
+  );
+}
+
+function ProcessCarousel({ images, caption }: { images: string[]; caption?: string }) {
+  const [idx, setIdx] = useState(0);
+  if (!images || images.length === 0) return (
+    <div className="cs-pc cs-pc--empty"><span>Add images here</span></div>
+  );
+  const prev = () => setIdx((i) => (i - 1 + images.length) % images.length);
+  const next = () => setIdx((i) => (i + 1) % images.length);
+  return (
+    <div className="cs-pc">
+      <div className="cs-pc__track">
+        {images[idx].includes("drive.google.com")
+          ? <iframe src={images[idx].replace("/view?usp=sharing", "/preview")} className="cs-pc__media cs-pc__iframe" allow="autoplay" allowFullScreen></iframe>
+          : /\.(mp4|webm|ogg|mov)$/i.test(images[idx])
+          ? <video src={images[idx]} controls playsInline className="cs-pc__media" />
+          : <img src={images[idx]} alt={caption ? `${caption} ${idx + 1}` : `Slide ${idx + 1}`} className="cs-pc__media" loading="lazy" />}
+        {images.length > 1 && (
+          <>
+            <button className="cs-pc__btn cs-pc__btn--prev" onClick={prev} aria-label="Previous"><ChevronLeft size={16} /></button>
+            <button className="cs-pc__btn cs-pc__btn--next" onClick={next} aria-label="Next"><ArrowRight size={16} /></button>
+          </>
+        )}
+      </div>
+      {images.length > 1 && (
+        <div className="cs-pc__dots">
+          {images.map((_, i) => (
+            <button key={i} className={`cs-pc__dot ${i === idx ? 'cs-pc__dot--active' : ''}`} onClick={() => setIdx(i)} aria-label={`Slide ${i + 1}`} />
+          ))}
+        </div>
+      )}
+      {caption && <p className="cs-pc__caption">{caption}</p>}
+    </div>
+  );
+}
+
+function ProcessGrid({ rows }: { rows: { text: string; carousel: { caption?: string; value: string[] } }[] }) {
+  return (
+    <div className="cs-pg">
+      {rows.map((row, i) => (
+        <div key={i} className={`cs-pg__row ${i % 2 !== 0 ? 'cs-pg__row--flip' : ''}`}>
+          <div className="cs-pg__text"><p>{row.text}</p></div>
+          <div className="cs-pg__media"><ProcessCarousel images={row.carousel?.value || []} caption={row.carousel?.caption} /></div>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 function RevealSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -299,6 +390,8 @@ export default function ProjectDetail() {
                   {project.development.items?.map((item: any, i: number) => {
                     if (item.type === "image" || item.type === "gif") return <div key={i} className="cs-dev-grid__media"><MediaBlock src={item.value} alt={`Process ${i + 1}`} /></div>;
                     if (item.type === "text") return <div key={i} className="cs-dev-grid__text"><p>{item.value}</p></div>;
+                    if (item.type === "carousel") return <div key={i} className="cs-dev-grid__media cs-dev-grid__media--full"><ImageCarousel images={item.value} caption={item.caption} /></div>;
+                    if (item.type === "process_grid") return <div key={i} style={{gridColumn:'1/-1'}}><ProcessGrid rows={item.rows} /></div>;
                     return null;
                   })}
                 </div>
@@ -456,7 +549,44 @@ export default function ProjectDetail() {
         .cs-section__text{font-size:1.05rem;line-height:1.75;color:hsl(var(--foreground));margin:0}
         .cs-dev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
         .cs-dev-grid__media img,.cs-dev-grid__media video{width:100%;border-radius:10px;object-fit:contain}
+        .cs-dev-grid__media--full{grid-column:1/-1}
         .cs-dev-grid__text p{font-size:.95rem;line-height:1.75;color:hsl(var(--foreground));margin:0}
+
+        /* ── Process Diagonal Grid ── */
+        .cs-pg{display:flex;flex-direction:column;gap:28px}
+        .cs-pg__row{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+        .cs-pg__row--flip .cs-pg__text{order:2}
+        .cs-pg__row--flip .cs-pg__media{order:1}
+        .cs-pg__text p{font-size:.92rem;line-height:1.8;color:hsl(var(--foreground));margin:0}
+
+        /* ── Process Carousel (single-image slideshow) ── */
+        .cs-pc{width:100%;display:flex;flex-direction:column;gap:8px}
+        .cs-pc__track{position:relative;border-radius:10px;overflow:hidden;background:hsl(var(--muted)/.3);aspect-ratio:4/3;border:1px solid hsl(var(--border))}
+        .cs-pc__media{width:100%;height:100%;object-fit:contain;display:block}
+        .cs-pc__btn{position:absolute;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:hsl(var(--background)/.85);border:1px solid hsl(var(--border));color:hsl(var(--foreground));cursor:pointer;transition:all .2s;z-index:2;backdrop-filter:blur(4px)}
+        .cs-pc__btn:hover{background:hsl(var(--background));box-shadow:0 4px 12px rgba(0,0,0,.15)}
+        .cs-pc__btn--prev{left:10px}
+        .cs-pc__btn--next{right:10px}
+        .cs-pc__dots{display:flex;justify-content:center;gap:5px}
+        .cs-pc__dot{width:6px;height:6px;border-radius:50%;border:none;background:hsl(var(--border));cursor:pointer;transition:all .2s;padding:0}
+        .cs-pc__dot--active{background:hsl(var(--foreground));transform:scale(1.25)}
+        .cs-pc__caption{font-size:.78rem;color:hsl(var(--muted-foreground));text-align:center;margin:0}
+        .cs-pc__iframe{border:none}
+        .cs-pc--empty{aspect-ratio:4/3;border-radius:10px;border:2px dashed hsl(var(--border));display:flex;align-items:center;justify-content:center}
+        .cs-pc--empty span{font-size:.78rem;color:hsl(var(--muted-foreground))}
+        @media(max-width:768px){.cs-pg__row{grid-template-columns:1fr}.cs-pg__row--flip .cs-pg__text{order:0}.cs-pg__row--flip .cs-pg__media{order:0}}
+        .cs-carousel{width:100%;display:flex;flex-direction:column;gap:16px}
+        .cs-carousel__grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .cs-carousel__cell{border-radius:10px;overflow:hidden;background:hsl(var(--muted)/.3);aspect-ratio:4/3;border:1px solid hsl(var(--border))}
+        .cs-carousel__media{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+        .cs-carousel__cell:hover .cs-carousel__media{transform:scale(1.03)}
+        .cs-carousel__controls{display:flex;align-items:center;justify-content:center;gap:16px}
+        .cs-carousel__btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:hsl(var(--card));border:1px solid hsl(var(--border));color:hsl(var(--foreground));cursor:pointer;transition:all .2s;flex-shrink:0}
+        .cs-carousel__btn:hover{background:hsl(var(--muted));box-shadow:0 4px 12px rgba(0,0,0,.1)}
+        .cs-carousel__dots{display:flex;justify-content:center;gap:6px}
+        .cs-carousel__dot{width:7px;height:7px;border-radius:50%;border:none;background:hsl(var(--border));cursor:pointer;transition:all .2s;padding:0}
+        .cs-carousel__dot--active{background:hsl(var(--foreground));transform:scale(1.25)}
+        .cs-carousel__caption{font-size:.82rem;color:hsl(var(--muted-foreground));text-align:center;margin:0}
         .cs-result{display:flex;flex-direction:column;gap:20px}
         .cs-result__media img,.cs-result__media video{width:100%;border-radius:10px;max-height:400px;object-fit:contain}
         .cs-result__text{font-size:1rem;line-height:1.75;color:hsl(var(--foreground));margin:0}

@@ -59,7 +59,7 @@
             "Build a fully functional 4-DOF robotic arm using low-cost, 3D-printed parts and off-the-shelf electronics.",
             "Design a lightweight custom gripper that reliably handles small objects.",
             "Implement key robotics concepts such as kinematics, control systems, and programming for under $30."
-         ]
+          ]
         }
       ]
     },
@@ -209,181 +209,180 @@
       "Coding"
     ],
     "content": [
-  {
-    "id": "lego-overview",
-    "type": "overview",
-    "title": "Overview",
-    "text": "This collection showcases a series of projects built with the LEGO Spike Prime Sets, exploring mechanical design, programming, and robotics. These projects were part of an introductory robotics(EN1:Simple Robotics) course and demonstrate the creative possibilities of the LEGO platform."
-  },
-  {
-    "id": "lego-walker",
-    "type": "project_item",
-    "title": "LEGO Walker",
-    "description": "We demonstrated the possibilites that could be achieved with LEGO by experimenting with motion. A simple forward-falling mechanism mimiced a walking pattern.",
-    "image": "/images/legowalker.jpeg",
-    "gif": "/walklego.gif"
-  },
-  {
-    "id": "lego-bird",
-    "type": "project_item",
-    "title": "LEGO Bird",
-    "description": "I applied biomimicry principles to design a bird with flapping wings. This project showed me how nature can inspire mechanical motion in LEGO builds.",
-    "image": "/images/legobird.jpeg",
-    "gif": "/birdlego.gif"
-  },
-  {
-    "id": "lego-top",
-    "type": "project_item",
-    "title": "LEGO Spinning Top",
-    "description": "Building a spinning top taught me how to use gears effectively to transfer and store energy. I learned how gear ratios can amplify speed in simple mechanisms.",
-    "image": "/images/legotop.jpg",
-    "gif": "/toplego.gif"
-  },
-  {
-    "id": "lego-spirograph",
-    "type": "project_item",
-    "title": "LEGO Spirograph",
-    "description": "This project used geometry and circular motion to create intricate designs with a tablet. I was the only one in the class to integrate a tablet into the mechanism, expanding the creative output.",
-    "image": "/images/spirography.jpeg",
-    "gif": "/spirolego.gif"
-  },
-  {
-    "id": "lego-2d-printer",
-    "type": "project_item",
-    "title": "LEGO 2D Printer",
-    "description": "For the square-drawing challenge, I developed an XY-axis LEGO printer. I was the only one to turn the task into a functional 2D drawing machine, deepening my understanding of coordinate motion.",
-    "image": "/images/2dprinter.jpeg",
-    "gif": "/squarelego.gif"
-  },
-  {
-    "id": "lego-drill",
-    "type": "project_item",
-    "title": "LEGO Drill",
-    "description": "I designed this handheld drill around the constraint of mimicking how astronauts might change a nut in space. It gave me insight into problem-solving under extreme conditions where ergonomics and efficiency are critical.",
-    "image": "/images/legodrill.jpg",
-    "gif": "/drillLego.gif"
-  },
-  {
-    "id": "lego-ps4-car",
-    "type": "project_item",
-    "title": "PS4-Controlled LEGO Car",
-    "description": "By integrating a PS4 controller, I learned the intricacies of building a responsive LEGO driving system. This project showed me how LEGO could be extended into interactive, remote-controlled systems.",
-    "image": "/carlego.gif",
-    "gif": "/carlego.gif"
-  },
-  {
-    "id": "lego-snake",
-    "type": "project_item",
-    "title": "LEGO Snake",
-    "description": "I adapted the PS4 control system to create a slithering LEGO snake. This project was themed for a Halloween house, showing how robotics could merge with creative storytelling.",
-    "image": "/images/legosnake.jpg",
-    "gif": "/snakelego.gif"
-  },
-  {
-    "id": "lego-walle",
-    "type": "project_item",
-    "title": "Repurposed WALL-E Set",
-    "description": "For the final project, I added motors and PS4 controller support to a LEGO WALL-E and designed a maze it could navigate. Although the elementary school demo was cancelled, the project taught me how to combine robotics with user interaction in playful, educational ways.",
-    "image": "/images/walle.jpg",
-    "gif": "/walle.gif"
-  }
+      {
+        "id": "lego-overview",
+        "type": "overview",
+        "title": "Overview",
+        "text": "This collection showcases a series of projects built with the LEGO Spike Prime Sets, exploring mechanical design, programming, and robotics. These projects were part of an introductory robotics(EN1:Simple Robotics) course and demonstrate the creative possibilities of the LEGO platform."
+      },
+      {
+        "id": "lego-walker",
+        "type": "project_item",
+        "title": "LEGO Walker",
+        "description": "We demonstrated the possibilites that could be achieved with LEGO by experimenting with motion. A simple forward-falling mechanism mimiced a walking pattern.",
+        "image": "/images/legowalker.jpeg",
+        "gif": "/walklego.gif"
+      },
+      {
+        "id": "lego-bird",
+        "type": "project_item",
+        "title": "LEGO Bird",
+        "description": "I applied biomimicry principles to design a bird with flapping wings. This project showed me how nature can inspire mechanical motion in LEGO builds.",
+        "image": "/images/legobird.jpeg",
+        "gif": "/birdlego.gif"
+      },
+      {
+        "id": "lego-top",
+        "type": "project_item",
+        "title": "LEGO Spinning Top",
+        "description": "Building a spinning top taught me how to use gears effectively to transfer and store energy. I learned how gear ratios can amplify speed in simple mechanisms.",
+        "image": "/images/legotop.jpg",
+        "gif": "/toplego.gif"
+      },
+      {
+        "id": "lego-spirograph",
+        "type": "project_item",
+        "title": "LEGO Spirograph",
+        "description": "This project used geometry and circular motion to create intricate designs with a tablet. I was the only one in the class to integrate a tablet into the mechanism, expanding the creative output.",
+        "image": "/images/spirography.jpeg",
+        "gif": "/spirolego.gif"
+      },
+      {
+        "id": "lego-2d-printer",
+        "type": "project_item",
+        "title": "LEGO 2D Printer",
+        "description": "For the square-drawing challenge, I developed an XY-axis LEGO printer. I was the only one to turn the task into a functional 2D drawing machine, deepening my understanding of coordinate motion.",
+        "image": "/images/2dprinter.jpeg",
+        "gif": "/squarelego.gif"
+      },
+      {
+        "id": "lego-drill",
+        "type": "project_item",
+        "title": "LEGO Drill",
+        "description": "I designed this handheld drill around the constraint of mimicking how astronauts might change a nut in space. It gave me insight into problem-solving under extreme conditions where ergonomics and efficiency are critical.",
+        "image": "/images/legodrill.jpg",
+        "gif": "/drillLego.gif"
+      },
+      {
+        "id": "lego-ps4-car",
+        "type": "project_item",
+        "title": "PS4-Controlled LEGO Car",
+        "description": "By integrating a PS4 controller, I learned the intricacies of building a responsive LEGO driving system. This project showed me how LEGO could be extended into interactive, remote-controlled systems.",
+        "image": "/carlego.gif",
+        "gif": "/carlego.gif"
+      },
+      {
+        "id": "lego-snake",
+        "type": "project_item",
+        "title": "LEGO Snake",
+        "description": "I adapted the PS4 control system to create a slithering LEGO snake. This project was themed for a Halloween house, showing how robotics could merge with creative storytelling.",
+        "image": "/images/legosnake.jpg",
+        "gif": "/snakelego.gif"
+      },
+      {
+        "id": "lego-walle",
+        "type": "project_item",
+        "title": "Repurposed WALL-E Set",
+        "description": "For the final project, I added motors and PS4 controller support to a LEGO WALL-E and designed a maze it could navigate. Although the elementary school demo was cancelled, the project taught me how to combine robotics with user interaction in playful, educational ways.",
+        "image": "/images/walle.jpg",
+        "gif": "/walle.gif"
+      }
     ],
     "layout": {
-  "lg": [
-    {
-      "w": 12,
-      "h": 2,
-      "x": 0,
-      "y": 0,
-      "i": "lego-overview",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 6,
-      "x": 0,
-      "y": 2,
-      "i": "lego-walker",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 6,
-      "x": 6,
-      "y": 2,
-      "i": "lego-bird",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 6,
-      "x": 0,
-      "y": 8,
-      "i": "lego-top",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 6,
-      "x": 6,
-      "y": 8,
-      "i": "lego-spirograph",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 6,
-      "x": 0,
-      "y": 14,
-      "i": "lego-2d-printer",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 6,
-      "x": 6,
-      "y": 14,
-      "i": "lego-drill",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 5,
-      "x": 6,
-      "y": 20,
-      "i": "lego-ps4-car",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 5,
-      "x": 0,
-      "y": 20,
-      "i": "lego-snake",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 9,
-      "h": 10,
-      "x": 1,
-      "y": 25,
-      "i": "lego-walle",
-      "moved": false,
-      "static": false
-    }
-  ]
+      "lg": [
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 0,
+          "i": "lego-overview",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 6,
+          "x": 0,
+          "y": 2,
+          "i": "lego-walker",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 6,
+          "x": 6,
+          "y": 2,
+          "i": "lego-bird",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 6,
+          "x": 0,
+          "y": 8,
+          "i": "lego-top",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 6,
+          "x": 6,
+          "y": 8,
+          "i": "lego-spirograph",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 6,
+          "x": 0,
+          "y": 14,
+          "i": "lego-2d-printer",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 6,
+          "x": 6,
+          "y": 14,
+          "i": "lego-drill",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 5,
+          "x": 6,
+          "y": 20,
+          "i": "lego-ps4-car",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 5,
+          "x": 0,
+          "y": 20,
+          "i": "lego-snake",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 9,
+          "h": 10,
+          "x": 1,
+          "y": 25,
+          "i": "lego-walle",
+          "moved": false,
+          "static": false
+        }
+      ]
     }
   },
-  
   {
     "id": "project-elles",
     "title": "Project Elles",
@@ -467,206 +466,203 @@
         "image": "/images/me10cad/vase.png"
       }
     ],
-    "layout": 
-{
-  "lg": [
-    {
-      "w": 12,
-      "h": 2,
-      "x": 0,
-      "y": 0,
-      "i": "overview",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 4,
-      "x": 0,
-      "y": 2,
-      "i": "cad-lego-brick",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 4,
-      "x": 6,
-      "y": 9,
-      "i": "cad-mounting-bracket",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 7,
-      "x": 6,
-      "y": 2,
-      "i": "cad-citrus-press",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 6,
-      "x": 0,
-      "y": 6,
-      "i": "cad-coffee-mug",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 6,
-      "x": 0,
-      "y": 12,
-      "i": "cad-pumpkin",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 6,
-      "h": 6,
-      "x": 6,
-      "y": 13,
-      "i": "cad-vase",
-      "moved": false,
-      "static": false
+    "layout": {
+      "lg": [
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 0,
+          "i": "overview",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 4,
+          "x": 0,
+          "y": 2,
+          "i": "cad-lego-brick",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 4,
+          "x": 6,
+          "y": 9,
+          "i": "cad-mounting-bracket",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 7,
+          "x": 6,
+          "y": 2,
+          "i": "cad-citrus-press",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 6,
+          "x": 0,
+          "y": 6,
+          "i": "cad-coffee-mug",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 6,
+          "x": 0,
+          "y": 12,
+          "i": "cad-pumpkin",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 6,
+          "h": 6,
+          "x": 6,
+          "y": 13,
+          "i": "cad-vase",
+          "moved": false,
+          "static": false
+        }
+      ],
+      "md": [
+        {
+          "i": "hero_media",
+          "x": 0,
+          "y": 0,
+          "w": 10,
+          "h": 5
+        },
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 5,
+          "w": 10,
+          "h": 2
+        },
+        {
+          "i": "cad-intro-text",
+          "x": 0,
+          "y": 7,
+          "w": 10,
+          "h": 2
+        },
+        {
+          "i": "cad-lego-brick",
+          "x": 0,
+          "y": 9,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "i": "cad-mounting-bracket",
+          "x": 5,
+          "y": 9,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "i": "cad-citrus-press",
+          "x": 0,
+          "y": 13,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "i": "cad-coffee-mug",
+          "x": 5,
+          "y": 13,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "i": "cad-pumpkin",
+          "x": 0,
+          "y": 17,
+          "w": 5,
+          "h": 4
+        },
+        {
+          "i": "cad-vase",
+          "x": 5,
+          "y": 17,
+          "w": 5,
+          "h": 4
+        }
+      ],
+      "sm": [
+        {
+          "i": "hero_media",
+          "x": 0,
+          "y": 0,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 4,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "i": "cad-intro-text",
+          "x": 0,
+          "y": 6,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "i": "cad-lego-brick",
+          "x": 0,
+          "y": 8,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "cad-mounting-bracket",
+          "x": 0,
+          "y": 12,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "cad-citrus-press",
+          "x": 0,
+          "y": 16,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "cad-coffee-mug",
+          "x": 0,
+          "y": 20,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "cad-pumpkin",
+          "x": 0,
+          "y": 24,
+          "w": 6,
+          "h": 4
+        },
+        {
+          "i": "cad-vase",
+          "x": 0,
+          "y": 28,
+          "w": 6,
+          "h": 4
+        }
+      ]
     }
-  ],
-  "md": [
-    {
-      "i": "hero_media",
-      "x": 0,
-      "y": 0,
-      "w": 10,
-      "h": 5
-    },
-    {
-      "i": "overview",
-      "x": 0,
-      "y": 5,
-      "w": 10,
-      "h": 2
-    },
-    {
-      "i": "cad-intro-text",
-      "x": 0,
-      "y": 7,
-      "w": 10,
-      "h": 2
-    },
-    {
-      "i": "cad-lego-brick",
-      "x": 0,
-      "y": 9,
-      "w": 5,
-      "h": 4
-    },
-    {
-      "i": "cad-mounting-bracket",
-      "x": 5,
-      "y": 9,
-      "w": 5,
-      "h": 4
-    },
-    {
-      "i": "cad-citrus-press",
-      "x": 0,
-      "y": 13,
-      "w": 5,
-      "h": 4
-    },
-    {
-      "i": "cad-coffee-mug",
-      "x": 5,
-      "y": 13,
-      "w": 5,
-      "h": 4
-    },
-    {
-      "i": "cad-pumpkin",
-      "x": 0,
-      "y": 17,
-      "w": 5,
-      "h": 4
-    },
-    {
-      "i": "cad-vase",
-      "x": 5,
-      "y": 17,
-      "w": 5,
-      "h": 4
-    }
-  ],
-  "sm": [
-    {
-      "i": "hero_media",
-      "x": 0,
-      "y": 0,
-      "w": 6,
-      "h": 4
-    },
-    {
-      "i": "overview",
-      "x": 0,
-      "y": 4,
-      "w": 6,
-      "h": 2
-    },
-    {
-      "i": "cad-intro-text",
-      "x": 0,
-      "y": 6,
-      "w": 6,
-      "h": 2
-    },
-    {
-      "i": "cad-lego-brick",
-      "x": 0,
-      "y": 8,
-      "w": 6,
-      "h": 4
-    },
-    {
-      "i": "cad-mounting-bracket",
-      "x": 0,
-      "y": 12,
-      "w": 6,
-      "h": 4
-    },
-    {
-      "i": "cad-citrus-press",
-      "x": 0,
-      "y": 16,
-      "w": 6,
-      "h": 4
-    },
-    {
-      "i": "cad-coffee-mug",
-      "x": 0,
-      "y": 20,
-      "w": 6,
-      "h": 4
-    },
-    {
-      "i": "cad-pumpkin",
-      "x": 0,
-      "y": 24,
-      "w": 6,
-      "h": 4
-    },
-    {
-      "i": "cad-vase",
-      "x": 0,
-      "y": 28,
-      "w": 6,
-      "h": 4
-    }
-  ]
-}
-
-
   },
   {
     "id": "Actuaid",
@@ -735,7 +731,7 @@
             "Design and fabricate a 3D-printed fluidic actuator through multiple iterations, achieving an airtight system capable of reliable inflation and deflection.",
             "Integrate the actuator into a wearable glove to enable controlled finger movement.",
             "Develop and test an electronic control system with pumps, valves, and an LCD interface."
-         ]
+          ]
         }
       ]
     },
@@ -744,139 +740,136 @@
       "text": "This project highlighted the versatility of 3D printing and the potential of soft robotics in rehabilitation. We learned the importance of patience and iteration, as multiple design cycles were required to achieve an airtight, functional actuator. These iterations showed how fluidic actuators can be refined to produce meaningful movement, and how combining hardware and software expands the possibilities for assistive technologies. Ultimately, ActuAid demonstrates that innovative, accessible solutions can be created to support medical rehabilitation."
     },
     "content": [],
-    "layout": 
-{
-  "desktop": [
-    {
-      "i": "hero_media",
-      "x": 0,
-      "y": 0,
-      "w": 12,
-      "h": 8
-    },
-    {
-      "i": "overview",
-      "x": 0,
-      "y": 8,
-      "w": 12,
-      "h": 4
-    },
-    {
-      "i": "development",
-      "x": 0,
-      "y": 12,
-      "w": 12,
-      "h": 8
-    },
-    {
-      "i": "final_result",
-      "x": 0,
-      "y": 20,
-      "w": 12,
-      "h": 8
-    },
-    {
-      "i": "reflection",
-      "x": 0,
-      "y": 28,
-      "w": 12,
-      "h": 4
+    "layout": {
+      "desktop": [
+        {
+          "i": "hero_media",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 8
+        },
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 8,
+          "w": 12,
+          "h": 4
+        },
+        {
+          "i": "development",
+          "x": 0,
+          "y": 12,
+          "w": 12,
+          "h": 8
+        },
+        {
+          "i": "final_result",
+          "x": 0,
+          "y": 20,
+          "w": 12,
+          "h": 8
+        },
+        {
+          "i": "reflection",
+          "x": 0,
+          "y": 28,
+          "w": 12,
+          "h": 4
+        }
+      ],
+      "mobile": [
+        {
+          "i": "hero_media",
+          "x": 0,
+          "y": 0,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "i": "overview",
+          "x": 0,
+          "y": 3,
+          "w": 4,
+          "h": 2
+        },
+        {
+          "i": "development",
+          "x": 0,
+          "y": 5,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "i": "final_result",
+          "x": 0,
+          "y": 8,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "i": "reflection",
+          "x": 0,
+          "y": 11,
+          "w": 4,
+          "h": 2
+        }
+      ],
+      "lg": [
+        {
+          "w": 10,
+          "h": 5,
+          "x": 1,
+          "y": 0,
+          "i": "hero_media",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 5,
+          "i": "overview",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 11,
+          "x": 0,
+          "y": 7,
+          "i": "development",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 9,
+          "x": 0,
+          "y": 18,
+          "i": "final_result",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 27,
+          "i": "reflection",
+          "moved": false,
+          "static": false
+        }
+      ]
     }
-  ],
-  "mobile": [
-    {
-      "i": "hero_media",
-      "x": 0,
-      "y": 0,
-      "w": 4,
-      "h": 3
-    },
-    {
-      "i": "overview",
-      "x": 0,
-      "y": 3,
-      "w": 4,
-      "h": 2
-    },
-    {
-      "i": "development",
-      "x": 0,
-      "y": 5,
-      "w": 4,
-      "h": 3
-    },
-    {
-      "i": "final_result",
-      "x": 0,
-      "y": 8,
-      "w": 4,
-      "h": 3
-    },
-    {
-      "i": "reflection",
-      "x": 0,
-      "y": 11,
-      "w": 4,
-      "h": 2
-    }
-  ],
-  "lg": [
-    {
-      "w": 10,
-      "h": 5,
-      "x": 1,
-      "y": 0,
-      "i": "hero_media",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 12,
-      "h": 2,
-      "x": 0,
-      "y": 5,
-      "i": "overview",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 12,
-      "h": 11,
-      "x": 0,
-      "y": 7,
-      "i": "development",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 12,
-      "h": 9,
-      "x": 0,
-      "y": 18,
-      "i": "final_result",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 12,
-      "h": 2,
-      "x": 0,
-      "y": 27,
-      "i": "reflection",
-      "moved": false,
-      "static": false
-    }
-  ]
-}
-
-
   },
   {
     "id": "Controlled_Car",
     "title": "PID Controlled Car",
     "quick_description": "PID-controlled car with web interface and multi-car network communication.",
-    "display_order": 2,
-    "is_featured": true,
+    "display_order": 3,
+    "is_featured": false,
     "gif_url": "/mamalona.gif",
     "hero_media": "/mamalona.gif",
     "images": [
@@ -931,7 +924,7 @@
             "Build a fully functional 4-DOF robotic arm using low-cost, 3D-printed parts and off-the-shelf electronics.",
             "Design a lightweight custom gripper that reliably handles small objects.",
             "Implement key robotics concepts such as kinematics, control systems, and programming for under $30."
-         ]
+          ]
         }
       ]
     },
@@ -1072,7 +1065,9 @@
     "is_featured": false,
     "gif_url": "/casting.gif",
     "hero_media": "/casting.gif",
-    "images": ["/images/me10man/pewter.jpg"],
+    "images": [
+      "/images/me10man/pewter.jpg"
+    ],
     "tags": [
       "Manufacturing"
     ],
@@ -1123,128 +1118,128 @@
     },
     "content": [],
     "layout": {
-  "lg": [
-    {
-      "w": 10,
-      "h": 5,
-      "x": 1,
-      "y": 2,
-      "i": "hero_media",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 12,
-      "h": 2,
-      "x": 0,
-      "y": 0,
-      "i": "overview",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 12,
-      "h": 14,
-      "x": 0,
-      "y": 7,
-      "i": "development",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 7,
-      "h": 10,
-      "x": 0,
-      "y": 21,
-      "i": "final_result",
-      "moved": false,
-      "static": false
-    },
-    {
-      "w": 5,
-      "h": 5,
-      "x": 7,
-      "y": 21,
-      "i": "reflection",
-      "moved": false,
-      "static": false
+      "lg": [
+        {
+          "w": 10,
+          "h": 5,
+          "x": 1,
+          "y": 2,
+          "i": "hero_media",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 0,
+          "i": "overview",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 14,
+          "x": 0,
+          "y": 7,
+          "i": "development",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 7,
+          "h": 10,
+          "x": 0,
+          "y": 21,
+          "i": "final_result",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 5,
+          "h": 5,
+          "x": 7,
+          "y": 21,
+          "i": "reflection",
+          "moved": false,
+          "static": false
+        }
+      ],
+      "md": [
+        {
+          "w": 10,
+          "h": 5,
+          "x": 0,
+          "y": 0,
+          "i": "hero_media"
+        },
+        {
+          "w": 10,
+          "h": 2,
+          "x": 0,
+          "y": 5,
+          "i": "overview"
+        },
+        {
+          "w": 10,
+          "h": 9,
+          "x": 0,
+          "y": 7,
+          "i": "development"
+        },
+        {
+          "w": 6,
+          "h": 8,
+          "x": 0,
+          "y": 16,
+          "i": "final_result"
+        },
+        {
+          "w": 10,
+          "h": 2,
+          "x": 0,
+          "y": 24,
+          "i": "reflection"
+        }
+      ],
+      "sm": [
+        {
+          "w": 6,
+          "h": 4,
+          "x": 0,
+          "y": 0,
+          "i": "hero_media"
+        },
+        {
+          "w": 6,
+          "h": 2,
+          "x": 0,
+          "y": 4,
+          "i": "overview"
+        },
+        {
+          "w": 6,
+          "h": 9,
+          "x": 0,
+          "y": 6,
+          "i": "development"
+        },
+        {
+          "w": 4,
+          "h": 8,
+          "x": 0,
+          "y": 15,
+          "i": "final_result"
+        },
+        {
+          "w": 6,
+          "h": 2,
+          "x": 0,
+          "y": 23,
+          "i": "reflection"
+        }
+      ]
     }
-  ],
-  "md": [
-    {
-      "w": 10,
-      "h": 5,
-      "x": 0,
-      "y": 0,
-      "i": "hero_media"
-    },
-    {
-      "w": 10,
-      "h": 2,
-      "x": 0,
-      "y": 5,
-      "i": "overview"
-    },
-    {
-      "w": 10,
-      "h": 9,
-      "x": 0,
-      "y": 7,
-      "i": "development"
-    },
-    {
-      "w": 6,
-      "h": 8,
-      "x": 0,
-      "y": 16,
-      "i": "final_result"
-    },
-    {
-      "w": 10,
-      "h": 2,
-      "x": 0,
-      "y": 24,
-      "i": "reflection"
-    }
-  ],
-  "sm": [
-    {
-      "w": 6,
-      "h": 4,
-      "x": 0,
-      "y": 0,
-      "i": "hero_media"
-    },
-    {
-      "w": 6,
-      "h": 2,
-      "x": 0,
-      "y": 4,
-      "i": "overview"
-    },
-    {
-      "w": 6,
-      "h": 9,
-      "x": 0,
-      "y": 6,
-      "i": "development"
-    },
-    {
-      "w": 4,
-      "h": 8,
-      "x": 0,
-      "y": 15,
-      "i": "final_result"
-    },
-    {
-      "w": 6,
-      "h": 2,
-      "x": 0,
-      "y": 23,
-      "i": "reflection"
-    }
-  ]
-}
   },
   {
     "id": "the-hand",
@@ -1264,7 +1259,6 @@
       "Coding"
     ]
   },
-
   {
     "id": "me-35",
     "title": "Robotics Portfolio (ME35)",
@@ -1282,5 +1276,153 @@
       "Coding",
       "Microcontroller"
     ]
+  },
+  {
+    "id": "robotic-studio-tu",
+    "title": "Robotic Studio: Tu",
+    "quick_description": "Tu is a 8-DOF bipedal robot designed and controlled by a Raspberry Pi 4.",
+    "display_order": 2,
+    "is_featured": true,
+    "notion_url": "https://docs.google.com/presentation/d/1H2oB9dT5479RGRaeEHEPkOG1NqDETgQ7TDyRqkPO9cs/edit?usp=sharing",
+    "notion_iframe_url": "https://docs.google.com/presentation/d/1H2oB9dT5479RGRaeEHEPkOG1NqDETgQ7TDyRqkPO9cs/embed?start=false&loop=false&delayms=3000",
+    "github_url": "https://github.com/paulgalvan/me134",
+    "gif_url": "/images/tu.gif",
+    "hero_media": "/images/tu.gif",
+    "images": [
+      "/images/tu.gif"
+    ],
+    "tags": [
+      "Robotics",
+      "CAD",
+      "Coding",
+      "Microcontroller"
+    ],
+    "overview": {
+      "title": "Overview",
+      "text": "This project covered the full development cycle of an 8-DOF bipedal robot from initial bio-inspired sketches to a functional physical prototype. Our design evolved from animal kinematics like chickens and Komodo dragons into a modular mechanical system. The final build stands 386 mm tall and is powered by a Raspberry Pi 4 and 8x LX-16A serial bus motors. To handle the 15 kg-cm of torque and maintain balance, we integrated a 9-DOF IMU for real-time orientation feedback and a 12V Li-ion battery with a buck converter."
+    },
+    "development": {
+      "title": "Development / Process",
+      "items": [
+        {
+          "type": "process_grid",
+          "rows": [
+            {
+              "text": "Mechanical Design and Stability: We built a symmetric joint system using two motors per axis to handle the torque and weight distribution across the frame. The leg kinematics follow a Pitch-Pitch-Roll-Pitch sequence starting from the ankle and moving up through the knee to the hip. We also added four points of contact to the feet so the robot would be more stable on its own. This helped us manage balance during the gait cycles without turning the project into an overly complex controls problem.",
+              "carousel": {
+                "caption": "Initial Sketches",
+                "value": [
+                  "/images/wolf.png",
+                  "/images/lizard.png",
+                  "/images/monkey.png",
+                  "/images/chicken.png"
+                ]
+              }
+            },
+            {
+              "text": "Iterative Prototyping and Locomotion: We identified and resolved structural failure points at the servo-wheel interface through 16 design iterations. This involved implementing exaggerated fillets, thickening walls, and using thermoplastic screw inserts to ensure mechanical longevity. For locomotion, we developed gait patterns including crawling and sinusoidal walking in Python. We used a PyBullet simulation pipeline to validate these movements and implemented exception handling to manage real-time motor disconnects.",
+              "carousel": {
+                "caption": "Prototyping & Gait",
+                "value": [
+                  "/images/legs.jpg",
+                  "/images/yuan1.png",
+                  "/images/yuan2.png"
+                ]
+              }
+            },
+            {
+              "text": "Control Systems and Simulation: To bridge the gap between design and physical execution, we utilized a combination of MATLAB, PyBullet, MuJoCo, and control theory for comprehensive simulations. We developed inverse kinematics models to precisely control foot trajectories and tested various control architectures including PID, Linear Quadratic Regulator (LQR), and Model Predictive Control (MPC) to maintain balance and optimize the gait cycle in a simulated environment before deploying to the Raspberry Pi. The shortcoming was controls was a lot harder than we planned, specifically for a bipedal robot, so we had to simplify our control strategy and focus on getting a basic walking gait working before trying to optimize it further.",
+              "carousel": {
+                "caption": "Simulations & Controllers",
+                "value": [
+                  "https://drive.google.com/file/d/1vW1WCoQ1Q-13RSsq-O0Mb8xyfKiWIHsK/preview",
+                  "/images/sim_run.png",
+                  "/images/sim.gif",
+                  "https://drive.google.com/file/d/1zcaNvTZBhGW1m7bs1UPP33V-_2Qa5QMq/preview"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_result": {
+      "title": "Final Result",
+      "items": [
+        {
+          "type": "list",
+          "value": [
+            "Successful Locomotion: Validated multiple stable gait patterns on physical hardware, matching the performance seen in simulation.",
+            "Structural Integrity: The final prototype survived rigorous testing without mechanical failure thanks to the reinforced joint geometry and heat-set inserts.",
+            "System Efficiency: Optimized the power delivery and gait timing to ensure the Raspberry Pi 4 and motor stack could run reliably on a single 12V 3000mAh battery.",
+            "High-Torque Performance: The dual-motor joint architecture successfully prevented joint sag and allowed for robust load distribution during walking cycles."
+          ]
+        },
+        {
+          "type": "gif",
+          "value": "/images/tu1.gif"
+        }
+      ]
+    },
+    "reflection": {
+      "title": "Reflection",
+      "text": "Building Tu showed me how mechanical decisions directly impact software complexity. Solving the repeated failures at the servo-wheel interface forced me to focus on material limits and manufacturing tolerances before even thinking about the code. Bridging the gap between the PyBullet simulation and the physical hardware was the most challenging part, but it taught me how to account for the variables that simulation often misses. This project was a lesson in how systematic iteration is just as important as the initial design concept.",
+      "items": [
+        {
+          "type": "image",
+          "value": "https://drive.google.com/file/d/1hKYroC0fllOd_0vcrCDnuNzGVSFl8eHC/preview"
+        }
+      ]
+    },
+    "content": [],
+    "layout": {
+      "lg": [
+        {
+          "w": 10,
+          "h": 5,
+          "x": 1,
+          "y": 0,
+          "i": "hero_media",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 2,
+          "x": 0,
+          "y": 5,
+          "i": "overview",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 9,
+          "x": 0,
+          "y": 7,
+          "i": "development",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 8,
+          "x": 0,
+          "y": 16,
+          "i": "final_result",
+          "moved": false,
+          "static": false
+        },
+        {
+          "w": 12,
+          "h": 4,
+          "x": 0,
+          "y": 24,
+          "i": "reflection",
+          "moved": false,
+          "static": false
+        }
+      ]
+    }
   }
 ]
