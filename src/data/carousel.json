@@ -1,0 +1,44 @@
+[
+  {
+    "id": "tu",
+    "title": "Robotic Studio: Tu",
+    "category": "Robotics and Controls",
+    "media_url": "/images/tu.gif"
+  },
+  {
+    "id": "gillette",
+    "title": "Proctor & Gamble - Gillette",
+    "category": "Process Engineering",
+    "media_url": "/gillette.jpeg"
+  },
+  {
+    "id": "lcra",
+    "title": "Low Cost Robotic Arm",
+    "category": "Robotics and Controls",
+    "media_url": "/LCRA-ezgif.com-optimize.gif"
+  },
+  {
+    "id": "mcontroller",
+    "title": "Custom PCB / Brushless Motor Controller",
+    "category": "Manufacturing",
+    "media_url": "/images/mcontroller.png"
+  },
+  {
+    "id": "elles",
+    "title": "Project Elles",
+    "category": "Robotics and Controls",
+    "media_url": "/elles.gif"
+  },
+  {
+    "id": "the-hand",
+    "title": "The Hand",
+    "category": "Robotics and Controls",
+    "media_url": "/handlego.gif"
+  },
+  {
+    "id": "portfolio",
+    "title": "Engineering Portfolio",
+    "category": "Coding",
+    "media_url": "/images/porfolio.png"
+  }
+]

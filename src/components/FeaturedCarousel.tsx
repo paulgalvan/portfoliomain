@@ -1,18 +1,15 @@
 'use client';
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useProjects } from "@/hooks/useProjects";
+import carouselData from "@/data/carousel.json";
 
 export default function FeaturedCarousel() {
-  const { projects, loading } = useProjects();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
 
-  const featuredProjects = projects
-    .filter((p) => p.is_featured)
-    .sort((a, b) => a.display_order - b.display_order);
+  const featuredProjects = carouselData;
 
   const nextSlide = useCallback(() => {
     setActiveIndex((current) => (current === featuredProjects.length - 1 ? 0 : current + 1));
@@ -39,12 +36,6 @@ export default function FeaturedCarousel() {
     setTouchStart(null);
   };
 
-  if (loading) return (
-    <div className="w-full flex-1 min-h-[350px] rounded-xl border border-border bg-card animate-pulse flex items-center justify-center">
-      <p className="text-sm text-muted-foreground">Loading highlights...</p>
-    </div>
-  );
-
   if (featuredProjects.length === 0) return null;
 
   return (
@@ -63,16 +54,16 @@ export default function FeaturedCarousel() {
             i === activeIndex ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
           }`}
         >
-          {project.gif_url ? (
+          {project.media_url.endsWith('.gif') ? (
             <img
-              src={project.gif_url}
+              src={project.media_url}
               alt={project.title}
               className="w-full h-full object-contain"
               loading={i === activeIndex ? "eager" : "lazy"}
             />
           ) : (
             <Image
-              src={project.images?.[0] || "/placeholder.png"}
+              src={project.media_url || "/placeholder.png"}
               alt={project.title}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -84,7 +75,7 @@ export default function FeaturedCarousel() {
           <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none"
                style={{ background: "linear-gradient(to top, hsl(var(--card)) 0%, transparent 100%)" }}>
             <p className="text-[0.65rem] uppercase tracking-widest font-bold mb-1 opacity-70">
-              {project.tags[0] || "Featured"}
+              {project.category}
             </p>
             <p className="text-base font-bold">
               {project.title}

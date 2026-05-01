@@ -1260,24 +1260,6 @@
     ]
   },
   {
-    "id": "me-35",
-    "title": "Robotics Portfolio (ME35)",
-    "quick_description": "A collection of my robotics projects from my ME35 class.",
-    "display_order": 102,
-    "is_featured": false,
-    "hero_media": "/images/ME35.png",
-    "images": [
-      "/images/ME35.png"
-    ],
-    "gif_url": "/me35.gif",
-    "notion_url": "https://flax-haze-954.notion.site/ME35-Portfolio-f40b04e4f3944280beca02ca9bbc8079?source=copy_link",
-    "tags": [
-      "Robotics",
-      "Coding",
-      "Microcontroller"
-    ]
-  },
-  {
     "id": "robotic-studio-tu",
     "title": "Robotic Studio: Tu",
     "quick_description": "Tu is a 8-DOF bipedal robot designed and controlled by a Raspberry Pi 4.",
@@ -1320,7 +1302,7 @@
               }
             },
             {
-              "text": "Iterative Prototyping and Locomotion: We identified and resolved structural failure points at the servo-wheel interface through 16 design iterations. This involved implementing exaggerated fillets, thickening walls, and using thermoplastic screw inserts to ensure mechanical longevity. For locomotion, we developed gait patterns including crawling and sinusoidal walking in Python. We used a PyBullet simulation pipeline to validate these movements and implemented exception handling to manage real-time motor disconnects.",
+              "text": "Iterative Prototyping and Locomotion: We identified and resolved structural failure points at the servo-wheel interface through multiple design iterations. This involved implementing exaggerated fillets, thickening walls, and using thermoplastic screw inserts to ensure mechanical longevity. For locomotion, we developed gait patterns including crawling and sinusoidal walking in Python. We used a PyBullet simulation pipeline to validate these movements and implemented exception handling to manage real-time motor disconnects.",
               "carousel": {
                 "caption": "Prototyping & Gait",
                 "value": [
