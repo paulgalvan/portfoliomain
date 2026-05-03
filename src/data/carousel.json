@@ -19,8 +19,8 @@
   },
   {
     "id": "mcontroller",
-    "title": "Custom PCB / Brushless Motor Controller",
-    "category": "Manufacturing",
+    "title": "H-Bridge Motor Controller",
+    "category": "PCB Design",
     "media_url": "/images/mcontroller.png"
   },
   {
@@ -28,6 +28,12 @@
     "title": "Project Elles",
     "category": "Robotics and Controls",
     "media_url": "/elles.gif"
+  },
+  {
+    "id": "Guitar",
+    "title": "Guitar",
+    "category": "Manufacturing",
+    "media_url": "/3a847c51-202a-4720-9ca9-489de6769995.png"
   },
   {
     "id": "the-hand",
@@ -40,5 +46,29 @@
     "title": "Engineering Portfolio",
     "category": "Coding",
     "media_url": "/images/porfolio.png"
+  },
+  {
+    "id": "actuaid",
+    "title": "ActuaID",
+    "category": "Medical Devices",
+    "media_url": "/actuaid.gif"
+  },
+  {
+    "id": "link",
+    "title": "Linkages",
+    "category": "Manufacturing",
+    "media_url": "/images/robotics/p2-linkages.gif"
+  },
+  {
+    "id": "mamalona",
+    "title": "PID Controlled Car",
+    "category": "Robotics and Controls",
+    "media_url": "/mamalona.gif"
+  },
+  {
+    "id": "pid-car",
+    "title": "PID Controlled Car",
+    "category": "Robotics and Controls",
+    "media_url": "/mamalona.gif"
   }
 ]
