@@ -1406,5 +1406,22 @@
         }
       ]
     }
+  },
+  {
+    "id": "requinto-guitar",
+    "title": "Requinto Guitar",
+    "quick_description": "Building a requinto guitar from scratch — documenting the full instrument-building process.",
+    "display_order": 3,
+    "is_featured": false,
+    "hero_media": "/images/guitar/guitar.jpeg",
+    "images": [
+      "/images/guitar/guitar.jpeg"
+    ],
+    "gif_url": "",
+    "notion_url": "https://shimmering-cesium-c35.notion.site/Build-an-Instrument-Paul-Galvan-31e2f91361d38099ae03d0fc276d5e5b?pvs=143",
+    "tags": [
+      "Design",
+      "Woodworking"
+    ]
   }
 ]

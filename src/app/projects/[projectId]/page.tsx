@@ -464,8 +464,32 @@ export default function ProjectDetail() {
             </RevealSection>
           )}
 
-          {/* ── Full Documentation Section (Dropdown or External Link) ── */}
-          {(project.notion_iframe_url || (tabbedContent && tabbedContent.length > 0) || htmlLoading) ? (
+          {/* ── Notion Embed (full-page, no accordion) for embed-only projects ── */}
+          {project.notion_iframe_url && !hasSummary && !hasCollectionItems ? (
+            <RevealSection>
+              <section className="cs-section cs-section--full">
+                <div className="cs-notion-direct">
+                  <div className="cs-notion-direct__header">
+                    <span className="cs-notion-direct__label">Documentation</span>
+                    {project.notion_url && (
+                      <a href={project.notion_url} target="_blank" rel="noopener noreferrer" className="cs-accordion__notion-link">
+                        Open in Notion <ArrowUpRight size={12} />
+                      </a>
+                    )}
+                  </div>
+                  <iframe
+                    src={project.notion_iframe_url}
+                    width="100%"
+                    frameBorder="0"
+                    allowFullScreen
+                    loading="lazy"
+                    className="cs-notion-direct__frame"
+                    title="Notion documentation"
+                  />
+                </div>
+              </section>
+            </RevealSection>
+          ) : (project.notion_iframe_url || (tabbedContent && tabbedContent.length > 0) || htmlLoading) ? (
             <RevealSection>
               <section className="cs-section cs-section--full">
                 {htmlLoading ? (
@@ -491,7 +515,7 @@ export default function ProjectDetail() {
                     rel="noopener noreferrer" 
                     className="cs-link cs-link--large"
                   >
-                    {project.notion_url.includes("github.com") ? "View Repository on GitHub" : "Read Blog"}
+                    {project.notion_url.includes("github.com") ? "View Repository on GitHub" : "Documentation"}
                     <ArrowUpRight size={18} className="ml-1" />
                   </a>
                 </div>
@@ -499,13 +523,10 @@ export default function ProjectDetail() {
             </RevealSection>
           ) : null}
 
-          {!hasSummary && !hasCollectionItems && !project.notion_iframe_url && tabbedContent.length === 0 && !htmlLoading && (
+          {!hasSummary && !hasCollectionItems && !project.notion_iframe_url && !project.notion_url && tabbedContent.length === 0 && !htmlLoading && (
             <RevealSection>
               <section className="cs-section cs-section--fallback">
-                {project.notion_url
-                  ? <a href={project.notion_url} target="_blank" rel="noopener noreferrer" className="cs-link cs-link--large">Read full case study <ArrowUpRight size={16} /></a>
-                  : <p className="cs-section__text" style={{ color: "hsl(var(--muted-foreground))" }}>No additional content available.</p>
-                }
+                <p className="cs-section__text" style={{ color: "hsl(var(--muted-foreground))" }}>No additional content available.</p>
               </section>
             </RevealSection>
           )}
@@ -746,6 +767,38 @@ export default function ProjectDetail() {
           height:680px;
           border:none;
           border-radius:0 0 12px 12px;
+        }
+        /* ── Direct Notion embed (no accordion) ── */
+        .cs-notion-direct{
+          border:1px solid hsl(var(--border));
+          border-radius:12px;
+          overflow:hidden;
+          background:hsl(var(--card));
+        }
+        .cs-notion-direct__header{
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          padding:16px 24px;
+          border-bottom:1px solid hsl(var(--border));
+        }
+        .cs-notion-direct__label{
+          font-size:.78rem;
+          font-weight:600;
+          letter-spacing:.08em;
+          text-transform:uppercase;
+          color:hsl(var(--muted-foreground));
+        }
+        .cs-notion-direct__frame{
+          display:block;
+          width:100%;
+          min-height:900px;
+          height:calc(100vh - 200px);
+          max-height:1200px;
+          border:none;
+        }
+        @media(max-width:768px){
+          .cs-notion-direct__frame{min-height:600px;height:calc(100vh - 160px)}
         }
       `}</style>
     </>
